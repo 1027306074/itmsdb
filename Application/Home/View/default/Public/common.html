@@ -1,0 +1,93 @@
+  <header class="main-header"> 
+    
+    <!-- Logo --> 
+    <a href="{:U('Index/index2')}" class="logo"> 
+    <!-- mini logo for sidebar mini 50x50 pixels --> 
+    <span class="logo-mini"><b>智能交通管理系统</b></span> 
+    <!-- logo for regular state and mobile devices --> 
+    <span class="logo-lg"><b>智能交通管理系统</b></span> </a> 
+    
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top"> 
+      <!-- Sidebar toggle button--> 
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button"> 
+	  <span class="sr-only">Toggle navigation</span> </a> 
+      <!-- Navbar Right Menu -->
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          
+          <!-- Control Sidebar Toggle Button -->
+          <!-- Control Sidebar Toggle Button -->
+          <li>
+            <a href="{:U('Index/logout')}" ><i class="glyphicon glyphicon-off"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar"> 
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar"> 
+      <!-- Sidebar user panel -->
+      <!-- Profile Image -->
+      <div class="box box-primary">
+        <div class="box-body box-profile">
+          <img class="profile-user-img img-responsive img-circle" src="__PUBLIC__/dist/img/user4-128x128.jpg" alt="User profile picture">
+          <h3 class="profile-username text-center">阿尼玛甜</h3>
+          </ul>
+        </div>
+        <!-- /.box-body -->
+      </div>
+      <!-- /.box -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="active treeview"> <a href="{:U('Index/index2')}"> <i class="fa fa-home"></i> <span>主页</span> <span class="pull-right-container">  </span> </a> </li>
+        <li class="treeview"> <a href="#"> <i class="fa fa-car"></i> <span>小车子系统</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
+          <ul class="treeview-menu">
+            <li><a href="{:U('Index/data011')}"><i class="fa fa-circle-o"></i>车辆基本信息</a></li>
+            <li><a href="{:U('Index/data012')}"><i class="fa fa-circle-o"></i>车辆充值记录</a></li>
+            <li><a href="{:U('Index/data013')}"><i class="fa fa-circle-o"></i>车辆违章记录</a></li>
+          </ul>
+        </li>
+        <li> <a href="pages/tables/data021.html"> <i class="fa fa-map-signs"></i> <span>红绿灯子系统</span> <span class="pull-right-container">  </span> </a>
+        </li>
+        <li> <a href="pages/tables/data031.html"> <i class="fa fa-filter"></i> <span>路灯子系统</span> <span class="pull-right-container">  </span> </a>
+        </li>
+        <li> <a href="pages/tables/data041.html"> <i class="fa fa-filter"></i> <span>环境子系统</span> <span class="pull-right-container">  </span> </a>
+        </li>
+   
+        <li class="treeview"> <a href="#"> <i class="fa fa-bus"></i> <span>公交车模块</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/tables/data051.html"><i class="fa fa-circle-o"></i> 站台信息查询</a></li>
+            <li><a href="pages/tables/data052.html"><i class="fa fa-circle-o"></i> 车载容量查询</a></li>
+          </ul>
+        </li>
+        <li> <a href="pages/tables/data061.html"> <i class="fa fa-road"></i> <span>道路子系统</span> <span class="pull-right-container">  </span> </a>
+        </li>
+        <li class="treeview"> <a href="#"> <i class="fa fa-database"></i> <span>基础数据表 </span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/tables/data071.html"><i class="fa fa-circle-o"></i> 车辆信息（管理员权限）</a></li>
+            <li><a href="pages/tables/data072.html"><i class="fa fa-circle-o"></i> 违章代码</a></li>
+          </ul>
+        </li>
+        <li class="treeview"> <a href="#"> <i class="fa fa-users"></i> <span>用户管理</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/tables/data081.html"><i class="fa fa-circle-o"></i> 用户权限管理（管理员权限）</a></li>
+            <li><a href="pages/tables/data082.html"><i class="fa fa-circle-o"></i> 获取所有用户信息（管理员权限）</a></li>
+          </ul>
+        </li>
+        <li> <a href="pages/tables/data091.html"> <i class="fa fa-cloud"></i> <span>气象信息查询</span> <span class="pull-right-container">  </span> </a>
+        </li>
+        <li class="treeview"> <a href="#"> <i class="fa fa-exchange"></i> <span>Etc模块</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/tables/data101.html"><i class="fa fa-circle-o"></i> Etc基本信息</a></li>
+            <li><a href="pages/tables/data111.html"><i class="fa fa-circle-o"></i> Etc通行日志</a></li>
+          </ul>
+        </li>
+      
+
+      </ul>
+    </section>
+    <!-- /.sidebar --> 
+  </aside>
