@@ -34,6 +34,7 @@
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
+
   <header class="main-header"> 
     
     <!-- Logo --> 
@@ -134,147 +135,244 @@
     <section class="content-header">
       <h1>      
           <ol class="breadcrumb">
-            <li><a href="<?php echo U('Index/index2');?>"><i class="fa  fa-sign-out"></i> 主页</a></li>
-            <li><a href="#">小车子系统</a></li>
-            <li class="active">车辆充值记录</li>
+            <li><a href="../../index2.html"><i class="fa  fa-sign-out"></i> 主页</a></li>
+            <li class="active">路灯子系统</li>
           </ol>
       </h1>
     </section>
 
  <!-- Main content -->
-    <section class="content">
-      <div class="row">
-        <div class="col-xs-12">
-         
-          <div class="box">
+    <section class="content">	
+		<div class="row">		
+			<div class="col-md-3 col-sm-6 col-xs-12">
 
+			  <div class="info-box">
+				<span class="info-box-icon bg-aqua"><i class="fa fa-envelope-o"></i></span>
+
+				<div class="info-box-content">
+				  <span class="info-box-text">控制模式</span>
+				  <span class="info-box-text">————————————————————————</span>
+				  <!-- radio -->
+				  <div class="form-group">
+					<label>
+					  <input type="radio" name="r3" class="flat-red" checked>
+					  手动
+					</label>
+					<label>
+					  <input type="radio" name="r3" class="flat-red">
+					  自动
+					</label>
+
+				  </div>
+				</div>
+				<!-- /.info-box-content -->
+			  </div>
+			  <!-- /.info-box -->
+			</div>
+			<!-- /.col -->
+			<div class="col-md-3 col-sm-6 col-xs-12">
+			  <div class="info-box">
+				<span class="info-box-icon bg-green"><i class="fa fa-flag-o"></i></span>
+
+				<div class="info-box-content">
+				  <span class="info-box-text">控制模式</span>
+				  <span class="info-box-text">————————————————————————</span>
+				  <!-- radio -->
+				  <div class="form-group">
+					<label>
+					  <input type="radio" name="r4" class="flat-red" checked>
+					  打开
+					</label>
+					<label>
+					  <input type="radio" name="r4" class="flat-red">
+					  关闭
+					</label>
+
+				  </div>
+				</div>
+				<!-- /.info-box-content -->
+			  </div>
+			  <!-- /.info-box -->
+			</div>	
+		</div>
+	
+		<div class="row">
+			<div class="col-md-6">
+			  <!-- Box Comment -->
+			  <div class="box box-widget">	  
+				<!-- /.box-header -->
+				<div class="box-body">
+				  <img class="img-responsive pad" src="../../dist/img/light_1.jpg" alt="Photo">
+				</div>	
+			</div>
+			</div>
+
+			<div class="col-md-6">
+			  <!-- Box Comment -->
+			  <div class="box box-widget">	  
+				<!-- /.box-header -->
+				<div class="box-body">
+				  <img class="img-responsive pad" src="../../dist/img/light_2.jpg" alt="Photo">
+				</div>				
+			</div>
+			</div>
+		</div>
+		
+		<div class="row">
+        <div class="col-xs-12">	        
+          <div class="box">      
             <!-- /.box-header -->
             <div class="box-body">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                   <tr>
-                    <th>车辆编号</th>
-                    <th>车牌号</th>
-                    <th>充值金额</th>
-                    <th>充值操作员</th>
-                    <th>充值时间</th>
+                    <th>ID</th>
+                    <th>路口</th>
+                    <th>红绿灯编号</th>
+                    <th>红灯周期</th>
+                    <th>绿灯周期</th>
+                    <th>黄灯周期</th>
+                    <th>操作</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>1</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
+                    <td>学院路-医院路交叉口</td>
+                    <td>1</td>
+                    <td>25</td>
+                    <td>35</td>
+                    <td>5</td>
+                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">修改</button></td>
                   </tr>
                   <tr>
                     <td>1</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
+                    <td>学院路-医院路交叉口</td>
+                    <td>1</td>
+                    <td>25</td>
+                    <td>35</td>
+                    <td>5</td>
+                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">修改</button></td>
                   </tr>
                   <tr>
                     <td>1</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
+                    <td>学院路-医院路交叉口</td>
+                    <td>1</td>
+                    <td>25</td>
+                    <td>35</td>
+                    <td>5</td>
+                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">修改</button></td>
                   </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
-                  </tr>                  
                   <tr>
                     <td>1</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
+                    <td>学院路-医院路交叉口</td>
+                    <td>1</td>
+                    <td>25</td>
+                    <td>35</td>
+                    <td>5</td>
+                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">修改</button></td>
                   </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
-                  </tr>                  
                   <tr>
                     <td>1</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
+                    <td>学院路-医院路交叉口</td>
+                    <td>1</td>
+                    <td>25</td>
+                    <td>35</td>
+                    <td>5</td>
+                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">修改</button></td>
                   </tr>
                   <tr>
-                    <td>2</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
+                    <td>1</td>
+                    <td>学院路-医院路交叉口</td>
+                    <td>1</td>
+                    <td>25</td>
+                    <td>35</td>
+                    <td>5</td>
+                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">修改</button></td>
                   </tr>
                   <tr>
-                    <td>3</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
-                  </tr>                  
-                  
-                  <tr>
-                    <td>Other browsers</td>
-                    <td>&nbsp;</td>
-                    <td>All others</td>
-                    <td>-</td>
-                    <td>-</td>
+                    <td>1</td>
+                    <td>学院路-医院路交叉口</td>
+                    <td>1</td>
+                    <td>25</td>
+                    <td>35</td>
+                    <td>5</td>
+                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">修改</button></td>
                   </tr>
-                </tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>学院路-医院路交叉口</td>
+                    <td>1</td>
+                    <td>25</td>
+                    <td>35</td>
+                    <td>5</td>
+                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">修改</button></td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>学院路-医院路交叉口</td>
+                    <td>1</td>
+                    <td>25</td>
+                    <td>35</td>
+                    <td>5</td>
+                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">修改</button></td>
+                  </tr>				  
+                  <tr>
+                    <td>1</td>
+                    <td>学院路-医院路交叉口</td>
+                    <td>1</td>
+                    <td>25</td>
+                    <td>35</td>
+                    <td>5</td>
+                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">修改</button></td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>学院路-医院路交叉口</td>
+                    <td>1</td>
+                    <td>25</td>
+                    <td>35</td>
+                    <td>5</td>
+                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">修改</button></td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>学院路-医院路交叉口</td>
+                    <td>1</td>
+                    <td>25</td>
+                    <td>35</td>
+                    <td>5</td>
+                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">修改</button></td>
+                  </tr>                                                      
+                                  <tr>
+                    <td>1</td>
+                    <td>学院路-医院路交叉口</td>
+                    <td>1</td>
+                    <td>25</td>
+                    <td>35</td>
+                    <td>5</td>
+                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">修改</button></td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>学院路-医院路交叉口</td>
+                    <td>1</td>
+                    <td>25</td>
+                    <td>35</td>
+                    <td>5</td>
+                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">修改</button></td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>学院路-医院路交叉口</td>
+                    <td>1</td>
+                    <td>25</td>
+                    <td>35</td>
+                    <td>5</td>
+                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">修改</button></td>
+                  </tr>
+				  
+				  </tbody>
                 <tfoot>
                 </tfoot>
               </table>
@@ -283,6 +381,30 @@
           </div>
           <!-- /.box --> 
         </div>
+		
+		<!-- modal content -->
+		<div class="modal fade" id="modal-info">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">车辆账户充值</h4>
+			  </div>
+			  <div class="modal-body">
+				  <input type="number" class="form-control" id="exampleInputEmail1" placeholder="充值金额">
+
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-primary pull-left" data-dismiss="modal">取消</button>
+				<button type="button" class="btn btn-primary ">充值</button>
+			  </div>
+			</div>
+			<!-- /.modal-content -->
+		  </div>
+		  <!-- /.modal-dialog -->
+		</div>
+		<!-- /.modal -->
         <!-- /.col --> 
       </div>
       <!-- /.row --> 

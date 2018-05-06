@@ -34,6 +34,7 @@
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
+
   <header class="main-header"> 
     
     <!-- Logo --> 
@@ -127,117 +128,160 @@
     </section>
     <!-- /.sidebar --> 
   </aside>
-  
+
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper"> 
+  <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1> 仪表盘 <small>版本 2.0</small> </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> 主页</a></li>
-        <li class="active">仪表盘</li>
-      </ol>
+      <h1>      
+          <ol class="breadcrumb">
+            <li><a href="../../index2.html"><i class="fa  fa-sign-out"></i> 主页</a></li>
+            <li><a href="#">Etc模块</a></li>
+            <li class="active">Etc通行日志</li>
+          </ol>
+      </h1>
     </section>
-    
-    <!-- Main content -->
-    <section class="content"> 
-      <!-- Info boxes -->
+
+     <!-- Main content -->
+    <section class="content">
       <div class="row">
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box"> <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
-            <div class="info-box-content"> <span class="info-box-text">温度</span> <span class="info-box-number">20<small>℃</small></span> </div>
-            <!-- /.info-box-content --> 
-          </div>
-          <!-- /.info-box --> 
-        </div>
-        <!-- /.col -->
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box"> <span class="info-box-icon bg-red"><i class="fa fa-google-plus"></i></span>
-            <div class="info-box-content"> <span class="info-box-text">湿度</span> <span class="info-box-number">41,410</span> </div>
-            <!-- /.info-box-content --> 
-          </div>
-          <!-- /.info-box --> 
-        </div>
-        <!-- /.col --> 
-        
-        <!-- fix for small devices only -->
-        <div class="clearfix visible-sm-block"></div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box"> <span class="info-box-icon bg-green"><i class="ion ion-ios-cart-outline"></i></span>
-            <div class="info-box-content"> <span class="info-box-text">CQ2</span> <span class="info-box-number">760</span> </div>
-            <!-- /.info-box-content --> 
-          </div>
-          <!-- /.info-box --> 
-        </div>
-        <!-- /.col -->
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box"> <span class="info-box-icon bg-yellow"><i class="ion ion-ios-people-outline"></i></span>
-            <div class="info-box-content"> <span class="info-box-text">PM2.5</span> <span class="info-box-number">2,000</span> </div>
-            <!-- /.info-box-content --> 
-          </div>
-          <!-- /.info-box --> 
-        </div>
-        <!-- /.col --> 
-      </div>
-      <!-- /.row -->
-      
-      <div class="row">
-        <div class="col-md-12">
+        <div class="col-xs-12">
+         
           <div class="box">
-            <div class="box-header with-border">
-              <h3 class="box-title">月度回顾报告</h3>
-			  <img class="img-responsive pad" src="/itmsdb/Public/dist/img/main_bg.jpg" alt="Photo">
 
-
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>姓名</th>
+                    <th>驶入Etc时间</th>
+                    <th>驶出Etc时间</th>
+                    <th>过路费用金额</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>2017/02/21 01:14:21</td>
+                    <td><p>2017/02/21 01:38:12</p></td>
+                    <td>10元</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>2017/02/21 01:23:29</td>
+                    <td>2017/02/21 01:43:01</td>
+                    <td>15元</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>2017/02/21 01:35:11</td>
+                    <td>2017/02/21 01:44:35</td>
+                    <td>12元</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>2017/02/21 01:47:56</td>
+                    <td>2017/02/21 01:48:20</td>
+                    <td>25元</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>2017/02/21 01:48:16</td>
+                    <td>2017/02/21 01:49:21</td>
+                    <td>10元</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>2017/02/21 01:49:27</td>
+                    <td>2017/02/21 01:49:46</td>
+                    <td>15元</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>2017/02/21 01:52:00</td>
+                    <td>2017/02/21 01:52:21</td>
+                    <td>12元</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>2017/02/21 01:54:49</td>
+                    <td>2017/02/21 01:55:25</td>
+                    <td>12元</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>2017/02/21 01:56:00</td>
+                    <td>2017/02/21 01:57:24</td>
+                    <td>12元</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>2017/02/21 01:18:16</td>
+                    <td>2017/02/21 02;00:10</td>
+                    <td>17元</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                </tfoot>
+              </table>
             </div>
-            
-            </div>
-            
-            </div>
-            <!-- /.box-footer --> 
+            <!-- /.box-body --> 
           </div>
           <!-- /.box --> 
         </div>
         <!-- /.col --> 
+      </div>
       <!-- /.row --> 
-      
- 
     </section>
     <!-- /.content --> 
+  </div>
   <!-- /.content-wrapper -->
-  
   <footer class="main-footer">
-    <div class="pull-right hidden-xs"> <b>Version</b> 2.0.7 </div>
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 2.0.7
+    </div>
     <strong>Copyright &copy; 2016-2017 成都中慧.</strong> All rights
-    reserved. </footer>
-  
+    reserved.
+  </footer>
 
+  <!-- Control Sidebar -->
+  
+  <!-- /.control-sidebar -->
   <!-- Add the sidebar's background. This div must be placed
        immediately after the control sidebar -->
   <div class="control-sidebar-bg"></div>
 </div>
-<!-- ./wrapper --> 
+<!-- ./wrapper -->
 
-<!-- jQuery 3 --> 
-<script src="/itmsdb/Public/bower_components/jquery/dist/jquery.min.js"></script> 
-<!-- Bootstrap 3.3.7 --> 
-<script src="/itmsdb/Public/bower_components/bootstrap/dist/js/bootstrap.min.js"></script> 
-<!-- FastClick --> 
-<script src="/itmsdb/Public/bower_components/fastclick/lib/fastclick.js"></script> 
-<!-- AdminLTE App --> 
-<script src="/itmsdb/Public/dist/js/adminlte.min.js"></script> 
-<!-- Sparkline --> 
-<script src="/itmsdb/Public/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script> 
-<!-- jvectormap  --> 
-<script src="/itmsdb/Public/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script> 
-<script src="/itmsdb/Public/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script> 
-<!-- SlimScroll --> 
-<script src="/itmsdb/Public/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script> 
-<!-- ChartJS --> 
-<script src="/itmsdb/Public/bower_components/Chart.js/Chart.js"></script> 
-<!-- AdminLTE dashboard demo (This is only for demo purposes) --> 
-<script src="/itmsdb/Public/dist/js/pages/dashboard2.js"></script> 
-<!-- AdminLTE for demo purposes --> 
+<!-- jQuery 3 -->
+<script src="/itmsdb/Public/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="/itmsdb/Public/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="/itmsdb/Public/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="/itmsdb/Public/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="/itmsdb/Public/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="/itmsdb/Public/bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="/itmsdb/Public/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
 <script src="/itmsdb/Public/dist/js/demo.js"></script>
+<!-- page script -->
+<script>
+  $(function () {
+    $('#example1').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
+</script>
 </body>
 </html>

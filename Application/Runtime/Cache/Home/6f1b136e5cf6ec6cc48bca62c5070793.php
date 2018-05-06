@@ -34,6 +34,7 @@
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
+
   <header class="main-header"> 
     
     <!-- Logo --> 
@@ -134,15 +135,15 @@
     <section class="content-header">
       <h1>      
           <ol class="breadcrumb">
-            <li><a href="<?php echo U('Index/index2');?>"><i class="fa  fa-sign-out"></i> 主页</a></li>
-            <li><a href="#">小车子系统</a></li>
-            <li class="active">车辆充值记录</li>
+            <li><a href="../../index2.html"><i class="fa  fa-sign-out"></i> 主页</a></li>
+            <li><a href="#">用户管理</a></li>
+            <li class="active">用户管理权限</li>
           </ol>
       </h1>
     </section>
 
- <!-- Main content -->
-    <section class="content">
+    <!-- Main content -->
+   <section class="content">
       <div class="row">
         <div class="col-xs-12">
          
@@ -153,127 +154,173 @@
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                   <tr>
-                    <th>车辆编号</th>
-                    <th>车牌号</th>
-                    <th>充值金额</th>
-                    <th>充值操作员</th>
-                    <th>充值时间</th>
+                    <th>ID</th>
+                    <th>用户名称</th>
+                    <th>口令</th>
+                    <th>角色</th>
+                    <th>权限管理</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>1</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
                     <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
+                    <td>123456</td>
+                    <td>一般管理员</td>
+                    <td>
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-default">设为一般管理员</button>
+                          <button type="button" class="btn btn-default">设为普通用户</button>
+                          <button type="button" class="btn btn-default">设为无效用户</button>
+                        </div>
+                    </td>
                   </tr>
                   <tr>
                     <td>1</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
                     <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
+                    <td>123456</td>
+                    <td>一般管理员</td>
+                    <td>
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-default">设为一般管理员</button>
+                          <button type="button" class="btn btn-default">设为普通用户</button>
+                          <button type="button" class="btn btn-default">设为无效用户</button>
+                        </div>
+                    </td>
                   </tr>
                   <tr>
                     <td>1</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
                     <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
+                    <td>123456</td>
+                    <td>一般管理员</td>
+                    <td>
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-default">设为一般管理员</button>
+                          <button type="button" class="btn btn-default">设为普通用户</button>
+                          <button type="button" class="btn btn-default">设为无效用户</button>
+                        </div>
+                    </td>
                   </tr>
                   <tr>
-                    <td>2</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
+                    <td>1</td>
                     <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
+                    <td>123456</td>
+                    <td>一般管理员</td>
+                    <td>
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-default">设为一般管理员</button>
+                          <button type="button" class="btn btn-default">设为普通用户</button>
+                          <button type="button" class="btn btn-default">设为无效用户</button>
+                        </div>
+                    </td>
                   </tr>                  
                   <tr>
                     <td>1</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
                     <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
+                    <td>123456</td>
+                    <td>一般管理员</td>
+                    <td>
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-default">设为一般管理员</button>
+                          <button type="button" class="btn btn-default">设为普通用户</button>
+                          <button type="button" class="btn btn-default">设为无效用户</button>
+                        </div>
+                    </td>
                   </tr>
                   <tr>
-                    <td>2</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
+                    <td>1</td>
                     <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
+                    <td>123456</td>
+                    <td>一般管理员</td>
+                    <td>
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-default">设为一般管理员</button>
+                          <button type="button" class="btn btn-default">设为普通用户</button>
+                          <button type="button" class="btn btn-default">设为无效用户</button>
+                        </div>
+                    </td>
                   </tr>                  
                   <tr>
                     <td>1</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
                     <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
+                    <td>123456</td>
+                    <td>一般管理员</td>
+                    <td>
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-default">设为一般管理员</button>
+                          <button type="button" class="btn btn-default">设为普通用户</button>
+                          <button type="button" class="btn btn-default">设为无效用户</button>
+                        </div>
+                    </td>
                   </tr>
                   <tr>
-                    <td>2</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
+                    <td>1</td>
                     <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
+                    <td>123456</td>
+                    <td>一般管理员</td>
+                    <td>
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-default">设为一般管理员</button>
+                          <button type="button" class="btn btn-default">设为普通用户</button>
+                          <button type="button" class="btn btn-default">设为无效用户</button>
+                        </div>
+                    </td>
                   </tr>                  
+                  <tr>
+                    <td>1</td>
+                    <td>user1</td>
+                    <td>123456</td>
+                    <td>一般管理员</td>
+                    <td>
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-default">设为一般管理员</button>
+                          <button type="button" class="btn btn-default">设为普通用户</button>
+                          <button type="button" class="btn btn-default">设为无效用户</button>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>user1</td>
+                    <td>123456</td>
+                    <td>一般管理员</td>
+                    <td>
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-default">设为一般管理员</button>
+                          <button type="button" class="btn btn-default">设为普通用户</button>
+                          <button type="button" class="btn btn-default">设为无效用户</button>
+                        </div>
+                    </td>
+                  <tr>
+                    <td>1</td>
+                    <td>user1</td>
+                    <td>123456</td>
+                    <td>一般管理员</td>
+                    <td>
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-default">设为一般管理员</button>
+                          <button type="button" class="btn btn-default">设为普通用户</button>
+                          <button type="button" class="btn btn-default">设为无效用户</button>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>user1</td>
+                    <td>123456</td>
+                    <td>一般管理员</td>
+                    <td>
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-default">设为一般管理员</button>
+                          <button type="button" class="btn btn-default">设为普通用户</button>
+                          <button type="button" class="btn btn-default">设为无效用户</button>
+                        </div>
+                    </td>
+                  </tr>  
+                                  
                   
-                  <tr>
-                    <td>Other browsers</td>
-                    <td>&nbsp;</td>
-                    <td>All others</td>
-                    <td>-</td>
-                    <td>-</td>
-                  </tr>
+                  
+                  
                 </tbody>
                 <tfoot>
                 </tfoot>
@@ -287,7 +334,7 @@
       </div>
       <!-- /.row --> 
     </section>
-    <!-- /.content --> 
+    <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">

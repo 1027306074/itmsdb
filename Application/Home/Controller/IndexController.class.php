@@ -34,5 +34,44 @@ class IndexController extends Controller {
 	public function data013(){
 		$this->display();	
 	}
+	public function data021(){
+		$this->display();	
+	}
+	public function data031(){
+		$this->display();	
+	}
+	public function data041(){
+		$this->display();	
+	}
+	public function data051(){
+		$this->display();	
+	}
+	public function data052(){
+		$this->display();	
+	}
+	public function data061(){
+		$this->display();	
+	}
+	public function data071(){
+		$this->display();	
+	}
+	public function data072(){
+		$this->display();	
+	}
+	public function data081(){
+		$this->display();	
+	}
+	public function data082(){
+		$this->display();	
+	}
+	public function data091(){
+		$this->display();	
+	}
+	public function data101(){
+		$this->display();	
+	}
+	public function data111(){
+		$this->display();	
+	}
 	
 }

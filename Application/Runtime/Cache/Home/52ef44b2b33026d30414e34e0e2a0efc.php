@@ -34,6 +34,7 @@
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
+
   <header class="main-header"> 
     
     <!-- Logo --> 
@@ -127,117 +128,212 @@
     </section>
     <!-- /.sidebar --> 
   </aside>
-  
+
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper"> 
+  <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1> 仪表盘 <small>版本 2.0</small> </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> 主页</a></li>
-        <li class="active">仪表盘</li>
-      </ol>
+      <h1>      
+          <ol class="breadcrumb">
+            <li><a href="../../index2.html"><i class="fa  fa-sign-out"></i> 主页</a></li>
+            <li><a href="#">基础数据表</a></li>
+            <li class="active">车辆信息</li>
+          </ol>
+      </h1>
     </section>
-    
+
     <!-- Main content -->
-    <section class="content"> 
-      <!-- Info boxes -->
+   <section class="content">
       <div class="row">
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box"> <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
-            <div class="info-box-content"> <span class="info-box-text">温度</span> <span class="info-box-number">20<small>℃</small></span> </div>
-            <!-- /.info-box-content --> 
-          </div>
-          <!-- /.info-box --> 
-        </div>
-        <!-- /.col -->
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box"> <span class="info-box-icon bg-red"><i class="fa fa-google-plus"></i></span>
-            <div class="info-box-content"> <span class="info-box-text">湿度</span> <span class="info-box-number">41,410</span> </div>
-            <!-- /.info-box-content --> 
-          </div>
-          <!-- /.info-box --> 
-        </div>
-        <!-- /.col --> 
-        
-        <!-- fix for small devices only -->
-        <div class="clearfix visible-sm-block"></div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box"> <span class="info-box-icon bg-green"><i class="ion ion-ios-cart-outline"></i></span>
-            <div class="info-box-content"> <span class="info-box-text">CQ2</span> <span class="info-box-number">760</span> </div>
-            <!-- /.info-box-content --> 
-          </div>
-          <!-- /.info-box --> 
-        </div>
-        <!-- /.col -->
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box"> <span class="info-box-icon bg-yellow"><i class="ion ion-ios-people-outline"></i></span>
-            <div class="info-box-content"> <span class="info-box-text">PM2.5</span> <span class="info-box-number">2,000</span> </div>
-            <!-- /.info-box-content --> 
-          </div>
-          <!-- /.info-box --> 
-        </div>
-        <!-- /.col --> 
-      </div>
-      <!-- /.row -->
-      
-      <div class="row">
-        <div class="col-md-12">
+        <div class="col-xs-12">
+         
           <div class="box">
-            <div class="box-header with-border">
-              <h3 class="box-title">月度回顾报告</h3>
-			  <img class="img-responsive pad" src="/itmsdb/Public/dist/img/main_bg.jpg" alt="Photo">
 
-
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>车辆编号</th>
+                    <th>车牌号</th>
+                    <th>车主</th>
+                    <th>车主身份证</th>
+					<th>购买日期</th>
+					<th>车辆品牌</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+					<td>1</td>
+					<td>1</td>
+					<td>辽B12345</td>
+                    <td>何颖升</td>
+                    <td>370213196502141014</td>
+					<td>2018-11-11</td>
+                    <td>奥迪</td>
+                  </tr>
+                   <tr>
+					<td>1</td>
+					<td>1</td>
+					<td>辽B12345</td>
+                    <td>何颖升</td>
+                    <td>370213196502141014</td>
+					<td>2018-11-11</td>
+                    <td>奥迪</td>
+                  </tr>
+                  <tr>
+					<td>1</td>
+					<td>1</td>
+					<td>辽B12345</td>
+                    <td>何颖升</td>
+                    <td>370213196502141014</td>
+					<td>2018-11-11</td>
+                    <td>奥迪</td>
+                  </tr>
+                   <tr>
+					<td>1</td>
+					<td>1</td>
+					<td>辽B12345</td>
+                    <td>何颖升</td>
+                    <td>370213196502141014</td>
+					<td>2018-11-11</td>
+                    <td>奥迪</td>
+                  </tr>				  
+                  <tr>
+					<td>1</td>
+					<td>1</td>
+					<td>辽B12345</td>
+                    <td>何颖升</td>
+                    <td>370213196502141014</td>
+					<td>2018-11-11</td>
+                    <td>奥迪</td>
+                  </tr>
+                   <tr>
+					<td>1</td>
+					<td>1</td>
+					<td>辽B12345</td>
+                    <td>何颖升</td>
+                    <td>370213196502141014</td>
+					<td>2018-11-11</td>
+                    <td>奥迪</td>
+                  </tr>				  
+                  <tr>
+					<td>1</td>
+					<td>1</td>
+					<td>辽B12345</td>
+                    <td>何颖升</td>
+                    <td>370213196502141014</td>
+					<td>2018-11-11</td>
+                    <td>奥迪</td>
+                  </tr>
+                   <tr>
+					<td>1</td>
+					<td>1</td>
+					<td>辽B12345</td>
+                    <td>何颖升</td>
+                    <td>370213196502141014</td>
+					<td>2018-11-11</td>
+                    <td>奥迪</td>
+                  </tr>				  
+                  <tr>
+					<td>1</td>
+					<td>1</td>
+					<td>辽B12345</td>
+                    <td>何颖升</td>
+                    <td>370213196502141014</td>
+					<td>2018-11-11</td>
+                    <td>奥迪</td>
+                  </tr>
+                   <tr>
+					<td>1</td>
+					<td>1</td>
+					<td>辽B12345</td>
+                    <td>何颖升</td>
+                    <td>370213196502141014</td>
+					<td>2018-11-11</td>
+                    <td>奥迪</td>
+                  </tr>				  
+                  <tr>
+					<td>1</td>
+					<td>1</td>
+					<td>辽B12345</td>
+                    <td>何颖升</td>
+                    <td>370213196502141014</td>
+					<td>2018-11-11</td>
+                    <td>奥迪</td>
+                  </tr>
+                   <tr>
+					<td>1</td>
+					<td>1</td>
+					<td>辽B12345</td>
+                    <td>何颖升</td>
+                    <td>370213196502141014</td>
+					<td>2018-11-11</td>
+                    <td>奥迪</td>
+                  </tr>				  
+				  
+                </tbody>
+                <tfoot>
+                </tfoot>
+              </table>
             </div>
-            
-            </div>
-            
-            </div>
-            <!-- /.box-footer --> 
+            <!-- /.box-body --> 
           </div>
           <!-- /.box --> 
         </div>
         <!-- /.col --> 
+      </div>
       <!-- /.row --> 
-      
- 
     </section>
-    <!-- /.content --> 
+    <!-- /.content -->
+  </div>
   <!-- /.content-wrapper -->
-  
   <footer class="main-footer">
-    <div class="pull-right hidden-xs"> <b>Version</b> 2.0.7 </div>
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 2.0.7
+    </div>
     <strong>Copyright &copy; 2016-2017 成都中慧.</strong> All rights
-    reserved. </footer>
-  
+    reserved.
+  </footer>
 
+  <!-- Control Sidebar -->
+  
+  <!-- /.control-sidebar -->
   <!-- Add the sidebar's background. This div must be placed
        immediately after the control sidebar -->
   <div class="control-sidebar-bg"></div>
 </div>
-<!-- ./wrapper --> 
+<!-- ./wrapper -->
 
-<!-- jQuery 3 --> 
-<script src="/itmsdb/Public/bower_components/jquery/dist/jquery.min.js"></script> 
-<!-- Bootstrap 3.3.7 --> 
-<script src="/itmsdb/Public/bower_components/bootstrap/dist/js/bootstrap.min.js"></script> 
-<!-- FastClick --> 
-<script src="/itmsdb/Public/bower_components/fastclick/lib/fastclick.js"></script> 
-<!-- AdminLTE App --> 
-<script src="/itmsdb/Public/dist/js/adminlte.min.js"></script> 
-<!-- Sparkline --> 
-<script src="/itmsdb/Public/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script> 
-<!-- jvectormap  --> 
-<script src="/itmsdb/Public/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script> 
-<script src="/itmsdb/Public/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script> 
-<!-- SlimScroll --> 
-<script src="/itmsdb/Public/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script> 
-<!-- ChartJS --> 
-<script src="/itmsdb/Public/bower_components/Chart.js/Chart.js"></script> 
-<!-- AdminLTE dashboard demo (This is only for demo purposes) --> 
-<script src="/itmsdb/Public/dist/js/pages/dashboard2.js"></script> 
-<!-- AdminLTE for demo purposes --> 
+<!-- jQuery 3 -->
+<script src="/itmsdb/Public/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="/itmsdb/Public/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="/itmsdb/Public/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="/itmsdb/Public/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="/itmsdb/Public/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="/itmsdb/Public/bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="/itmsdb/Public/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
 <script src="/itmsdb/Public/dist/js/demo.js"></script>
+<!-- page script -->
+<script>
+  $(function () {
+    $('#example1').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
+</script>
 </body>
 </html>

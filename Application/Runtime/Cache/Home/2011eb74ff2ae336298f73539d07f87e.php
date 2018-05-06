@@ -34,6 +34,7 @@
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
+
   <header class="main-header"> 
     
     <!-- Logo --> 
@@ -127,117 +128,302 @@
     </section>
     <!-- /.sidebar --> 
   </aside>
-  
+
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper"> 
+  <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1> 仪表盘 <small>版本 2.0</small> </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> 主页</a></li>
-        <li class="active">仪表盘</li>
-      </ol>
+      <h1>      
+          <ol class="breadcrumb">
+            <li><a href="../../index2.html"><i class="fa  fa-sign-out"></i> 主页</a></li>
+            
+            <li class="active">气象信息查询</li>
+          </ol>
+      </h1>
     </section>
-    
-    <!-- Main content -->
-    <section class="content"> 
-      <!-- Info boxes -->
-      <div class="row">
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box"> <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
-            <div class="info-box-content"> <span class="info-box-text">温度</span> <span class="info-box-number">20<small>℃</small></span> </div>
-            <!-- /.info-box-content --> 
-          </div>
-          <!-- /.info-box --> 
-        </div>
-        <!-- /.col -->
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box"> <span class="info-box-icon bg-red"><i class="fa fa-google-plus"></i></span>
-            <div class="info-box-content"> <span class="info-box-text">湿度</span> <span class="info-box-number">41,410</span> </div>
-            <!-- /.info-box-content --> 
-          </div>
-          <!-- /.info-box --> 
-        </div>
-        <!-- /.col --> 
-        
-        <!-- fix for small devices only -->
-        <div class="clearfix visible-sm-block"></div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box"> <span class="info-box-icon bg-green"><i class="ion ion-ios-cart-outline"></i></span>
-            <div class="info-box-content"> <span class="info-box-text">CQ2</span> <span class="info-box-number">760</span> </div>
-            <!-- /.info-box-content --> 
-          </div>
-          <!-- /.info-box --> 
-        </div>
-        <!-- /.col -->
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box"> <span class="info-box-icon bg-yellow"><i class="ion ion-ios-people-outline"></i></span>
-            <div class="info-box-content"> <span class="info-box-text">PM2.5</span> <span class="info-box-number">2,000</span> </div>
-            <!-- /.info-box-content --> 
-          </div>
-          <!-- /.info-box --> 
-        </div>
+
+	<!-- Main content -->
+    <section class="content">
+
+		<div class="row">
+			<div class="col-md-6">
+				<!-- AREA CHART -->
+				<div class="box box-primary">
+				<div class="box-header with-border">
+				  <h3 class="box-title">最近几天温度比较</h3>
+
+				  <div class="box-tools pull-right">
+					<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+					</button>
+					<button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+				  </div>
+				</div>
+				<div class="box-body chart-responsive">
+				  <div class="chart" id="revenue-chart" style="height: 300px;"></div>
+				</div>
+				<!-- /.box-body -->
+				</div>
+				<!-- /.box -->
+
+			</div>
+			<!-- /.col -->
+
+			<div class="col-md-6">
+			
+				<div class="box">
+
+				<!-- interactive chart -->
+				  <div class="box box-widget">
+					<div class="box-header with-border">
+					  <i class="fa fa-bar-chart-o"></i>
+
+					  <h3 class="box-title">温度实时显示</h3>
+
+					  <div class="box-tools pull-right">
+						Real time
+						<div class="btn-group" id="realtime" data-toggle="btn-toggle">
+						  <button type="button" class="btn btn-default btn-xs active" data-toggle="on">On</button>
+						  <button type="button" class="btn btn-default btn-xs" data-toggle="off">Off</button>
+						</div>
+					  </div>
+					</div>
+					<div class="box-body">
+					  <div id="interactive" style="height: 300px;"></div>
+					</div>
+					<!-- /.box-body-->
+				  </div>
+				  <!-- /.box -->
+				<!-- /.box-body -->
+			  </div>
+			  <!-- /.box -->		
+			
+		
+								
+			</div>
+		</div>	
         <!-- /.col --> 
       </div>
-      <!-- /.row -->
-      
-      <div class="row">
-        <div class="col-md-12">
-          <div class="box">
-            <div class="box-header with-border">
-              <h3 class="box-title">月度回顾报告</h3>
-			  <img class="img-responsive pad" src="/itmsdb/Public/dist/img/main_bg.jpg" alt="Photo">
-
-
-            </div>
-            
-            </div>
-            
-            </div>
-            <!-- /.box-footer --> 
-          </div>
-          <!-- /.box --> 
-        </div>
-        <!-- /.col --> 
       <!-- /.row --> 
-      
- 
     </section>
     <!-- /.content --> 
   <!-- /.content-wrapper -->
-  
   <footer class="main-footer">
-    <div class="pull-right hidden-xs"> <b>Version</b> 2.0.7 </div>
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 2.0.7
+    </div>
     <strong>Copyright &copy; 2016-2017 成都中慧.</strong> All rights
-    reserved. </footer>
-  
+    reserved.
+  </footer>
 
+  <!-- Control Sidebar -->
+  
+  <!-- /.control-sidebar -->
   <!-- Add the sidebar's background. This div must be placed
        immediately after the control sidebar -->
   <div class="control-sidebar-bg"></div>
 </div>
-<!-- ./wrapper --> 
-
-<!-- jQuery 3 --> 
-<script src="/itmsdb/Public/bower_components/jquery/dist/jquery.min.js"></script> 
-<!-- Bootstrap 3.3.7 --> 
-<script src="/itmsdb/Public/bower_components/bootstrap/dist/js/bootstrap.min.js"></script> 
-<!-- FastClick --> 
-<script src="/itmsdb/Public/bower_components/fastclick/lib/fastclick.js"></script> 
-<!-- AdminLTE App --> 
-<script src="/itmsdb/Public/dist/js/adminlte.min.js"></script> 
-<!-- Sparkline --> 
-<script src="/itmsdb/Public/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script> 
-<!-- jvectormap  --> 
-<script src="/itmsdb/Public/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script> 
-<script src="/itmsdb/Public/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script> 
-<!-- SlimScroll --> 
-<script src="/itmsdb/Public/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script> 
-<!-- ChartJS --> 
-<script src="/itmsdb/Public/bower_components/Chart.js/Chart.js"></script> 
-<!-- AdminLTE dashboard demo (This is only for demo purposes) --> 
-<script src="/itmsdb/Public/dist/js/pages/dashboard2.js"></script> 
-<!-- AdminLTE for demo purposes --> 
+<!-- ./wrapper -->
+<!-- jQuery 3 -->
+<script src="/itmsdb/Public/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="/itmsdb/Public/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- Morris.js charts -->
+<script src="/itmsdb/Public/bower_components/raphael/raphael.min.js"></script>
+<script src="/itmsdb/Public/bower_components/morris.js/morris.min.js"></script>
+<!-- FastClick -->
+<script src="/itmsdb/Public/bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="/itmsdb/Public/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
 <script src="/itmsdb/Public/dist/js/demo.js"></script>
+<!-- FLOT CHARTS -->
+<script src="/itmsdb/Public/bower_components/Flot/jquery.flot.js"></script>
+<!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
+<script src="/itmsdb/Public/bower_components/Flot/jquery.flot.resize.js"></script>
+<!-- FLOT PIE PLUGIN - also used to draw donut charts -->
+<script src="/itmsdb/Public/bower_components/Flot/jquery.flot.pie.js"></script>
+<!-- FLOT CATEGORIES PLUGIN - Used to draw bar charts -->
+<script src="/itmsdb/Public/bower_components/Flot/jquery.flot.categories.js"></script>
+<!-- Page script -->
+<!-- page script -->
+<script>
+  $(function () {
+  
+  /*
+     * Flot Interactive Chart
+     * -----------------------
+     */
+    // We use an inline data source in the example, usually data would
+    // be fetched from a server
+    var data = [], totalPoints = 100
+
+    function getRandomData() {
+
+      if (data.length > 0)
+        data = data.slice(1)
+
+      // Do a random walk
+      while (data.length < totalPoints) {
+
+        var prev = data.length > 0 ? data[data.length - 1] : 50,
+            y    = prev + Math.random() * 10 - 5
+
+        if (y < 0) {
+          y = 0
+        } else if (y > 100) {
+          y = 100
+        }
+
+        data.push(y)
+      }
+
+      // Zip the generated y values with the x values
+      var res = []
+      for (var i = 0; i < data.length; ++i) {
+        res.push([i, data[i]])
+      }
+
+      return res
+    }
+
+    var interactive_plot = $.plot('#interactive', [getRandomData()], {
+      grid  : {
+        borderColor: '#f3f3f3',
+        borderWidth: 1,
+        tickColor  : '#f3f3f3'
+      },
+      series: {
+        shadowSize: 0, // Drawing is faster without shadows
+        color     : '#3c8dbc'
+      },
+      lines : {
+        fill : true, //Converts the line chart to area chart
+        color: '#3c8dbc'
+      },
+      yaxis : {
+        min : 0,
+        max : 100,
+        show: true
+      },
+      xaxis : {
+        show: true
+      }
+    })
+
+    var updateInterval = 500 //Fetch data ever x milliseconds
+    var realtime       = 'on' //If == to on then fetch data every x seconds. else stop fetching
+    function update() {
+
+      interactive_plot.setData([getRandomData()])
+
+      // Since the axes don't change, we don't need to call plot.setupGrid()
+      interactive_plot.draw()
+      if (realtime === 'on')
+        setTimeout(update, updateInterval)
+    }
+
+    //INITIALIZE REALTIME DATA FETCHING
+    if (realtime === 'on') {
+      update()
+    }
+    //REALTIME TOGGLE
+    $('#realtime .btn').click(function () {
+      if ($(this).data('toggle') === 'on') {
+        realtime = 'on'
+      }
+      else {
+        realtime = 'off'
+      }
+      update()
+    })
+    /*
+     * END INTERACTIVE CHART
+     */
+	
+		
+	
+    "use strict";
+
+    // AREA CHART
+    var area = new Morris.Area({
+      element: 'revenue-chart',
+      resize: true,
+      data: [
+        {y: '2011 Q1', item1: 2666, item2: 2666},
+        {y: '2011 Q2', item1: 2778, item2: 2294},
+        {y: '2011 Q3', item1: 4912, item2: 1969},
+        {y: '2011 Q4', item1: 3767, item2: 3597},
+        {y: '2012 Q1', item1: 6810, item2: 1914},
+        {y: '2012 Q2', item1: 5670, item2: 4293},
+        {y: '2012 Q3', item1: 4820, item2: 3795},
+        {y: '2012 Q4', item1: 15073, item2: 5967},
+        {y: '2013 Q1', item1: 10687, item2: 4460},
+        {y: '2013 Q2', item1: 8432, item2: 5713}
+      ],
+      xkey: 'y',
+      ykeys: ['item1', 'item2'],
+      labels: ['Item 1', 'Item 2'],
+      lineColors: ['#a0d0e0', '#3c8dbc'],
+      hideHover: 'auto'
+    });
+
+    // LINE CHART
+    var line = new Morris.Line({
+      element: 'line-chart',
+      resize: true,
+      data: [
+        {y: '2011 Q1', item1: 2666},
+        {y: '2011 Q2', item1: 2778},
+        {y: '2011 Q3', item1: 4912},
+        {y: '2011 Q4', item1: 3767},
+        {y: '2012 Q1', item1: 6810},
+        {y: '2012 Q2', item1: 5670},
+        {y: '2012 Q3', item1: 4820},
+        {y: '2012 Q4', item1: 15073},
+        {y: '2013 Q1', item1: 10687},
+        {y: '2013 Q2', item1: 8432}
+      ],
+      xkey: 'y',
+      ykeys: ['item1'],
+      labels: ['Item 1'],
+      lineColors: ['#3c8dbc'],
+      hideHover: 'auto'
+    });
+
+    //DONUT CHART
+    var donut = new Morris.Donut({
+      element: 'sales-chart',
+      resize: true,
+      colors: ["#3c8dbc", "#f56954", "#00a65a"],
+      data: [
+        {label: "Download Sales", value: 12},
+        {label: "In-Store Sales", value: 30},
+        {label: "Mail-Order Sales", value: 20}
+      ],
+      hideHover: 'auto'
+    });
+    //BAR CHART
+    var bar = new Morris.Bar({
+      element: 'bar-chart',
+      resize: true,
+      data: [
+        {y: '2006', a: 100, b: 90},
+        {y: '2007', a: 75, b: 65},
+        {y: '2008', a: 50, b: 40},
+        {y: '2009', a: 75, b: 65},
+        {y: '2010', a: 50, b: 40},
+        {y: '2011', a: 75, b: 65},
+        {y: '2012', a: 100, b: 90}
+      ],
+      barColors: ['#00a65a', '#f56954'],
+      xkey: 'y',
+      ykeys: ['a', 'b'],
+      labels: ['CPU', 'DISK'],
+      hideHover: 'auto'
+    });
+	
+	
+  });
+</script>
 </body>
 </html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<include file="./Application/Home/View/default/Public/header.html" />
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+<include file="./Application/Home/View/default/Public/common.html" />
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>      
+          <ol class="breadcrumb">
+            <li><a href="../../index2.html"><i class="fa  fa-sign-out"></i> 主页</a></li>
+            <li><a href="#">Etc模块</a></li>
+            <li class="active">Etc基本信息</li>
+          </ol>
+      </h1>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+	
+	<!-- Small boxes (Stat box) -->
+     <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-aqua"><i class="fa fa-envelope-o"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">当前费率</span>
+              <span class="info-box-number">10</span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- ./col -->
+		<!-- /.box-body -->
+		<div class="col-md-3 col-sm-6 col-xs-12"">
+		  <form action="#" method="post">
+			<div class="info-box"">
+			  <input type="number" name="message" placeholder="输入新的费率" class="form-control">
+				  <span class="input-group-btn">
+					<button type="submit" class="btn btn-primary btn-flat">修改</button>
+				  </span>
+			</div>
+		  </form>
+		</div>
+		<!-- /.box-footer-->
+      </div>
+      <!-- /.row -->
+	
+	
+	
+      <div class="row">
+	              <div class="box-header">
+              <h3 class="box-title">黑名单管理</h3>
+            </div>
+        <div class="col-xs-12">
+        
+        
+          <div class="box">
+
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+
+                  <tr>
+                    <th>车辆编号</th>
+					<th>选项</th>
+                    <th>车牌号</th>
+                    <th>车主</th>
+                    <th>黑名单</th>                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td><label> <input type="checkbox" class="minimal-red">  </label></td>
+                    <td>辽B12345</td>
+                    <td>张胜男</td>
+                    <td>是</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td><label> <input type="checkbox" class="minimal-red">  </label></td>
+                    <td>辽B12345</td>
+                    <td>张胜男</td>
+                    <td>是</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td><label> <input type="checkbox" class="minimal-red">  </label></td>
+                    <td>辽B12345</td>
+                    <td>张胜男</td>
+                    <td>否</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td><label> <input type="checkbox" class="minimal-red">  </label></td>
+                    <td>辽B12345</td>
+                    <td>张胜男</td>
+                    <td>是</td>
+                  </tr>                  <tr>
+                    <td>5</td>
+                    <td><label> <input type="checkbox" class="minimal-red">  </label></td>
+                    <td>辽B12345</td>
+                    <td>张胜男</td>
+                    <td>是</td>
+                  </tr>
+
+				  
+                </tbody>
+                <tfoot>
+                </tfoot>
+              </table>
+            </div>
+            <!-- /.box-body --> 
+          </div>
+          <!-- /.box -->
+          
+			<button type="button" class="btn bg-primary btn-flat margin">加入黑名单</button>
+
+          
+
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+<include file="./Application/Home/View/default/Public/footer.html" />
+</body>
+</html>
