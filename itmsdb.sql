@@ -1,21 +1,22 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : localhost_3306
-Source Server Version : 50162
+Source Server         : etc
+Source Server Version : 50553
 Source Host           : localhost:3306
 Source Database       : itmsdb
 
 Target Server Type    : MYSQL
-Target Server Version : 50162
+Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2017-12-11 00:28:49
+Date: 2018-05-06 16:13:43
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
 -- ----------------------------
--- Table structure for `carinfo`
+-- Table structure for carinfo
 -- ----------------------------
 DROP TABLE IF EXISTS `carinfo`;
 CREATE TABLE `carinfo` (
@@ -25,585 +26,586 @@ CREATE TABLE `carinfo` (
   `buydate` date DEFAULT NULL,
   `carbrand` varchar(50) DEFAULT NULL,
   `cardbrand` varchar(255) DEFAULT NULL,
+  `is_black` int(2) DEFAULT '0',
   PRIMARY KEY (`carnumber`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of carinfo
 -- ----------------------------
-INSERT INTO `carinfo` VALUES ('鲁A10001', '101', '370214197107271055', '2016-06-01', 'audi', null);
-INSERT INTO `carinfo` VALUES ('鲁A10002', '102', '370281197208281056', '2016-06-01', 'baoma', null);
-INSERT INTO `carinfo` VALUES ('鲁A10003', '103', '370282197309011057', '2016-06-01', 'benchi', null);
-INSERT INTO `carinfo` VALUES ('鲁A10004', '104', '370283197410021058', '2016-06-01', 'bentian', null);
-INSERT INTO `carinfo` VALUES ('鲁A10005', '105', '370284197511031059', '2016-06-01', 'biaozhi', null);
-INSERT INTO `carinfo` VALUES ('鲁A10006', '106', '370285197612041060', '2016-06-01', 'bieke', null);
-INSERT INTO `carinfo` VALUES ('鲁A10007', '107', '370101197701051061', '2016-06-01', 'biyadi', null);
-INSERT INTO `carinfo` VALUES ('鲁A10008', '108', '370102197802061062', '2016-06-01', 'dazhong', null);
-INSERT INTO `carinfo` VALUES ('鲁A10009', '109', '370103197903071063', '2016-06-01', 'fengtian', null);
-INSERT INTO `carinfo` VALUES ('鲁A10010', '110', '370104197104081064', '2016-06-01', 'fute', null);
-INSERT INTO `carinfo` VALUES ('鲁A10011', '111', '370105197205091065', '2016-06-01', 'mazhida', null);
-INSERT INTO `carinfo` VALUES ('鲁A10012', '112', '370112197306101066', '2016-06-01', 'qirui', null);
-INSERT INTO `carinfo` VALUES ('鲁A10013', '113', '370123197407111067', '2016-06-01', 'richan', null);
-INSERT INTO `carinfo` VALUES ('鲁A10014', '114', '370201197508121068', '2016-06-01', 'sanling', null);
-INSERT INTO `carinfo` VALUES ('鲁A10015', '115', '370202197609131069', '2016-06-01', 'sibalu', null);
-INSERT INTO `carinfo` VALUES ('鲁A10016', '116', '370203197710141070', '2016-06-01', 'tesila', null);
-INSERT INTO `carinfo` VALUES ('鲁A10017', '117', '370205197811151071', '2016-06-01', 'voervo', null);
-INSERT INTO `carinfo` VALUES ('鲁A10018', '118', '370211197912161072', '2016-06-01', 'xiandai', null);
-INSERT INTO `carinfo` VALUES ('鲁A10019', '119', '370212197101171073', '2016-06-01', 'xuefulan', null);
-INSERT INTO `carinfo` VALUES ('鲁A10020', '120', '370213197202181074', '2016-06-01', 'zhonghua', null);
-INSERT INTO `carinfo` VALUES ('鲁A10021', '121', '370214197303191075', '2016-06-01', 'audi', null);
-INSERT INTO `carinfo` VALUES ('鲁A10022', '122', '370281197404201076', '2016-06-01', 'baoma', null);
-INSERT INTO `carinfo` VALUES ('鲁A10023', '123', '370282197505211077', '2016-06-01', 'benchi', null);
-INSERT INTO `carinfo` VALUES ('鲁A10024', '124', '370283197606221078', '2016-06-01', 'bentian', null);
-INSERT INTO `carinfo` VALUES ('鲁A10025', '125', '370284197707231079', '2016-06-01', 'biaozhi', null);
-INSERT INTO `carinfo` VALUES ('鲁A10026', '126', '370285197808241080', '2016-06-01', 'bieke', null);
-INSERT INTO `carinfo` VALUES ('鲁A10027', '127', '370101197909251081', '2016-06-01', 'biyadi', null);
-INSERT INTO `carinfo` VALUES ('鲁A10028', '128', '370102197110261082', '2016-06-01', 'dazhong', null);
-INSERT INTO `carinfo` VALUES ('鲁A10029', '129', '370103197211271083', '2016-06-01', 'fengtian', null);
-INSERT INTO `carinfo` VALUES ('鲁A10030', '130', '370104197312281084', '2016-06-01', 'fute', null);
-INSERT INTO `carinfo` VALUES ('鲁A10031', '131', '370105197401011085', '2016-06-01', 'mazhida', null);
-INSERT INTO `carinfo` VALUES ('鲁A10032', '132', '370112197502021086', '2016-06-01', 'qirui', null);
-INSERT INTO `carinfo` VALUES ('鲁A10033', '133', '370123197603031087', '2016-06-01', 'richan', null);
-INSERT INTO `carinfo` VALUES ('鲁A10034', '134', '370201197704041088', '2016-06-01', 'sanling', null);
-INSERT INTO `carinfo` VALUES ('鲁A10035', '135', '370202197805051089', '2016-06-01', 'sibalu', null);
-INSERT INTO `carinfo` VALUES ('鲁A10036', '136', '370203197906061090', '2016-06-01', 'tesila', null);
-INSERT INTO `carinfo` VALUES ('鲁A10037', '137', '370205198107071091', '2016-06-01', 'voervo', null);
-INSERT INTO `carinfo` VALUES ('鲁A10038', '138', '370211198208081092', '2016-06-01', 'xiandai', null);
-INSERT INTO `carinfo` VALUES ('鲁A10039', '139', '370212198309091093', '2016-06-01', 'xuefulan', null);
-INSERT INTO `carinfo` VALUES ('鲁A10040', '140', '370213198410101094', '2016-06-01', 'zhonghua', null);
-INSERT INTO `carinfo` VALUES ('鲁A10041', '141', '370214198511111095', '2016-06-01', 'audi', null);
-INSERT INTO `carinfo` VALUES ('鲁A10042', '142', '370281198612121096', '2016-06-01', 'baoma', null);
-INSERT INTO `carinfo` VALUES ('鲁A10043', '143', '370205196407031031', '2016-06-01', 'benchi', null);
-INSERT INTO `carinfo` VALUES ('鲁A10044', '144', '370211196508041032', '2016-06-01', 'bentian', null);
-INSERT INTO `carinfo` VALUES ('鲁A10045', '145', '370212196609051033', '2016-06-01', 'biaozhi', null);
-INSERT INTO `carinfo` VALUES ('鲁A10046', '146', '370213196710061034', '2016-06-01', 'bieke', null);
-INSERT INTO `carinfo` VALUES ('鲁A10047', '147', '370214196811071035', '2016-06-01', 'biyadi', null);
-INSERT INTO `carinfo` VALUES ('鲁A10048', '148', '370281196912081036', '2016-06-01', 'dazhong', null);
-INSERT INTO `carinfo` VALUES ('鲁A10049', '149', '370282196101091037', '2016-06-01', 'fengtian', null);
-INSERT INTO `carinfo` VALUES ('鲁A10050', '150', '370283196202101038', '2016-06-01', 'fute', null);
-INSERT INTO `carinfo` VALUES ('鲁A10051', '151', '370284196303111039', '2016-06-01', 'mazhida', null);
-INSERT INTO `carinfo` VALUES ('鲁A10052', '152', '370285196404121040', '2016-06-01', 'qirui', null);
-INSERT INTO `carinfo` VALUES ('鲁A10053', '153', '370101196505131041', '2016-06-01', 'richan', null);
-INSERT INTO `carinfo` VALUES ('鲁A10054', '154', '370102196606141042', '2016-06-01', 'sanling', null);
-INSERT INTO `carinfo` VALUES ('鲁A10055', '155', '370103196707151043', '2016-06-01', 'sibalu', null);
-INSERT INTO `carinfo` VALUES ('鲁A10056', '156', '370104196808161044', '2016-06-01', 'tesila', null);
-INSERT INTO `carinfo` VALUES ('鲁A10057', '157', '370105196909171045', '2016-06-01', 'voervo', null);
-INSERT INTO `carinfo` VALUES ('鲁A10058', '158', '370112197110181046', '2016-06-01', 'xiandai', null);
-INSERT INTO `carinfo` VALUES ('鲁A10059', '159', '370123197211191047', '2016-06-01', 'xuefulan', null);
-INSERT INTO `carinfo` VALUES ('鲁A10060', '160', '370201197312201048', '2016-06-01', 'zhonghua', null);
-INSERT INTO `carinfo` VALUES ('鲁A10061', '161', '370202197401211049', '2016-06-01', 'audi', null);
-INSERT INTO `carinfo` VALUES ('鲁A10062', '162', '370203197502221050', '2016-06-01', 'baoma', null);
-INSERT INTO `carinfo` VALUES ('鲁A10063', '163', '370205197603231051', '2016-06-01', 'benchi', null);
-INSERT INTO `carinfo` VALUES ('鲁A10064', '164', '370211197704241052', '2016-06-01', 'bentian', null);
-INSERT INTO `carinfo` VALUES ('鲁A10065', '165', '370212197805251053', '2016-06-01', 'biaozhi', null);
-INSERT INTO `carinfo` VALUES ('鲁A10066', '166', '370213197906261054', '2016-06-01', 'bieke', null);
-INSERT INTO `carinfo` VALUES ('鲁A10067', '167', '370214197107271055', '2016-06-01', 'biyadi', null);
-INSERT INTO `carinfo` VALUES ('鲁A10068', '168', '370281197208281056', '2016-06-01', 'dazhong', null);
-INSERT INTO `carinfo` VALUES ('鲁A10069', '169', '370282197309011057', '2016-06-01', 'fengtian', null);
-INSERT INTO `carinfo` VALUES ('鲁A10070', '170', '370283197410021058', '2016-06-01', 'fute', null);
-INSERT INTO `carinfo` VALUES ('鲁A10071', '171', '370284197511031059', '2016-06-01', 'mazhida', null);
-INSERT INTO `carinfo` VALUES ('鲁A10072', '172', '370285197612041060', '2016-06-01', 'qirui', null);
-INSERT INTO `carinfo` VALUES ('鲁A10073', '173', '370101197701051061', '2016-06-01', 'richan', null);
-INSERT INTO `carinfo` VALUES ('鲁A10074', '174', '370102197802061062', '2016-06-01', 'sanling', null);
-INSERT INTO `carinfo` VALUES ('鲁A10075', '175', '370103197903071063', '2016-06-01', 'sibalu', null);
-INSERT INTO `carinfo` VALUES ('鲁A10076', '176', '370104197104081064', '2016-06-01', 'tesila', null);
-INSERT INTO `carinfo` VALUES ('鲁A10077', '177', '370105197205091065', '2016-06-01', 'voervo', null);
-INSERT INTO `carinfo` VALUES ('鲁A10078', '178', '370112197306101066', '2016-06-01', 'xiandai', null);
-INSERT INTO `carinfo` VALUES ('鲁A10079', '179', '370123197407111067', '2016-06-01', 'xuefulan', null);
-INSERT INTO `carinfo` VALUES ('鲁A10080', '180', '370201197508121068', '2016-06-01', 'zhonghua', null);
-INSERT INTO `carinfo` VALUES ('鲁A10081', '181', '370202197609131069', '2016-06-01', 'audi', null);
-INSERT INTO `carinfo` VALUES ('鲁A10082', '182', '370203197710141070', '2016-06-01', 'baoma', null);
-INSERT INTO `carinfo` VALUES ('鲁A10083', '183', '370205197811151071', '2016-06-01', 'benchi', null);
-INSERT INTO `carinfo` VALUES ('鲁A10084', '184', '370211197912161072', '2016-06-01', 'bentian', null);
-INSERT INTO `carinfo` VALUES ('鲁A10085', '185', '370212197101171073', '2016-06-01', 'biaozhi', null);
-INSERT INTO `carinfo` VALUES ('鲁A10086', '186', '370213197202181074', '2016-06-01', 'bieke', null);
-INSERT INTO `carinfo` VALUES ('鲁A10087', '187', '370214197303191075', '2016-06-01', 'biyadi', null);
-INSERT INTO `carinfo` VALUES ('鲁A10088', '188', '370281197404201076', '2016-06-01', 'dazhong', null);
-INSERT INTO `carinfo` VALUES ('鲁A10089', '189', '370282197505211077', '2016-06-01', 'fengtian', null);
-INSERT INTO `carinfo` VALUES ('鲁A10090', '190', '370283197606221078', '2016-06-01', 'fute', null);
-INSERT INTO `carinfo` VALUES ('鲁A10091', '191', '370284197707231079', '2016-06-01', 'mazhida', null);
-INSERT INTO `carinfo` VALUES ('鲁A10092', '192', '370285197808241080', '2016-06-01', 'qirui', null);
-INSERT INTO `carinfo` VALUES ('鲁A10093', '193', '370101197909251081', '2016-06-01', 'richan', null);
-INSERT INTO `carinfo` VALUES ('鲁A10094', '194', '370102197110261082', '2016-06-01', 'sanling', null);
-INSERT INTO `carinfo` VALUES ('鲁A10095', '195', '370103197211271083', '2016-06-01', 'sibalu', null);
-INSERT INTO `carinfo` VALUES ('鲁A10096', '196', '370104197312281084', '2016-06-01', 'tesila', null);
-INSERT INTO `carinfo` VALUES ('鲁A10097', '197', '370105197401011085', '2016-06-01', 'voervo', null);
-INSERT INTO `carinfo` VALUES ('鲁A10098', '198', '370112197502021086', '2016-06-01', 'xiandai', null);
-INSERT INTO `carinfo` VALUES ('鲁A10099', '199', '370123197603031087', '2016-06-01', 'xuefulan', null);
-INSERT INTO `carinfo` VALUES ('鲁A10100', '200', '370201197704041088', '2016-06-01', 'zhonghua', null);
-INSERT INTO `carinfo` VALUES ('鲁A20001', '201', '370202197805051089', '2016-06-01', 'audi', null);
-INSERT INTO `carinfo` VALUES ('鲁A20002', '202', '370203197906061090', '2016-06-01', 'baoma', null);
-INSERT INTO `carinfo` VALUES ('鲁A20003', '203', '370205198107071091', '2016-06-01', 'benchi', null);
-INSERT INTO `carinfo` VALUES ('鲁A20004', '204', '370211198208081092', '2016-06-01', 'bentian', null);
-INSERT INTO `carinfo` VALUES ('鲁A20005', '205', '370212198309091093', '2016-06-01', 'biaozhi', null);
-INSERT INTO `carinfo` VALUES ('鲁A20006', '206', '370213198410101094', '2016-06-01', 'bieke', null);
-INSERT INTO `carinfo` VALUES ('鲁A20007', '207', '370214198511111095', '2016-06-01', 'biyadi', null);
-INSERT INTO `carinfo` VALUES ('鲁A20008', '208', '370281198612121096', '2016-06-01', 'dazhong', null);
-INSERT INTO `carinfo` VALUES ('鲁A20009', '209', '370202196909091009', '2016-06-01', 'fengtian', null);
-INSERT INTO `carinfo` VALUES ('鲁A20010', '210', '370203196110101010', '2016-06-01', 'fute', null);
-INSERT INTO `carinfo` VALUES ('鲁A20011', '211', '370205196211111011', '2016-06-01', 'mazhida', null);
-INSERT INTO `carinfo` VALUES ('鲁A20012', '212', '370211196312121012', '2016-06-01', 'qirui', null);
-INSERT INTO `carinfo` VALUES ('鲁A20013', '213', '370212196401131013', '2016-06-01', 'richan', null);
-INSERT INTO `carinfo` VALUES ('鲁A20014', '214', '370213196502141014', '2016-06-01', 'sanling', null);
-INSERT INTO `carinfo` VALUES ('鲁A20015', '215', '370214196603151015', '2016-06-01', 'sibalu', null);
-INSERT INTO `carinfo` VALUES ('鲁A20016', '216', '370281196704161016', '2016-06-01', 'tesila', null);
-INSERT INTO `carinfo` VALUES ('鲁A20017', '217', '370282196805171017', '2016-06-01', 'voervo', null);
-INSERT INTO `carinfo` VALUES ('鲁A20018', '218', '370283196906181018', '2016-06-01', 'xiandai', null);
-INSERT INTO `carinfo` VALUES ('鲁A20019', '219', '370284196107191019', '2016-06-01', 'xuefulan', null);
-INSERT INTO `carinfo` VALUES ('鲁A20020', '220', '370285196208201020', '2016-06-01', 'zhonghua', null);
-INSERT INTO `carinfo` VALUES ('鲁A20021', '221', '370101196309211021', '2016-06-01', 'audi', null);
-INSERT INTO `carinfo` VALUES ('鲁A20022', '222', '370102196410221022', '2016-06-01', 'baoma', null);
-INSERT INTO `carinfo` VALUES ('鲁A20023', '223', '370103196511231023', '2016-06-01', 'benchi', null);
-INSERT INTO `carinfo` VALUES ('鲁A20024', '224', '370104196612241024', '2016-06-01', 'bentian', null);
-INSERT INTO `carinfo` VALUES ('鲁A20025', '225', '370105196701251025', '2016-06-01', 'biaozhi', null);
-INSERT INTO `carinfo` VALUES ('鲁A20026', '226', '370112196802261026', '2016-06-01', 'bieke', null);
-INSERT INTO `carinfo` VALUES ('鲁A20027', '227', '370123196903271027', '2016-06-01', 'biyadi', null);
-INSERT INTO `carinfo` VALUES ('鲁A20028', '228', '370201196104281028', '2016-06-01', 'dazhong', null);
-INSERT INTO `carinfo` VALUES ('鲁A20029', '229', '370202196205011029', '2016-06-01', 'fengtian', null);
-INSERT INTO `carinfo` VALUES ('鲁A20030', '230', '370203196306021030', '2016-06-01', 'fute', null);
-INSERT INTO `carinfo` VALUES ('鲁A20031', '231', '370205196407031031', '2016-06-01', 'mazhida', null);
-INSERT INTO `carinfo` VALUES ('鲁A20032', '232', '370211196508041032', '2016-06-01', 'qirui', null);
-INSERT INTO `carinfo` VALUES ('鲁A20033', '233', '370212196609051033', '2016-06-01', 'richan', null);
-INSERT INTO `carinfo` VALUES ('鲁A20034', '234', '370213196710061034', '2016-06-01', 'sanling', null);
-INSERT INTO `carinfo` VALUES ('鲁A20035', '235', '370214196811071035', '2016-06-01', 'sibalu', null);
-INSERT INTO `carinfo` VALUES ('鲁A20036', '236', '370281196912081036', '2016-06-01', 'tesila', null);
-INSERT INTO `carinfo` VALUES ('鲁A20037', '237', '370282196101091037', '2016-06-01', 'voervo', null);
-INSERT INTO `carinfo` VALUES ('鲁A20038', '238', '370283196202101038', '2016-06-01', 'xiandai', null);
-INSERT INTO `carinfo` VALUES ('鲁A20039', '239', '370284196303111039', '2016-06-01', 'xuefulan', null);
-INSERT INTO `carinfo` VALUES ('鲁A20040', '240', '370285196404121040', '2016-06-01', 'zhonghua', null);
-INSERT INTO `carinfo` VALUES ('鲁A20041', '241', '370101196505131041', '2016-06-01', 'audi', null);
-INSERT INTO `carinfo` VALUES ('鲁A20042', '242', '370102196606141042', '2016-06-01', 'baoma', null);
-INSERT INTO `carinfo` VALUES ('鲁A20043', '243', '370103196707151043', '2016-06-01', 'benchi', null);
-INSERT INTO `carinfo` VALUES ('鲁A20044', '244', '370104196808161044', '2016-06-01', 'bentian', null);
-INSERT INTO `carinfo` VALUES ('鲁A20045', '245', '370105196909171045', '2016-06-01', 'biaozhi', null);
-INSERT INTO `carinfo` VALUES ('鲁A20046', '246', '370112197110181046', '2016-06-01', 'bieke', null);
-INSERT INTO `carinfo` VALUES ('鲁A20047', '247', '370123197211191047', '2016-06-01', 'biyadi', null);
-INSERT INTO `carinfo` VALUES ('鲁A20048', '248', '370201197312201048', '2016-06-01', 'dazhong', null);
-INSERT INTO `carinfo` VALUES ('鲁A20049', '249', '370202197401211049', '2016-06-01', 'fengtian', null);
-INSERT INTO `carinfo` VALUES ('鲁A20050', '250', '370203197502221050', '2016-06-01', 'fute', null);
-INSERT INTO `carinfo` VALUES ('鲁A20051', '251', '370205197603231051', '2016-06-01', 'mazhida', null);
-INSERT INTO `carinfo` VALUES ('鲁A20052', '252', '370211197704241052', '2016-06-01', 'qirui', null);
-INSERT INTO `carinfo` VALUES ('鲁A20053', '253', '370212197805251053', '2016-06-01', 'richan', null);
-INSERT INTO `carinfo` VALUES ('鲁A20054', '254', '370213197906261054', '2016-06-01', 'sanling', null);
-INSERT INTO `carinfo` VALUES ('鲁A20055', '255', '370214197107271055', '2016-06-01', 'sibalu', null);
-INSERT INTO `carinfo` VALUES ('鲁A20056', '256', '370281197208281056', '2016-06-01', 'tesila', null);
-INSERT INTO `carinfo` VALUES ('鲁A20057', '257', '370282197309011057', '2016-06-01', 'voervo', null);
-INSERT INTO `carinfo` VALUES ('鲁A20058', '258', '370283197410021058', '2016-06-01', 'xiandai', null);
-INSERT INTO `carinfo` VALUES ('鲁A20059', '259', '370284197511031059', '2016-06-01', 'xuefulan', null);
-INSERT INTO `carinfo` VALUES ('鲁A20060', '260', '370285197612041060', '2016-06-01', 'zhonghua', null);
-INSERT INTO `carinfo` VALUES ('鲁A20061', '261', '370101197701051061', '2016-06-01', 'audi', null);
-INSERT INTO `carinfo` VALUES ('鲁A20062', '262', '370102197802061062', '2016-06-01', 'baoma', null);
-INSERT INTO `carinfo` VALUES ('鲁A20063', '263', '370103197903071063', '2016-06-01', 'benchi', null);
-INSERT INTO `carinfo` VALUES ('鲁A20064', '264', '370104197104081064', '2016-06-01', 'bentian', null);
-INSERT INTO `carinfo` VALUES ('鲁A20065', '265', '370105197205091065', '2016-06-01', 'biaozhi', null);
-INSERT INTO `carinfo` VALUES ('鲁A20066', '266', '370112197306101066', '2016-06-01', 'bieke', null);
-INSERT INTO `carinfo` VALUES ('鲁A20067', '267', '370123197407111067', '2016-06-01', 'biyadi', null);
-INSERT INTO `carinfo` VALUES ('鲁A20068', '268', '370201197508121068', '2016-06-01', 'dazhong', null);
-INSERT INTO `carinfo` VALUES ('鲁A20069', '269', '370202197609131069', '2016-06-01', 'fengtian', null);
-INSERT INTO `carinfo` VALUES ('鲁A20070', '270', '370203197710141070', '2016-06-01', 'fute', null);
-INSERT INTO `carinfo` VALUES ('鲁A20071', '271', '370205197811151071', '2016-06-01', 'mazhida', null);
-INSERT INTO `carinfo` VALUES ('鲁A20072', '272', '370211197912161072', '2016-06-01', 'qirui', null);
-INSERT INTO `carinfo` VALUES ('鲁A20073', '273', '370212197101171073', '2016-06-01', 'richan', null);
-INSERT INTO `carinfo` VALUES ('鲁A20074', '274', '370213197202181074', '2016-06-01', 'sanling', null);
-INSERT INTO `carinfo` VALUES ('鲁A20075', '275', '370214197303191075', '2016-06-01', 'sibalu', null);
-INSERT INTO `carinfo` VALUES ('鲁A20076', '276', '370281197404201076', '2016-06-01', 'tesila', null);
-INSERT INTO `carinfo` VALUES ('鲁A20077', '277', '370282197505211077', '2016-06-01', 'voervo', null);
-INSERT INTO `carinfo` VALUES ('鲁A20078', '278', '370283197606221078', '2016-06-01', 'xiandai', null);
-INSERT INTO `carinfo` VALUES ('鲁A20079', '279', '370284197707231079', '2016-06-01', 'xuefulan', null);
-INSERT INTO `carinfo` VALUES ('鲁A20080', '280', '370285197808241080', '2016-06-01', 'zhonghua', null);
-INSERT INTO `carinfo` VALUES ('鲁A20081', '281', '370101197909251081', '2016-06-01', 'audi', null);
-INSERT INTO `carinfo` VALUES ('鲁A20082', '282', '370102197110261082', '2016-06-01', 'baoma', null);
-INSERT INTO `carinfo` VALUES ('鲁A20083', '283', '370103197211271083', '2016-06-01', 'benchi', null);
-INSERT INTO `carinfo` VALUES ('鲁A20084', '284', '370104197312281084', '2016-06-01', 'bentian', null);
-INSERT INTO `carinfo` VALUES ('鲁A20085', '285', '370105197401011085', '2016-06-01', 'biaozhi', null);
-INSERT INTO `carinfo` VALUES ('鲁A20086', '286', '370112197502021086', '2016-06-01', 'bieke', null);
-INSERT INTO `carinfo` VALUES ('鲁A20087', '287', '370123197603031087', '2016-06-01', 'biyadi', null);
-INSERT INTO `carinfo` VALUES ('鲁A20088', '288', '370201197704041088', '2016-06-01', 'dazhong', null);
-INSERT INTO `carinfo` VALUES ('鲁A20089', '289', '370202197805051089', '2016-06-01', 'fengtian', null);
-INSERT INTO `carinfo` VALUES ('鲁A20090', '290', '370203197906061090', '2016-06-01', 'fute', null);
-INSERT INTO `carinfo` VALUES ('鲁A20091', '291', '370205198107071091', '2016-06-01', 'mazhida', null);
-INSERT INTO `carinfo` VALUES ('鲁A20092', '292', '370211198208081092', '2016-06-01', 'qirui', null);
-INSERT INTO `carinfo` VALUES ('鲁A20093', '293', '370212198309091093', '2016-06-01', 'richan', null);
-INSERT INTO `carinfo` VALUES ('鲁A20094', '294', '370213198410101094', '2016-06-01', 'sanling', null);
-INSERT INTO `carinfo` VALUES ('鲁A20095', '295', '370214198511111095', '2016-06-01', 'sibalu', null);
-INSERT INTO `carinfo` VALUES ('鲁A20096', '296', '370281198612121096', '2016-06-01', 'tesila', null);
-INSERT INTO `carinfo` VALUES ('鲁A20097', '297', '370282198701131097', '2016-06-01', 'voervo', null);
-INSERT INTO `carinfo` VALUES ('鲁A20098', '298', '370283198802141098', '2016-06-01', 'xiandai', null);
-INSERT INTO `carinfo` VALUES ('鲁A20099', '299', '370284198903151099', '2016-06-01', 'xuefulan', null);
-INSERT INTO `carinfo` VALUES ('鲁A20100', '300', '370285198104161100', '2016-06-01', 'zhonghua', null);
-INSERT INTO `carinfo` VALUES ('鲁A30001', '301', '370101198205171101', '2016-06-01', 'audi', null);
-INSERT INTO `carinfo` VALUES ('鲁A30002', '302', '370102198306181102', '2016-06-01', 'baoma', null);
-INSERT INTO `carinfo` VALUES ('鲁A30003', '303', '370103198407191103', '2016-06-01', 'benchi', null);
-INSERT INTO `carinfo` VALUES ('鲁A30004', '304', '370104198508201104', '2016-06-01', 'bentian', null);
-INSERT INTO `carinfo` VALUES ('鲁A30005', '305', '370105198609211105', '2016-06-01', 'biaozhi', null);
-INSERT INTO `carinfo` VALUES ('鲁A30006', '306', '370112198710221106', '2016-06-01', 'bieke', null);
-INSERT INTO `carinfo` VALUES ('鲁A30007', '307', '370123198811231107', '2016-06-01', 'biyadi', null);
-INSERT INTO `carinfo` VALUES ('鲁A30008', '308', '370201198912241108', '2016-06-01', 'dazhong', null);
-INSERT INTO `carinfo` VALUES ('鲁A30009', '309', '370202198101251109', '2016-06-01', 'fengtian', null);
-INSERT INTO `carinfo` VALUES ('鲁A30010', '310', '370203198202261110', '2016-06-01', 'fute', null);
-INSERT INTO `carinfo` VALUES ('鲁A30011', '311', '370205198303271111', '2016-06-01', 'mazhida', null);
-INSERT INTO `carinfo` VALUES ('鲁A30012', '312', '370211198404281112', '2016-06-01', 'qirui', null);
-INSERT INTO `carinfo` VALUES ('鲁A30013', '313', '370212198505011113', '2016-06-01', 'richan', null);
-INSERT INTO `carinfo` VALUES ('鲁A30014', '314', '370213198606021114', '2016-06-01', 'sanling', null);
-INSERT INTO `carinfo` VALUES ('鲁A30015', '315', '370214198707031115', '2016-06-01', 'sibalu', null);
-INSERT INTO `carinfo` VALUES ('鲁A30016', '316', '370281198808041116', '2016-06-01', 'tesila', null);
-INSERT INTO `carinfo` VALUES ('鲁A30017', '317', '370282198909051117', '2016-06-01', 'voervo', null);
-INSERT INTO `carinfo` VALUES ('鲁A30018', '318', '370283198110061118', '2016-06-01', 'xiandai', null);
-INSERT INTO `carinfo` VALUES ('鲁A30019', '319', '370284198211071119', '2016-06-01', 'xuefulan', null);
-INSERT INTO `carinfo` VALUES ('鲁A30020', '320', '370285198312081120', '2016-06-01', 'zhonghua', null);
-INSERT INTO `carinfo` VALUES ('鲁A30021', '321', '370101198401091121', '2016-06-01', 'audi', null);
-INSERT INTO `carinfo` VALUES ('鲁A30022', '322', '370102198502101122', '2016-06-01', 'baoma', null);
-INSERT INTO `carinfo` VALUES ('鲁A30023', '323', '370103198603111123', '2016-06-01', 'benchi', null);
-INSERT INTO `carinfo` VALUES ('鲁A30024', '324', '370104198704121124', '2016-06-01', 'bentian', null);
-INSERT INTO `carinfo` VALUES ('鲁A30025', '325', '370105198805131125', '2016-06-01', 'biaozhi', null);
-INSERT INTO `carinfo` VALUES ('鲁A30026', '326', '370112198906141126', '2016-06-01', 'bieke', null);
-INSERT INTO `carinfo` VALUES ('鲁A30027', '327', '370123198107151127', '2016-06-01', 'biyadi', null);
-INSERT INTO `carinfo` VALUES ('鲁A30028', '328', '370201198208161128', '2016-06-01', 'dazhong', null);
-INSERT INTO `carinfo` VALUES ('鲁A30029', '329', '370202198309171129', '2016-06-01', 'fengtian', null);
-INSERT INTO `carinfo` VALUES ('鲁A30030', '330', '370203198410181130', '2016-06-01', 'fute', null);
-INSERT INTO `carinfo` VALUES ('鲁A30031', '331', '370205198511191131', '2016-06-01', 'mazhida', null);
-INSERT INTO `carinfo` VALUES ('鲁A30032', '332', '370211198612201132', '2016-06-01', 'qirui', null);
-INSERT INTO `carinfo` VALUES ('鲁A30033', '333', '370212198701211133', '2016-06-01', 'richan', null);
-INSERT INTO `carinfo` VALUES ('鲁A30034', '334', '370213198802221134', '2016-06-01', 'sanling', null);
-INSERT INTO `carinfo` VALUES ('鲁A30035', '335', '370214198903231135', '2016-06-01', 'sibalu', null);
-INSERT INTO `carinfo` VALUES ('鲁A30036', '336', '370281198104241136', '2016-06-01', 'tesila', null);
-INSERT INTO `carinfo` VALUES ('鲁A30037', '337', '370282198205251137', '2016-06-01', 'voervo', null);
-INSERT INTO `carinfo` VALUES ('鲁A30038', '338', '370283198306261138', '2016-06-01', 'xiandai', null);
-INSERT INTO `carinfo` VALUES ('鲁A30039', '339', '370284198407271139', '2016-06-01', 'xuefulan', null);
-INSERT INTO `carinfo` VALUES ('鲁A30040', '340', '370285198508281140', '2016-06-01', 'zhonghua', null);
-INSERT INTO `carinfo` VALUES ('鲁A30041', '341', '370101198609011141', '2016-06-01', 'audi', null);
-INSERT INTO `carinfo` VALUES ('鲁A30042', '342', '370102198710021142', '2016-06-01', 'baoma', null);
-INSERT INTO `carinfo` VALUES ('鲁A30043', '343', '370103198811031143', '2016-06-01', 'benchi', null);
-INSERT INTO `carinfo` VALUES ('鲁A30044', '344', '370104198912041144', '2016-06-01', 'bentian', null);
-INSERT INTO `carinfo` VALUES ('鲁A30045', '345', '370105198101051145', '2016-06-01', 'biaozhi', null);
-INSERT INTO `carinfo` VALUES ('鲁A30046', '346', '370112198202061146', '2016-06-01', 'bieke', null);
-INSERT INTO `carinfo` VALUES ('鲁A30047', '347', '370123198303071147', '2016-06-01', 'biyadi', null);
-INSERT INTO `carinfo` VALUES ('鲁A30048', '348', '370201198404081148', '2016-06-01', 'dazhong', null);
-INSERT INTO `carinfo` VALUES ('鲁A30049', '349', '370202198505091149', '2016-06-01', 'fengtian', null);
-INSERT INTO `carinfo` VALUES ('鲁A30050', '350', '370203198606101150', '2016-06-01', 'fute', null);
-INSERT INTO `carinfo` VALUES ('鲁A30051', '351', '370205198707111151', '2016-06-01', 'mazhida', null);
-INSERT INTO `carinfo` VALUES ('鲁A30052', '352', '370211198808121152', '2016-06-01', 'qirui', null);
-INSERT INTO `carinfo` VALUES ('鲁A30053', '353', '370212198909131153', '2016-06-01', 'richan', null);
-INSERT INTO `carinfo` VALUES ('鲁A30054', '354', '370213198110141154', '2016-06-01', 'sanling', null);
-INSERT INTO `carinfo` VALUES ('鲁A30055', '355', '370214198211151155', '2016-06-01', 'sibalu', null);
-INSERT INTO `carinfo` VALUES ('鲁A30056', '356', '370281198312161156', '2016-06-01', 'tesila', null);
-INSERT INTO `carinfo` VALUES ('鲁A30057', '357', '370282198401171157', '2016-06-01', 'voervo', null);
-INSERT INTO `carinfo` VALUES ('鲁A30058', '358', '370283198502181158', '2016-06-01', 'xiandai', null);
-INSERT INTO `carinfo` VALUES ('鲁A30059', '359', '370284198603191159', '2016-06-01', 'xuefulan', null);
-INSERT INTO `carinfo` VALUES ('鲁A30060', '360', '370285198704201160', '2016-06-01', 'zhonghua', null);
-INSERT INTO `carinfo` VALUES ('鲁A30061', '361', '370101198805211161', '2016-06-01', 'audi', null);
-INSERT INTO `carinfo` VALUES ('鲁A30062', '362', '370102198906221162', '2016-06-01', 'baoma', null);
-INSERT INTO `carinfo` VALUES ('鲁A30063', '363', '370103198107231163', '2016-06-01', 'benchi', null);
-INSERT INTO `carinfo` VALUES ('鲁A30064', '364', '370104198208241164', '2016-06-01', 'bentian', null);
-INSERT INTO `carinfo` VALUES ('鲁A30065', '365', '370105198309251165', '2016-06-01', 'biaozhi', null);
-INSERT INTO `carinfo` VALUES ('鲁A30066', '366', '370112198410261166', '2016-06-01', 'bieke', null);
-INSERT INTO `carinfo` VALUES ('鲁A30067', '367', '370123198511271167', '2016-06-01', 'biyadi', null);
-INSERT INTO `carinfo` VALUES ('鲁A30068', '368', '370201198612281168', '2016-06-01', 'dazhong', null);
-INSERT INTO `carinfo` VALUES ('鲁A30069', '369', '370202198701011169', '2016-06-01', 'fengtian', null);
-INSERT INTO `carinfo` VALUES ('鲁A30070', '370', '370203198802021170', '2016-06-01', 'fute', null);
-INSERT INTO `carinfo` VALUES ('鲁A30071', '371', '370205198903031171', '2016-06-01', 'mazhida', null);
-INSERT INTO `carinfo` VALUES ('鲁A30072', '372', '370211198104041172', '2016-06-01', 'qirui', null);
-INSERT INTO `carinfo` VALUES ('鲁A30073', '373', '370212198205051173', '2016-06-01', 'richan', null);
-INSERT INTO `carinfo` VALUES ('鲁A30074', '374', '370213198306061174', '2016-06-01', 'sanling', null);
-INSERT INTO `carinfo` VALUES ('鲁A30075', '375', '370214198407071175', '2016-06-01', 'sibalu', null);
-INSERT INTO `carinfo` VALUES ('鲁A30076', '376', '370281198508081176', '2016-06-01', 'tesila', null);
-INSERT INTO `carinfo` VALUES ('鲁A30077', '377', '370282198609091177', '2016-06-01', 'voervo', null);
-INSERT INTO `carinfo` VALUES ('鲁A30078', '378', '370283198710101178', '2016-06-01', 'xiandai', null);
-INSERT INTO `carinfo` VALUES ('鲁A30079', '379', '370284198811111179', '2016-06-01', 'xuefulan', null);
-INSERT INTO `carinfo` VALUES ('鲁A30080', '380', '370285198912121180', '2016-06-01', 'zhonghua', null);
-INSERT INTO `carinfo` VALUES ('鲁A30081', '381', '370101198101131181', '2016-06-01', 'audi', null);
-INSERT INTO `carinfo` VALUES ('鲁A30082', '382', '370102198202141182', '2016-06-01', 'baoma', null);
-INSERT INTO `carinfo` VALUES ('鲁A30083', '383', '370103198303151183', '2016-06-01', 'benchi', null);
-INSERT INTO `carinfo` VALUES ('鲁A30084', '384', '370104198404161184', '2016-06-01', 'bentian', null);
-INSERT INTO `carinfo` VALUES ('鲁A30085', '385', '370105198505171185', '2016-06-01', 'biaozhi', null);
-INSERT INTO `carinfo` VALUES ('鲁A30086', '386', '370112198606181186', '2016-06-01', 'bieke', null);
-INSERT INTO `carinfo` VALUES ('鲁A30087', '387', '370123198707191187', '2016-06-01', 'biyadi', null);
-INSERT INTO `carinfo` VALUES ('鲁A30088', '388', '370201198808201188', '2016-06-01', 'dazhong', null);
-INSERT INTO `carinfo` VALUES ('鲁A30089', '389', '370202198909211189', '2016-06-01', 'fengtian', null);
-INSERT INTO `carinfo` VALUES ('鲁A30090', '390', '370203199110221190', '2016-06-01', 'fute', null);
-INSERT INTO `carinfo` VALUES ('鲁A30091', '391', '370205199211231191', '2016-06-01', 'mazhida', null);
-INSERT INTO `carinfo` VALUES ('鲁A30092', '392', '370211199312241192', '2016-06-01', 'qirui', null);
-INSERT INTO `carinfo` VALUES ('鲁A30093', '393', '370212199401251193', '2016-06-01', 'richan', null);
-INSERT INTO `carinfo` VALUES ('鲁A30094', '394', '370213199502261194', '2016-06-01', 'sanling', null);
-INSERT INTO `carinfo` VALUES ('鲁A30095', '395', '370214199603271195', '2016-06-01', 'sibalu', null);
-INSERT INTO `carinfo` VALUES ('鲁A30096', '396', '370281199704281196', '2016-06-01', 'tesila', null);
-INSERT INTO `carinfo` VALUES ('鲁A30097', '397', '370282199805011197', '2016-06-01', 'voervo', null);
-INSERT INTO `carinfo` VALUES ('鲁A30098', '398', '370283199906021198', '2016-06-01', 'xiandai', null);
-INSERT INTO `carinfo` VALUES ('鲁A30099', '399', '370284199107031199', '2016-06-01', 'xuefulan', null);
-INSERT INTO `carinfo` VALUES ('鲁A30100', '400', '370285199208041200', '2016-06-01', 'zhonghua', null);
-INSERT INTO `carinfo` VALUES ('鲁A50001', '401', '370101199309051201', '2016-06-01', 'audi', null);
-INSERT INTO `carinfo` VALUES ('鲁A50002', '402', '370102199410061202', '2016-06-01', 'baoma', null);
-INSERT INTO `carinfo` VALUES ('鲁A50003', '403', '370103199511071203', '2016-06-01', 'benchi', null);
-INSERT INTO `carinfo` VALUES ('鲁A50004', '404', '370104199612081204', '2016-06-01', 'bentian', null);
-INSERT INTO `carinfo` VALUES ('鲁A50005', '405', '370105199701091205', '2016-06-01', 'biaozhi', null);
-INSERT INTO `carinfo` VALUES ('鲁A50006', '406', '370112199802101206', '2016-06-01', 'bieke', null);
-INSERT INTO `carinfo` VALUES ('鲁A50007', '407', '370123199903111207', '2016-06-01', 'biyadi', null);
-INSERT INTO `carinfo` VALUES ('鲁A50008', '408', '370201199104121208', '2016-06-01', 'dazhong', null);
-INSERT INTO `carinfo` VALUES ('鲁A50009', '409', '370202199205131209', '2016-06-01', 'fengtian', null);
-INSERT INTO `carinfo` VALUES ('鲁A50010', '410', '370203199306141210', '2016-06-01', 'fute', null);
-INSERT INTO `carinfo` VALUES ('鲁A50011', '411', '370205199407151211', '2016-06-01', 'mazhida', null);
-INSERT INTO `carinfo` VALUES ('鲁A50012', '412', '370211199508161212', '2016-06-01', 'qirui', null);
-INSERT INTO `carinfo` VALUES ('鲁A50013', '413', '370212199609171213', '2016-06-01', 'richan', null);
-INSERT INTO `carinfo` VALUES ('鲁A50014', '414', '370213199710181214', '2016-06-01', 'sanling', null);
-INSERT INTO `carinfo` VALUES ('鲁A50015', '415', '370214199811191215', '2016-06-01', 'sibalu', null);
-INSERT INTO `carinfo` VALUES ('鲁A50016', '416', '370281199912201216', '2016-06-01', 'tesila', null);
-INSERT INTO `carinfo` VALUES ('鲁A50017', '417', '370282199101211217', '2016-06-01', 'voervo', null);
-INSERT INTO `carinfo` VALUES ('鲁A50018', '418', '370283199202221218', '2016-06-01', 'xiandai', null);
-INSERT INTO `carinfo` VALUES ('鲁A50019', '419', '370284199303231219', '2016-06-01', 'xuefulan', null);
-INSERT INTO `carinfo` VALUES ('鲁A50020', '420', '370285199404241220', '2016-06-01', 'zhonghua', null);
-INSERT INTO `carinfo` VALUES ('鲁A50021', '421', '370101199505251221', '2016-06-01', 'audi', null);
-INSERT INTO `carinfo` VALUES ('鲁A50022', '422', '370102199606261222', '2016-06-01', 'baoma', null);
-INSERT INTO `carinfo` VALUES ('鲁A50023', '423', '370103199707271223', '2016-06-01', 'benchi', null);
-INSERT INTO `carinfo` VALUES ('鲁A50024', '424', '370104199808281224', '2016-06-01', 'bentian', null);
-INSERT INTO `carinfo` VALUES ('鲁A50025', '425', '370105199909011225', '2016-06-01', 'biaozhi', null);
-INSERT INTO `carinfo` VALUES ('鲁A50026', '426', '370112199110021226', '2016-06-01', 'bieke', null);
-INSERT INTO `carinfo` VALUES ('鲁A50027', '427', '370123199211031227', '2016-06-01', 'biyadi', null);
-INSERT INTO `carinfo` VALUES ('鲁A50028', '428', '370201199312041228', '2016-06-01', 'dazhong', null);
-INSERT INTO `carinfo` VALUES ('鲁A50029', '429', '370202199401051229', '2016-06-01', 'fengtian', null);
-INSERT INTO `carinfo` VALUES ('鲁A50030', '430', '370203199502061230', '2016-06-01', 'fute', null);
-INSERT INTO `carinfo` VALUES ('鲁A50031', '431', '370205199603071231', '2016-06-01', 'mazhida', null);
-INSERT INTO `carinfo` VALUES ('鲁A50032', '432', '370211199704081232', '2016-06-01', 'qirui', null);
-INSERT INTO `carinfo` VALUES ('鲁A50033', '433', '370212199805091233', '2016-06-01', 'richan', null);
-INSERT INTO `carinfo` VALUES ('鲁A50034', '434', '370213199906101234', '2016-06-01', 'sanling', null);
-INSERT INTO `carinfo` VALUES ('鲁A50035', '435', '370214199107111235', '2016-06-01', 'sibalu', null);
-INSERT INTO `carinfo` VALUES ('鲁A50036', '436', '370281199208121236', '2016-06-01', 'tesila', null);
-INSERT INTO `carinfo` VALUES ('鲁A50037', '437', '370282199309131237', '2016-06-01', 'voervo', null);
-INSERT INTO `carinfo` VALUES ('鲁A50038', '438', '370283199410141238', '2016-06-01', 'xiandai', null);
-INSERT INTO `carinfo` VALUES ('鲁A50039', '439', '370284199511151239', '2016-06-01', 'xuefulan', null);
-INSERT INTO `carinfo` VALUES ('鲁A50040', '440', '370285199612161240', '2016-06-01', 'zhonghua', null);
-INSERT INTO `carinfo` VALUES ('鲁A50041', '441', '370101199701171241', '2016-06-01', 'audi', null);
-INSERT INTO `carinfo` VALUES ('鲁A50042', '442', '370102199802181242', '2016-06-01', 'baoma', null);
-INSERT INTO `carinfo` VALUES ('鲁A50043', '443', '370103199903191243', '2016-06-01', 'benchi', null);
-INSERT INTO `carinfo` VALUES ('鲁A50044', '444', '370104199504201244', '2016-06-01', 'bentian', null);
-INSERT INTO `carinfo` VALUES ('鲁A50045', '445', '370105199605211245', '2016-06-01', 'biaozhi', null);
-INSERT INTO `carinfo` VALUES ('鲁A50046', '446', '370112199706221246', '2016-06-01', 'bieke', null);
-INSERT INTO `carinfo` VALUES ('鲁A50047', '447', '370123199807231247', '2016-06-01', 'biyadi', null);
-INSERT INTO `carinfo` VALUES ('鲁A50048', '448', '370201199908241248', '2016-06-01', 'dazhong', null);
-INSERT INTO `carinfo` VALUES ('鲁A50049', '449', '370202199109251249', '2016-06-01', 'fengtian', null);
-INSERT INTO `carinfo` VALUES ('鲁A50050', '450', '370203199210261250', '2016-06-01', 'fute', null);
-INSERT INTO `carinfo` VALUES ('鲁A50051', '451', '370205199311271251', '2016-06-01', 'mazhida', null);
-INSERT INTO `carinfo` VALUES ('鲁A50052', '452', '370211199412281252', '2016-06-01', 'qirui', null);
-INSERT INTO `carinfo` VALUES ('鲁A50053', '453', '370212199501011253', '2016-06-01', 'richan', null);
-INSERT INTO `carinfo` VALUES ('鲁A50054', '454', '370213199602021254', '2016-06-01', 'sanling', null);
-INSERT INTO `carinfo` VALUES ('鲁A50055', '455', '370214199703031255', '2016-06-01', 'sibalu', null);
-INSERT INTO `carinfo` VALUES ('鲁A50056', '456', '370281199804041256', '2016-06-01', 'tesila', null);
-INSERT INTO `carinfo` VALUES ('鲁A50057', '457', '370282199905051257', '2016-06-01', 'voervo', null);
-INSERT INTO `carinfo` VALUES ('鲁A50058', '458', '370283199106061258', '2016-06-01', 'xiandai', null);
-INSERT INTO `carinfo` VALUES ('鲁A50059', '459', '370284199207071259', '2016-06-01', 'xuefulan', null);
-INSERT INTO `carinfo` VALUES ('鲁A50060', '460', '370285199308081260', '2016-06-01', 'zhonghua', null);
-INSERT INTO `carinfo` VALUES ('鲁A50061', '461', '370101199409091261', '2016-06-01', 'audi', null);
-INSERT INTO `carinfo` VALUES ('鲁A50062', '462', '370102199510101262', '2016-06-01', 'baoma', null);
-INSERT INTO `carinfo` VALUES ('鲁A50063', '463', '370103199611111263', '2016-06-01', 'benchi', null);
-INSERT INTO `carinfo` VALUES ('鲁A50064', '464', '370104199712121264', '2016-06-01', 'bentian', null);
-INSERT INTO `carinfo` VALUES ('鲁A50065', '465', '370105199801131265', '2016-06-01', 'biaozhi', null);
-INSERT INTO `carinfo` VALUES ('鲁A50066', '466', '370112199902141266', '2016-06-01', 'bieke', null);
-INSERT INTO `carinfo` VALUES ('鲁A50067', '467', '370123199503151267', '2016-06-01', 'biyadi', null);
-INSERT INTO `carinfo` VALUES ('鲁A50068', '468', '370201199604161268', '2016-06-01', 'dazhong', null);
-INSERT INTO `carinfo` VALUES ('鲁A50069', '469', '370202199705171269', '2016-06-01', 'fengtian', null);
-INSERT INTO `carinfo` VALUES ('鲁A50070', '470', '370203199806181270', '2016-06-01', 'fute', null);
-INSERT INTO `carinfo` VALUES ('鲁A50071', '471', '370205199907191271', '2016-06-01', 'mazhida', null);
-INSERT INTO `carinfo` VALUES ('鲁A50072', '472', '370211199108201272', '2016-06-01', 'qirui', null);
-INSERT INTO `carinfo` VALUES ('鲁A50073', '473', '370212199209211273', '2016-06-01', 'richan', null);
-INSERT INTO `carinfo` VALUES ('鲁A50074', '474', '370213199310221274', '2016-06-01', 'sanling', null);
-INSERT INTO `carinfo` VALUES ('鲁A50075', '475', '370214199411231275', '2016-06-01', 'sibalu', null);
-INSERT INTO `carinfo` VALUES ('鲁A50076', '476', '370281199512241276', '2016-06-01', 'tesila', null);
-INSERT INTO `carinfo` VALUES ('鲁A50077', '477', '370282199601251277', '2016-06-01', 'voervo', null);
-INSERT INTO `carinfo` VALUES ('鲁A50078', '478', '370283199702261278', '2016-06-01', 'xiandai', null);
-INSERT INTO `carinfo` VALUES ('鲁A50079', '479', '370284199803271279', '2016-06-01', 'xuefulan', null);
-INSERT INTO `carinfo` VALUES ('鲁A50080', '480', '370285199904281280', '2016-06-01', 'zhonghua', null);
-INSERT INTO `carinfo` VALUES ('鲁A50081', '481', '370101199105011281', '2016-06-01', 'audi', null);
-INSERT INTO `carinfo` VALUES ('鲁A50082', '482', '370102199206021282', '2016-06-01', 'baoma', null);
-INSERT INTO `carinfo` VALUES ('鲁A50083', '483', '370103199307031283', '2016-06-01', 'benchi', null);
-INSERT INTO `carinfo` VALUES ('鲁A50084', '484', '370104199408041284', '2016-06-01', 'bentian', null);
-INSERT INTO `carinfo` VALUES ('鲁A50085', '485', '370105199509051285', '2016-06-01', 'biaozhi', null);
-INSERT INTO `carinfo` VALUES ('鲁A50086', '486', '370213199310221274', '2016-06-01', 'bieke', null);
-INSERT INTO `carinfo` VALUES ('鲁A50087', '487', '370214199411231275', '2016-06-01', 'biyadi', null);
-INSERT INTO `carinfo` VALUES ('鲁A50088', '488', '370281199512241276', '2016-06-01', 'dazhong', null);
-INSERT INTO `carinfo` VALUES ('鲁A50089', '489', '370282199601251277', '2016-06-01', 'fengtian', null);
-INSERT INTO `carinfo` VALUES ('鲁A50090', '490', '370283199702261278', '2016-06-01', 'fute', null);
-INSERT INTO `carinfo` VALUES ('鲁A50091', '491', '370284199803271279', '2016-06-01', 'mazhida', null);
-INSERT INTO `carinfo` VALUES ('鲁A50092', '492', '370285199904281280', '2016-06-01', 'qirui', null);
-INSERT INTO `carinfo` VALUES ('鲁A50093', '493', '370101199105011281', '2016-06-01', 'richan', null);
-INSERT INTO `carinfo` VALUES ('鲁A50094', '494', '370102199206021282', '2016-06-01', 'sanling', null);
-INSERT INTO `carinfo` VALUES ('鲁A50095', '495', '370103199307031283', '2016-06-01', 'sibalu', null);
-INSERT INTO `carinfo` VALUES ('鲁A50096', '496', '370104199408041284', '2016-06-01', 'tesila', null);
-INSERT INTO `carinfo` VALUES ('鲁A50097', '497', '370105199509051285', '2016-06-01', 'voervo', null);
-INSERT INTO `carinfo` VALUES ('鲁A50098', '498', '370213199310221274', '2016-06-01', 'xiandai', null);
-INSERT INTO `carinfo` VALUES ('鲁A50099', '499', '370214199411231275', '2016-06-01', 'xuefulan', null);
-INSERT INTO `carinfo` VALUES ('鲁A50100', '500', '370281199512241276', '2016-06-01', 'dazhong', null);
-INSERT INTO `carinfo` VALUES ('鲁B10001', '1', '370101196101011001', '2016-06-01', 'audi', null);
-INSERT INTO `carinfo` VALUES ('鲁B10002', '2', '370102196202021002', '2016-06-01', 'baoma', null);
-INSERT INTO `carinfo` VALUES ('鲁B10003', '3', '370103196303031003', '2016-06-01', 'benchi', null);
-INSERT INTO `carinfo` VALUES ('鲁B10004', '4', '370101196101011001', '2016-06-01', 'bentian', null);
-INSERT INTO `carinfo` VALUES ('鲁B10005', '5', '370102196202021002', '2016-06-01', 'biaozhi', null);
-INSERT INTO `carinfo` VALUES ('鲁B10006', '6', '370103196303031003', '2016-06-01', 'bieke', null);
-INSERT INTO `carinfo` VALUES ('鲁B10007', '7', '370101196101011001', '2016-06-01', 'biyadi', null);
-INSERT INTO `carinfo` VALUES ('鲁B10008', '8', '370102196202021002', '2016-06-01', 'dazhong', null);
-INSERT INTO `carinfo` VALUES ('鲁B10009', '9', '370103196303031003', '2016-06-01', 'fengtian', null);
-INSERT INTO `carinfo` VALUES ('鲁B10010', '10', '370101196101011001', '2016-06-01', 'fute', null);
-INSERT INTO `carinfo` VALUES ('鲁B10011', '11', '370112196606061006', '2016-06-01', 'mazhida', null);
-INSERT INTO `carinfo` VALUES ('鲁B10012', '12', '370123196707071007', '2016-06-01', 'qirui', null);
-INSERT INTO `carinfo` VALUES ('鲁B10013', '13', '370201196808081008', '2016-06-01', 'richan', null);
-INSERT INTO `carinfo` VALUES ('鲁B10014', '14', '370202196909091009', '2016-06-01', 'sanling', null);
-INSERT INTO `carinfo` VALUES ('鲁B10015', '15', '370203196110101010', '2016-06-01', 'sibalu', null);
-INSERT INTO `carinfo` VALUES ('鲁B10016', '16', '370205196211111011', '2016-06-01', 'tesila', null);
-INSERT INTO `carinfo` VALUES ('鲁B10017', '17', '370211196312121012', '2016-06-01', 'voervo', null);
-INSERT INTO `carinfo` VALUES ('鲁B10018', '18', '370212196401131013', '2016-06-01', 'xiandai', null);
-INSERT INTO `carinfo` VALUES ('鲁B10019', '19', '370213196502141014', '2016-06-01', 'xuefulan', null);
-INSERT INTO `carinfo` VALUES ('鲁B10020', '20', '370214196603151015', '2016-06-01', 'zhonghua', null);
-INSERT INTO `carinfo` VALUES ('鲁B10021', '21', '370281196704161016', '2016-06-01', 'audi', null);
-INSERT INTO `carinfo` VALUES ('鲁B10022', '22', '370282196805171017', '2016-06-01', 'baoma', null);
-INSERT INTO `carinfo` VALUES ('鲁B10023', '23', '370283196906181018', '2016-06-01', 'benchi', null);
-INSERT INTO `carinfo` VALUES ('鲁B10024', '24', '370284196107191019', '2016-06-01', 'bentian', null);
-INSERT INTO `carinfo` VALUES ('鲁B10025', '25', '370285196208201020', '2016-06-01', 'biaozhi', null);
-INSERT INTO `carinfo` VALUES ('鲁B10026', '26', '370101196309211021', '2016-06-01', 'bieke', null);
-INSERT INTO `carinfo` VALUES ('鲁B10027', '27', '370102196410221022', '2016-06-01', 'biyadi', null);
-INSERT INTO `carinfo` VALUES ('鲁B10028', '28', '370103196511231023', '2016-06-01', 'dazhong', null);
-INSERT INTO `carinfo` VALUES ('鲁B10029', '29', '370104196612241024', '2016-06-01', 'fengtian', null);
-INSERT INTO `carinfo` VALUES ('鲁B10030', '30', '370105196701251025', '2016-06-01', 'fute', null);
-INSERT INTO `carinfo` VALUES ('鲁B10031', '31', '370112196802261026', '2016-06-01', 'mazhida', null);
-INSERT INTO `carinfo` VALUES ('鲁B10032', '32', '370123196903271027', '2016-06-01', 'qirui', null);
-INSERT INTO `carinfo` VALUES ('鲁B10033', '33', '370112196606061006', '2016-06-01', 'richan', null);
-INSERT INTO `carinfo` VALUES ('鲁B10034', '34', '370123196707071007', '2016-06-01', 'sanling', null);
-INSERT INTO `carinfo` VALUES ('鲁B10035', '35', '370201196808081008', '2016-06-01', 'sibalu', null);
-INSERT INTO `carinfo` VALUES ('鲁B10036', '36', '370202196909091009', '2016-06-01', 'tesila', null);
-INSERT INTO `carinfo` VALUES ('鲁B10037', '37', '370203196110101010', '2016-06-01', 'voervo', null);
-INSERT INTO `carinfo` VALUES ('鲁B10038', '38', '370205196211111011', '2016-06-01', 'xiandai', null);
-INSERT INTO `carinfo` VALUES ('鲁B10039', '39', '370211196312121012', '2016-06-01', 'xuefulan', null);
-INSERT INTO `carinfo` VALUES ('鲁B10040', '40', '370212196401131013', '2016-06-01', 'zhonghua', null);
-INSERT INTO `carinfo` VALUES ('鲁B10041', '41', '370213196502141014', '2016-06-01', 'audi', null);
-INSERT INTO `carinfo` VALUES ('鲁B10042', '42', '370214196603151015', '2016-06-01', 'baoma', null);
-INSERT INTO `carinfo` VALUES ('鲁B10043', '43', '370281196704161016', '2016-06-01', 'benchi', null);
-INSERT INTO `carinfo` VALUES ('鲁B10044', '44', '370282196805171017', '2016-06-01', 'bentian', null);
-INSERT INTO `carinfo` VALUES ('鲁B10045', '45', '370283196906181018', '2016-06-01', 'biaozhi', null);
-INSERT INTO `carinfo` VALUES ('鲁B10046', '46', '370284196107191019', '2016-06-01', 'bieke', null);
-INSERT INTO `carinfo` VALUES ('鲁B10047', '47', '370285196208201020', '2016-06-01', 'biyadi', null);
-INSERT INTO `carinfo` VALUES ('鲁B10048', '48', '370101196309211021', '2016-06-01', 'dazhong', null);
-INSERT INTO `carinfo` VALUES ('鲁B10049', '49', '370102196410221022', '2016-06-01', 'fengtian', null);
-INSERT INTO `carinfo` VALUES ('鲁B10050', '50', '370103196511231023', '2016-06-01', 'fute', null);
-INSERT INTO `carinfo` VALUES ('鲁B10051', '51', '370104196612241024', '2016-06-01', 'mazhida', null);
-INSERT INTO `carinfo` VALUES ('鲁B10052', '52', '370105196701251025', '2016-06-01', 'qirui', null);
-INSERT INTO `carinfo` VALUES ('鲁B10053', '53', '370112196802261026', '2016-06-01', 'richan', null);
-INSERT INTO `carinfo` VALUES ('鲁B10054', '54', '370123196903271027', '2016-06-01', 'sanling', null);
-INSERT INTO `carinfo` VALUES ('鲁B10055', '55', '370112196606061006', '2016-06-01', 'sibalu', null);
-INSERT INTO `carinfo` VALUES ('鲁B10056', '56', '370123196707071007', '2016-06-01', 'tesila', null);
-INSERT INTO `carinfo` VALUES ('鲁B10057', '57', '370201196808081008', '2016-06-01', 'voervo', null);
-INSERT INTO `carinfo` VALUES ('鲁B10058', '58', '370202196909091009', '2016-06-01', 'xiandai', null);
-INSERT INTO `carinfo` VALUES ('鲁B10059', '59', '370203196110101010', '2016-06-01', 'xuefulan', null);
-INSERT INTO `carinfo` VALUES ('鲁B10060', '60', '370205196211111011', '2016-06-01', 'zhonghua', null);
-INSERT INTO `carinfo` VALUES ('鲁B10061', '61', '370211196312121012', '2016-06-01', 'audi', null);
-INSERT INTO `carinfo` VALUES ('鲁B10062', '62', '370212196401131013', '2016-06-01', 'baoma', null);
-INSERT INTO `carinfo` VALUES ('鲁B10063', '63', '370213196502141014', '2016-06-01', 'benchi', null);
-INSERT INTO `carinfo` VALUES ('鲁B10064', '64', '370214196603151015', '2016-06-01', 'bentian', null);
-INSERT INTO `carinfo` VALUES ('鲁B10065', '65', '370281196704161016', '2016-06-01', 'biaozhi', null);
-INSERT INTO `carinfo` VALUES ('鲁B10066', '66', '370282196805171017', '2016-06-01', 'bieke', null);
-INSERT INTO `carinfo` VALUES ('鲁B10067', '67', '370283196906181018', '2016-06-01', 'biyadi', null);
-INSERT INTO `carinfo` VALUES ('鲁B10068', '68', '370284196107191019', '2016-06-01', 'dazhong', null);
-INSERT INTO `carinfo` VALUES ('鲁B10069', '69', '370285196208201020', '2016-06-01', 'fengtian', null);
-INSERT INTO `carinfo` VALUES ('鲁B10070', '70', '370101196309211021', '2016-06-01', 'fute', null);
-INSERT INTO `carinfo` VALUES ('鲁B10071', '71', '370102196410221022', '2016-06-01', 'mazhida', null);
-INSERT INTO `carinfo` VALUES ('鲁B10072', '72', '370103196511231023', '2016-06-01', 'qirui', null);
-INSERT INTO `carinfo` VALUES ('鲁B10073', '73', '370104196612241024', '2016-06-01', 'richan', null);
-INSERT INTO `carinfo` VALUES ('鲁B10074', '74', '370105196701251025', '2016-06-01', 'sanling', null);
-INSERT INTO `carinfo` VALUES ('鲁B10075', '75', '370112196802261026', '2016-06-01', 'sibalu', null);
-INSERT INTO `carinfo` VALUES ('鲁B10076', '76', '370123196903271027', '2016-06-01', 'tesila', null);
-INSERT INTO `carinfo` VALUES ('鲁B10077', '77', '370205196407031031', '2016-06-01', 'voervo', null);
-INSERT INTO `carinfo` VALUES ('鲁B10078', '78', '370211196508041032', '2016-06-01', 'xiandai', null);
-INSERT INTO `carinfo` VALUES ('鲁B10079', '79', '370212196609051033', '2016-06-01', 'xuefulan', null);
-INSERT INTO `carinfo` VALUES ('鲁B10080', '80', '370213196710061034', '2016-06-01', 'zhonghua', null);
-INSERT INTO `carinfo` VALUES ('鲁B10081', '81', '370214196811071035', '2016-06-01', 'audi', null);
-INSERT INTO `carinfo` VALUES ('鲁B10082', '82', '370281196912081036', '2016-06-01', 'baoma', null);
-INSERT INTO `carinfo` VALUES ('鲁B10083', '83', '370282196101091037', '2016-06-01', 'benchi', null);
-INSERT INTO `carinfo` VALUES ('鲁B10084', '84', '370283196202101038', '2016-06-01', 'bentian', null);
-INSERT INTO `carinfo` VALUES ('鲁B10085', '85', '370284196303111039', '2016-06-01', 'biaozhi', null);
-INSERT INTO `carinfo` VALUES ('鲁B10086', '86', '370285196404121040', '2016-06-01', 'bieke', null);
-INSERT INTO `carinfo` VALUES ('鲁B10087', '87', '370101196505131041', '2016-06-01', 'biyadi', null);
-INSERT INTO `carinfo` VALUES ('鲁B10088', '88', '370102196606141042', '2016-06-01', 'dazhong', null);
-INSERT INTO `carinfo` VALUES ('鲁B10089', '89', '370103196707151043', '2016-06-01', 'fengtian', null);
-INSERT INTO `carinfo` VALUES ('鲁B10090', '90', '370104196808161044', '2016-06-01', 'fute', null);
-INSERT INTO `carinfo` VALUES ('鲁B10091', '91', '370105196909171045', '2016-06-01', 'mazhida', null);
-INSERT INTO `carinfo` VALUES ('鲁B10092', '92', '370112197110181046', '2016-06-01', 'qirui', null);
-INSERT INTO `carinfo` VALUES ('鲁B10093', '93', '370123197211191047', '2016-06-01', 'richan', null);
-INSERT INTO `carinfo` VALUES ('鲁B10094', '94', '370201197312201048', '2016-06-01', 'sanling', null);
-INSERT INTO `carinfo` VALUES ('鲁B10095', '95', '370202197401211049', '2016-06-01', 'sibalu', null);
-INSERT INTO `carinfo` VALUES ('鲁B10096', '96', '370203197502221050', '2016-06-01', 'tesila', null);
-INSERT INTO `carinfo` VALUES ('鲁B10097', '97', '370205197603231051', '2016-06-01', 'voervo', null);
-INSERT INTO `carinfo` VALUES ('鲁B10098', '98', '370211197704241052', '2016-06-01', 'xiandai', null);
-INSERT INTO `carinfo` VALUES ('鲁B10099', '99', '370212197805251053', '2016-06-01', 'xuefulan', null);
-INSERT INTO `carinfo` VALUES ('鲁B10100', '100', '370213197906261054', '2016-06-01', 'zhonghua', null);
-INSERT INTO `carinfo` VALUES ('鲁C50101', '500', '370282199601251277', '2016-06-01', 'fengtian', null);
-INSERT INTO `carinfo` VALUES ('鲁C50102', '500', '370283199702261278', '2016-06-01', 'fute', null);
-INSERT INTO `carinfo` VALUES ('鲁C50103', '500', '370284199803271279', '2016-06-01', 'mazhida', null);
-INSERT INTO `carinfo` VALUES ('鲁C50104', '500', '370285199904281280', '2016-06-01', 'qirui', null);
-INSERT INTO `carinfo` VALUES ('鲁C50105', '500', '370101199105011281', '2016-06-01', 'richan', null);
-INSERT INTO `carinfo` VALUES ('鲁C50106', '500', '370102199206021282', '2016-06-01', 'sanling', null);
-INSERT INTO `carinfo` VALUES ('鲁C50107', '500', '370103199307031283', '2016-06-01', 'sibalu', null);
-INSERT INTO `carinfo` VALUES ('鲁C50108', '500', '370104199408041284', '2016-06-01', 'tesila', null);
-INSERT INTO `carinfo` VALUES ('鲁C50109', '500', '370105199509051285', '2016-06-01', 'voervo', null);
-INSERT INTO `carinfo` VALUES ('鲁C50110', '500', '370213199310221274', '2016-06-01', 'xiandai', null);
-INSERT INTO `carinfo` VALUES ('鲁C50111', '500', '370214199411231275', '2016-06-01', 'xuefulan', null);
-INSERT INTO `carinfo` VALUES ('鲁C50112', '500', '370281199512241276', '2016-06-01', 'zhonghua', null);
-INSERT INTO `carinfo` VALUES ('鲁C50113', '500', '370282199601251277', '2016-06-01', 'audi', null);
-INSERT INTO `carinfo` VALUES ('鲁C50114', '500', '370283199702261278', '2016-06-01', 'baoma', null);
-INSERT INTO `carinfo` VALUES ('鲁C50115', '500', '370284199803271279', '2016-06-01', 'benchi', null);
-INSERT INTO `carinfo` VALUES ('鲁C50116', '500', '370285199904281280', '2016-06-01', 'bentian', null);
-INSERT INTO `carinfo` VALUES ('鲁C50117', '500', '370101199105011281', '2016-06-01', 'biaozhi', null);
-INSERT INTO `carinfo` VALUES ('鲁C50118', '500', '370102199206021282', '2016-06-01', 'bieke', null);
-INSERT INTO `carinfo` VALUES ('鲁C50119', '500', '370103199307031283', '2016-06-01', 'biyadi', null);
-INSERT INTO `carinfo` VALUES ('鲁C50120', '500', '370104199408041284', '2016-06-01', 'dazhong', null);
-INSERT INTO `carinfo` VALUES ('鲁C50121', '500', '370105199509051285', '2016-06-01', 'fengtian', null);
-INSERT INTO `carinfo` VALUES ('鲁C50122', '500', '370213199310221274', '2016-06-01', 'fute', null);
-INSERT INTO `carinfo` VALUES ('鲁C50123', '500', '370214199411231275', '2016-06-01', 'mazhida', null);
-INSERT INTO `carinfo` VALUES ('鲁C50124', '500', '370281199512241276', '2016-06-01', 'qirui', null);
-INSERT INTO `carinfo` VALUES ('鲁C50125', '500', '370282199601251277', '2016-06-01', 'richan', null);
-INSERT INTO `carinfo` VALUES ('鲁C50126', '500', '370283199702261278', '2016-06-01', 'sanling', null);
-INSERT INTO `carinfo` VALUES ('鲁C50127', '500', '370284199803271279', '2016-06-01', 'sibalu', null);
-INSERT INTO `carinfo` VALUES ('鲁C50128', '500', '370285199904281280', '2016-06-01', 'tesila', null);
-INSERT INTO `carinfo` VALUES ('鲁C50129', '500', '370101199105011281', '2016-06-01', 'voervo', null);
-INSERT INTO `carinfo` VALUES ('鲁C50130', '500', '370102199206021282', '2016-06-01', 'xiandai', null);
-INSERT INTO `carinfo` VALUES ('鲁C50131', '500', '370103199307031283', '2016-06-01', 'xuefulan', null);
-INSERT INTO `carinfo` VALUES ('鲁C50132', '500', '370104199408041284', '2016-06-01', 'zhonghua', null);
-INSERT INTO `carinfo` VALUES ('鲁C50133', '500', '370105199509051285', '2016-06-01', 'audi', null);
-INSERT INTO `carinfo` VALUES ('鲁C50134', '500', '370213199310221274', '2016-06-01', 'baoma', null);
-INSERT INTO `carinfo` VALUES ('鲁C50135', '500', '370214199411231275', '2016-06-01', 'benchi', null);
-INSERT INTO `carinfo` VALUES ('鲁C50136', '500', '370281199512241276', '2016-06-01', 'bentian', null);
-INSERT INTO `carinfo` VALUES ('鲁C50137', '500', '370282199601251277', '2016-06-01', 'biaozhi', null);
-INSERT INTO `carinfo` VALUES ('鲁C50138', '500', '370283199702261278', '2016-06-01', 'bieke', null);
-INSERT INTO `carinfo` VALUES ('鲁C50139', '500', '370284199803271279', '2016-06-01', 'biyadi', null);
-INSERT INTO `carinfo` VALUES ('鲁C50140', '500', '370285199904281280', '2016-06-01', 'dazhong', null);
-INSERT INTO `carinfo` VALUES ('鲁C50141', '500', '370101199105011281', '2016-06-01', 'fengtian', null);
-INSERT INTO `carinfo` VALUES ('鲁C50142', '500', '370102199206021282', '2016-06-01', 'fute', null);
-INSERT INTO `carinfo` VALUES ('鲁C50143', '500', '370103199307031283', '2016-06-01', 'mazhida', null);
-INSERT INTO `carinfo` VALUES ('鲁C50144', '500', '370104199408041284', '2016-06-01', 'qirui', null);
-INSERT INTO `carinfo` VALUES ('鲁C50145', '500', '370105199509051285', '2016-06-01', 'richan', null);
-INSERT INTO `carinfo` VALUES ('鲁C50146', '500', '370213199310221274', '2016-06-01', 'sanling', null);
-INSERT INTO `carinfo` VALUES ('鲁C50147', '500', '370214199411231275', '2016-06-01', 'sibalu', null);
-INSERT INTO `carinfo` VALUES ('鲁C50148', '500', '370281199512241276', '2016-06-01', 'tesila', null);
-INSERT INTO `carinfo` VALUES ('鲁C50149', '500', '370282199601251277', '2016-06-01', 'voervo', null);
-INSERT INTO `carinfo` VALUES ('鲁C50150', '500', '370283199702261278', '2016-06-01', 'xiandai', null);
-INSERT INTO `carinfo` VALUES ('鲁C50151', '500', '370284199803271279', '2016-06-01', 'xuefulan', null);
-INSERT INTO `carinfo` VALUES ('鲁C50152', '500', '370285199904281280', '2016-06-01', 'zhonghua', null);
-INSERT INTO `carinfo` VALUES ('鲁C50153', '500', '370101199105011281', '2016-06-01', 'audi', null);
-INSERT INTO `carinfo` VALUES ('鲁C50154', '500', '370102199206021282', '2016-06-01', 'baoma', null);
-INSERT INTO `carinfo` VALUES ('鲁C50155', '500', '370103199307031283', '2016-06-01', 'benchi', null);
-INSERT INTO `carinfo` VALUES ('鲁C50156', '500', '370104199408041284', '2016-06-01', 'bentian', null);
-INSERT INTO `carinfo` VALUES ('鲁C50157', '500', '370105199509051285', '2016-06-01', 'biaozhi', null);
-INSERT INTO `carinfo` VALUES ('鲁C50158', '500', '370213199310221274', '2016-06-01', 'bieke', null);
-INSERT INTO `carinfo` VALUES ('鲁C50159', '500', '370214199411231275', '2016-06-01', 'biyadi', null);
-INSERT INTO `carinfo` VALUES ('鲁C50160', '500', '370281199512241276', '2016-06-01', 'dazhong', null);
-INSERT INTO `carinfo` VALUES ('鲁C50161', '500', '370282199601251277', '2016-06-01', 'fengtian', null);
-INSERT INTO `carinfo` VALUES ('鲁C50162', '500', '370283199702261278', '2016-06-01', 'fute', null);
-INSERT INTO `carinfo` VALUES ('鲁C50163', '500', '370284199803271279', '2016-06-01', 'mazhida', null);
-INSERT INTO `carinfo` VALUES ('鲁C50164', '500', '370285199904281280', '2016-06-01', 'qirui', null);
-INSERT INTO `carinfo` VALUES ('鲁C50165', '500', '370101199105011281', '2016-06-01', 'richan', null);
-INSERT INTO `carinfo` VALUES ('鲁C50166', '500', '370102199206021282', '2016-06-01', 'sanling', null);
-INSERT INTO `carinfo` VALUES ('鲁C50167', '500', '370103199307031283', '2016-06-01', 'sibalu', null);
-INSERT INTO `carinfo` VALUES ('鲁C50168', '500', '370104199408041284', '2016-06-01', 'tesila', null);
-INSERT INTO `carinfo` VALUES ('鲁C50169', '500', '370105199509051285', '2016-06-01', 'voervo', null);
-INSERT INTO `carinfo` VALUES ('鲁C50170', '500', '370213199310221274', '2016-06-01', 'xiandai', null);
+INSERT INTO `carinfo` VALUES ('鲁A10001', '101', '370214197107271055', '2016-06-01', 'audi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10002', '102', '370281197208281056', '2016-06-01', 'baoma', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10003', '103', '370282197309011057', '2016-06-01', 'benchi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10004', '104', '370283197410021058', '2016-06-01', 'bentian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10005', '105', '370284197511031059', '2016-06-01', 'biaozhi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10006', '106', '370285197612041060', '2016-06-01', 'bieke', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10007', '107', '370101197701051061', '2016-06-01', 'biyadi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10008', '108', '370102197802061062', '2016-06-01', 'dazhong', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10009', '109', '370103197903071063', '2016-06-01', 'fengtian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10010', '110', '370104197104081064', '2016-06-01', 'fute', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10011', '111', '370105197205091065', '2016-06-01', 'mazhida', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10012', '112', '370112197306101066', '2016-06-01', 'qirui', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10013', '113', '370123197407111067', '2016-06-01', 'richan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10014', '114', '370201197508121068', '2016-06-01', 'sanling', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10015', '115', '370202197609131069', '2016-06-01', 'sibalu', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10016', '116', '370203197710141070', '2016-06-01', 'tesila', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10017', '117', '370205197811151071', '2016-06-01', 'voervo', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10018', '118', '370211197912161072', '2016-06-01', 'xiandai', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10019', '119', '370212197101171073', '2016-06-01', 'xuefulan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10020', '120', '370213197202181074', '2016-06-01', 'zhonghua', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10021', '121', '370214197303191075', '2016-06-01', 'audi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10022', '122', '370281197404201076', '2016-06-01', 'baoma', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10023', '123', '370282197505211077', '2016-06-01', 'benchi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10024', '124', '370283197606221078', '2016-06-01', 'bentian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10025', '125', '370284197707231079', '2016-06-01', 'biaozhi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10026', '126', '370285197808241080', '2016-06-01', 'bieke', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10027', '127', '370101197909251081', '2016-06-01', 'biyadi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10028', '128', '370102197110261082', '2016-06-01', 'dazhong', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10029', '129', '370103197211271083', '2016-06-01', 'fengtian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10030', '130', '370104197312281084', '2016-06-01', 'fute', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10031', '131', '370105197401011085', '2016-06-01', 'mazhida', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10032', '132', '370112197502021086', '2016-06-01', 'qirui', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10033', '133', '370123197603031087', '2016-06-01', 'richan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10034', '134', '370201197704041088', '2016-06-01', 'sanling', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10035', '135', '370202197805051089', '2016-06-01', 'sibalu', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10036', '136', '370203197906061090', '2016-06-01', 'tesila', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10037', '137', '370205198107071091', '2016-06-01', 'voervo', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10038', '138', '370211198208081092', '2016-06-01', 'xiandai', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10039', '139', '370212198309091093', '2016-06-01', 'xuefulan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10040', '140', '370213198410101094', '2016-06-01', 'zhonghua', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10041', '141', '370214198511111095', '2016-06-01', 'audi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10042', '142', '370281198612121096', '2016-06-01', 'baoma', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10043', '143', '370205196407031031', '2016-06-01', 'benchi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10044', '144', '370211196508041032', '2016-06-01', 'bentian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10045', '145', '370212196609051033', '2016-06-01', 'biaozhi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10046', '146', '370213196710061034', '2016-06-01', 'bieke', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10047', '147', '370214196811071035', '2016-06-01', 'biyadi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10048', '148', '370281196912081036', '2016-06-01', 'dazhong', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10049', '149', '370282196101091037', '2016-06-01', 'fengtian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10050', '150', '370283196202101038', '2016-06-01', 'fute', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10051', '151', '370284196303111039', '2016-06-01', 'mazhida', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10052', '152', '370285196404121040', '2016-06-01', 'qirui', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10053', '153', '370101196505131041', '2016-06-01', 'richan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10054', '154', '370102196606141042', '2016-06-01', 'sanling', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10055', '155', '370103196707151043', '2016-06-01', 'sibalu', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10056', '156', '370104196808161044', '2016-06-01', 'tesila', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10057', '157', '370105196909171045', '2016-06-01', 'voervo', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10058', '158', '370112197110181046', '2016-06-01', 'xiandai', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10059', '159', '370123197211191047', '2016-06-01', 'xuefulan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10060', '160', '370201197312201048', '2016-06-01', 'zhonghua', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10061', '161', '370202197401211049', '2016-06-01', 'audi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10062', '162', '370203197502221050', '2016-06-01', 'baoma', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10063', '163', '370205197603231051', '2016-06-01', 'benchi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10064', '164', '370211197704241052', '2016-06-01', 'bentian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10065', '165', '370212197805251053', '2016-06-01', 'biaozhi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10066', '166', '370213197906261054', '2016-06-01', 'bieke', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10067', '167', '370214197107271055', '2016-06-01', 'biyadi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10068', '168', '370281197208281056', '2016-06-01', 'dazhong', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10069', '169', '370282197309011057', '2016-06-01', 'fengtian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10070', '170', '370283197410021058', '2016-06-01', 'fute', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10071', '171', '370284197511031059', '2016-06-01', 'mazhida', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10072', '172', '370285197612041060', '2016-06-01', 'qirui', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10073', '173', '370101197701051061', '2016-06-01', 'richan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10074', '174', '370102197802061062', '2016-06-01', 'sanling', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10075', '175', '370103197903071063', '2016-06-01', 'sibalu', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10076', '176', '370104197104081064', '2016-06-01', 'tesila', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10077', '177', '370105197205091065', '2016-06-01', 'voervo', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10078', '178', '370112197306101066', '2016-06-01', 'xiandai', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10079', '179', '370123197407111067', '2016-06-01', 'xuefulan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10080', '180', '370201197508121068', '2016-06-01', 'zhonghua', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10081', '181', '370202197609131069', '2016-06-01', 'audi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10082', '182', '370203197710141070', '2016-06-01', 'baoma', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10083', '183', '370205197811151071', '2016-06-01', 'benchi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10084', '184', '370211197912161072', '2016-06-01', 'bentian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10085', '185', '370212197101171073', '2016-06-01', 'biaozhi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10086', '186', '370213197202181074', '2016-06-01', 'bieke', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10087', '187', '370214197303191075', '2016-06-01', 'biyadi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10088', '188', '370281197404201076', '2016-06-01', 'dazhong', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10089', '189', '370282197505211077', '2016-06-01', 'fengtian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10090', '190', '370283197606221078', '2016-06-01', 'fute', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10091', '191', '370284197707231079', '2016-06-01', 'mazhida', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10092', '192', '370285197808241080', '2016-06-01', 'qirui', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10093', '193', '370101197909251081', '2016-06-01', 'richan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10094', '194', '370102197110261082', '2016-06-01', 'sanling', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10095', '195', '370103197211271083', '2016-06-01', 'sibalu', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10096', '196', '370104197312281084', '2016-06-01', 'tesila', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10097', '197', '370105197401011085', '2016-06-01', 'voervo', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10098', '198', '370112197502021086', '2016-06-01', 'xiandai', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10099', '199', '370123197603031087', '2016-06-01', 'xuefulan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A10100', '200', '370201197704041088', '2016-06-01', 'zhonghua', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20001', '201', '370202197805051089', '2016-06-01', 'audi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20002', '202', '370203197906061090', '2016-06-01', 'baoma', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20003', '203', '370205198107071091', '2016-06-01', 'benchi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20004', '204', '370211198208081092', '2016-06-01', 'bentian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20005', '205', '370212198309091093', '2016-06-01', 'biaozhi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20006', '206', '370213198410101094', '2016-06-01', 'bieke', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20007', '207', '370214198511111095', '2016-06-01', 'biyadi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20008', '208', '370281198612121096', '2016-06-01', 'dazhong', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20009', '209', '370202196909091009', '2016-06-01', 'fengtian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20010', '210', '370203196110101010', '2016-06-01', 'fute', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20011', '211', '370205196211111011', '2016-06-01', 'mazhida', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20012', '212', '370211196312121012', '2016-06-01', 'qirui', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20013', '213', '370212196401131013', '2016-06-01', 'richan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20014', '214', '370213196502141014', '2016-06-01', 'sanling', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20015', '215', '370214196603151015', '2016-06-01', 'sibalu', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20016', '216', '370281196704161016', '2016-06-01', 'tesila', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20017', '217', '370282196805171017', '2016-06-01', 'voervo', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20018', '218', '370283196906181018', '2016-06-01', 'xiandai', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20019', '219', '370284196107191019', '2016-06-01', 'xuefulan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20020', '220', '370285196208201020', '2016-06-01', 'zhonghua', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20021', '221', '370101196309211021', '2016-06-01', 'audi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20022', '222', '370102196410221022', '2016-06-01', 'baoma', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20023', '223', '370103196511231023', '2016-06-01', 'benchi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20024', '224', '370104196612241024', '2016-06-01', 'bentian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20025', '225', '370105196701251025', '2016-06-01', 'biaozhi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20026', '226', '370112196802261026', '2016-06-01', 'bieke', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20027', '227', '370123196903271027', '2016-06-01', 'biyadi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20028', '228', '370201196104281028', '2016-06-01', 'dazhong', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20029', '229', '370202196205011029', '2016-06-01', 'fengtian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20030', '230', '370203196306021030', '2016-06-01', 'fute', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20031', '231', '370205196407031031', '2016-06-01', 'mazhida', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20032', '232', '370211196508041032', '2016-06-01', 'qirui', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20033', '233', '370212196609051033', '2016-06-01', 'richan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20034', '234', '370213196710061034', '2016-06-01', 'sanling', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20035', '235', '370214196811071035', '2016-06-01', 'sibalu', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20036', '236', '370281196912081036', '2016-06-01', 'tesila', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20037', '237', '370282196101091037', '2016-06-01', 'voervo', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20038', '238', '370283196202101038', '2016-06-01', 'xiandai', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20039', '239', '370284196303111039', '2016-06-01', 'xuefulan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20040', '240', '370285196404121040', '2016-06-01', 'zhonghua', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20041', '241', '370101196505131041', '2016-06-01', 'audi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20042', '242', '370102196606141042', '2016-06-01', 'baoma', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20043', '243', '370103196707151043', '2016-06-01', 'benchi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20044', '244', '370104196808161044', '2016-06-01', 'bentian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20045', '245', '370105196909171045', '2016-06-01', 'biaozhi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20046', '246', '370112197110181046', '2016-06-01', 'bieke', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20047', '247', '370123197211191047', '2016-06-01', 'biyadi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20048', '248', '370201197312201048', '2016-06-01', 'dazhong', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20049', '249', '370202197401211049', '2016-06-01', 'fengtian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20050', '250', '370203197502221050', '2016-06-01', 'fute', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20051', '251', '370205197603231051', '2016-06-01', 'mazhida', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20052', '252', '370211197704241052', '2016-06-01', 'qirui', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20053', '253', '370212197805251053', '2016-06-01', 'richan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20054', '254', '370213197906261054', '2016-06-01', 'sanling', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20055', '255', '370214197107271055', '2016-06-01', 'sibalu', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20056', '256', '370281197208281056', '2016-06-01', 'tesila', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20057', '257', '370282197309011057', '2016-06-01', 'voervo', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20058', '258', '370283197410021058', '2016-06-01', 'xiandai', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20059', '259', '370284197511031059', '2016-06-01', 'xuefulan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20060', '260', '370285197612041060', '2016-06-01', 'zhonghua', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20061', '261', '370101197701051061', '2016-06-01', 'audi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20062', '262', '370102197802061062', '2016-06-01', 'baoma', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20063', '263', '370103197903071063', '2016-06-01', 'benchi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20064', '264', '370104197104081064', '2016-06-01', 'bentian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20065', '265', '370105197205091065', '2016-06-01', 'biaozhi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20066', '266', '370112197306101066', '2016-06-01', 'bieke', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20067', '267', '370123197407111067', '2016-06-01', 'biyadi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20068', '268', '370201197508121068', '2016-06-01', 'dazhong', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20069', '269', '370202197609131069', '2016-06-01', 'fengtian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20070', '270', '370203197710141070', '2016-06-01', 'fute', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20071', '271', '370205197811151071', '2016-06-01', 'mazhida', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20072', '272', '370211197912161072', '2016-06-01', 'qirui', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20073', '273', '370212197101171073', '2016-06-01', 'richan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20074', '274', '370213197202181074', '2016-06-01', 'sanling', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20075', '275', '370214197303191075', '2016-06-01', 'sibalu', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20076', '276', '370281197404201076', '2016-06-01', 'tesila', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20077', '277', '370282197505211077', '2016-06-01', 'voervo', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20078', '278', '370283197606221078', '2016-06-01', 'xiandai', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20079', '279', '370284197707231079', '2016-06-01', 'xuefulan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20080', '280', '370285197808241080', '2016-06-01', 'zhonghua', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20081', '281', '370101197909251081', '2016-06-01', 'audi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20082', '282', '370102197110261082', '2016-06-01', 'baoma', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20083', '283', '370103197211271083', '2016-06-01', 'benchi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20084', '284', '370104197312281084', '2016-06-01', 'bentian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20085', '285', '370105197401011085', '2016-06-01', 'biaozhi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20086', '286', '370112197502021086', '2016-06-01', 'bieke', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20087', '287', '370123197603031087', '2016-06-01', 'biyadi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20088', '288', '370201197704041088', '2016-06-01', 'dazhong', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20089', '289', '370202197805051089', '2016-06-01', 'fengtian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20090', '290', '370203197906061090', '2016-06-01', 'fute', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20091', '291', '370205198107071091', '2016-06-01', 'mazhida', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20092', '292', '370211198208081092', '2016-06-01', 'qirui', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20093', '293', '370212198309091093', '2016-06-01', 'richan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20094', '294', '370213198410101094', '2016-06-01', 'sanling', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20095', '295', '370214198511111095', '2016-06-01', 'sibalu', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20096', '296', '370281198612121096', '2016-06-01', 'tesila', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20097', '297', '370282198701131097', '2016-06-01', 'voervo', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20098', '298', '370283198802141098', '2016-06-01', 'xiandai', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20099', '299', '370284198903151099', '2016-06-01', 'xuefulan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A20100', '300', '370285198104161100', '2016-06-01', 'zhonghua', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30001', '301', '370101198205171101', '2016-06-01', 'audi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30002', '302', '370102198306181102', '2016-06-01', 'baoma', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30003', '303', '370103198407191103', '2016-06-01', 'benchi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30004', '304', '370104198508201104', '2016-06-01', 'bentian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30005', '305', '370105198609211105', '2016-06-01', 'biaozhi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30006', '306', '370112198710221106', '2016-06-01', 'bieke', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30007', '307', '370123198811231107', '2016-06-01', 'biyadi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30008', '308', '370201198912241108', '2016-06-01', 'dazhong', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30009', '309', '370202198101251109', '2016-06-01', 'fengtian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30010', '310', '370203198202261110', '2016-06-01', 'fute', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30011', '311', '370205198303271111', '2016-06-01', 'mazhida', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30012', '312', '370211198404281112', '2016-06-01', 'qirui', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30013', '313', '370212198505011113', '2016-06-01', 'richan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30014', '314', '370213198606021114', '2016-06-01', 'sanling', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30015', '315', '370214198707031115', '2016-06-01', 'sibalu', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30016', '316', '370281198808041116', '2016-06-01', 'tesila', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30017', '317', '370282198909051117', '2016-06-01', 'voervo', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30018', '318', '370283198110061118', '2016-06-01', 'xiandai', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30019', '319', '370284198211071119', '2016-06-01', 'xuefulan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30020', '320', '370285198312081120', '2016-06-01', 'zhonghua', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30021', '321', '370101198401091121', '2016-06-01', 'audi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30022', '322', '370102198502101122', '2016-06-01', 'baoma', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30023', '323', '370103198603111123', '2016-06-01', 'benchi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30024', '324', '370104198704121124', '2016-06-01', 'bentian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30025', '325', '370105198805131125', '2016-06-01', 'biaozhi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30026', '326', '370112198906141126', '2016-06-01', 'bieke', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30027', '327', '370123198107151127', '2016-06-01', 'biyadi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30028', '328', '370201198208161128', '2016-06-01', 'dazhong', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30029', '329', '370202198309171129', '2016-06-01', 'fengtian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30030', '330', '370203198410181130', '2016-06-01', 'fute', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30031', '331', '370205198511191131', '2016-06-01', 'mazhida', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30032', '332', '370211198612201132', '2016-06-01', 'qirui', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30033', '333', '370212198701211133', '2016-06-01', 'richan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30034', '334', '370213198802221134', '2016-06-01', 'sanling', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30035', '335', '370214198903231135', '2016-06-01', 'sibalu', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30036', '336', '370281198104241136', '2016-06-01', 'tesila', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30037', '337', '370282198205251137', '2016-06-01', 'voervo', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30038', '338', '370283198306261138', '2016-06-01', 'xiandai', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30039', '339', '370284198407271139', '2016-06-01', 'xuefulan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30040', '340', '370285198508281140', '2016-06-01', 'zhonghua', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30041', '341', '370101198609011141', '2016-06-01', 'audi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30042', '342', '370102198710021142', '2016-06-01', 'baoma', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30043', '343', '370103198811031143', '2016-06-01', 'benchi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30044', '344', '370104198912041144', '2016-06-01', 'bentian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30045', '345', '370105198101051145', '2016-06-01', 'biaozhi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30046', '346', '370112198202061146', '2016-06-01', 'bieke', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30047', '347', '370123198303071147', '2016-06-01', 'biyadi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30048', '348', '370201198404081148', '2016-06-01', 'dazhong', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30049', '349', '370202198505091149', '2016-06-01', 'fengtian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30050', '350', '370203198606101150', '2016-06-01', 'fute', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30051', '351', '370205198707111151', '2016-06-01', 'mazhida', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30052', '352', '370211198808121152', '2016-06-01', 'qirui', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30053', '353', '370212198909131153', '2016-06-01', 'richan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30054', '354', '370213198110141154', '2016-06-01', 'sanling', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30055', '355', '370214198211151155', '2016-06-01', 'sibalu', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30056', '356', '370281198312161156', '2016-06-01', 'tesila', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30057', '357', '370282198401171157', '2016-06-01', 'voervo', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30058', '358', '370283198502181158', '2016-06-01', 'xiandai', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30059', '359', '370284198603191159', '2016-06-01', 'xuefulan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30060', '360', '370285198704201160', '2016-06-01', 'zhonghua', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30061', '361', '370101198805211161', '2016-06-01', 'audi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30062', '362', '370102198906221162', '2016-06-01', 'baoma', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30063', '363', '370103198107231163', '2016-06-01', 'benchi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30064', '364', '370104198208241164', '2016-06-01', 'bentian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30065', '365', '370105198309251165', '2016-06-01', 'biaozhi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30066', '366', '370112198410261166', '2016-06-01', 'bieke', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30067', '367', '370123198511271167', '2016-06-01', 'biyadi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30068', '368', '370201198612281168', '2016-06-01', 'dazhong', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30069', '369', '370202198701011169', '2016-06-01', 'fengtian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30070', '370', '370203198802021170', '2016-06-01', 'fute', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30071', '371', '370205198903031171', '2016-06-01', 'mazhida', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30072', '372', '370211198104041172', '2016-06-01', 'qirui', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30073', '373', '370212198205051173', '2016-06-01', 'richan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30074', '374', '370213198306061174', '2016-06-01', 'sanling', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30075', '375', '370214198407071175', '2016-06-01', 'sibalu', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30076', '376', '370281198508081176', '2016-06-01', 'tesila', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30077', '377', '370282198609091177', '2016-06-01', 'voervo', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30078', '378', '370283198710101178', '2016-06-01', 'xiandai', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30079', '379', '370284198811111179', '2016-06-01', 'xuefulan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30080', '380', '370285198912121180', '2016-06-01', 'zhonghua', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30081', '381', '370101198101131181', '2016-06-01', 'audi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30082', '382', '370102198202141182', '2016-06-01', 'baoma', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30083', '383', '370103198303151183', '2016-06-01', 'benchi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30084', '384', '370104198404161184', '2016-06-01', 'bentian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30085', '385', '370105198505171185', '2016-06-01', 'biaozhi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30086', '386', '370112198606181186', '2016-06-01', 'bieke', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30087', '387', '370123198707191187', '2016-06-01', 'biyadi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30088', '388', '370201198808201188', '2016-06-01', 'dazhong', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30089', '389', '370202198909211189', '2016-06-01', 'fengtian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30090', '390', '370203199110221190', '2016-06-01', 'fute', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30091', '391', '370205199211231191', '2016-06-01', 'mazhida', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30092', '392', '370211199312241192', '2016-06-01', 'qirui', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30093', '393', '370212199401251193', '2016-06-01', 'richan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30094', '394', '370213199502261194', '2016-06-01', 'sanling', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30095', '395', '370214199603271195', '2016-06-01', 'sibalu', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30096', '396', '370281199704281196', '2016-06-01', 'tesila', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30097', '397', '370282199805011197', '2016-06-01', 'voervo', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30098', '398', '370283199906021198', '2016-06-01', 'xiandai', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30099', '399', '370284199107031199', '2016-06-01', 'xuefulan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A30100', '400', '370285199208041200', '2016-06-01', 'zhonghua', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50001', '401', '370101199309051201', '2016-06-01', 'audi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50002', '402', '370102199410061202', '2016-06-01', 'baoma', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50003', '403', '370103199511071203', '2016-06-01', 'benchi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50004', '404', '370104199612081204', '2016-06-01', 'bentian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50005', '405', '370105199701091205', '2016-06-01', 'biaozhi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50006', '406', '370112199802101206', '2016-06-01', 'bieke', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50007', '407', '370123199903111207', '2016-06-01', 'biyadi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50008', '408', '370201199104121208', '2016-06-01', 'dazhong', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50009', '409', '370202199205131209', '2016-06-01', 'fengtian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50010', '410', '370203199306141210', '2016-06-01', 'fute', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50011', '411', '370205199407151211', '2016-06-01', 'mazhida', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50012', '412', '370211199508161212', '2016-06-01', 'qirui', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50013', '413', '370212199609171213', '2016-06-01', 'richan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50014', '414', '370213199710181214', '2016-06-01', 'sanling', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50015', '415', '370214199811191215', '2016-06-01', 'sibalu', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50016', '416', '370281199912201216', '2016-06-01', 'tesila', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50017', '417', '370282199101211217', '2016-06-01', 'voervo', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50018', '418', '370283199202221218', '2016-06-01', 'xiandai', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50019', '419', '370284199303231219', '2016-06-01', 'xuefulan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50020', '420', '370285199404241220', '2016-06-01', 'zhonghua', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50021', '421', '370101199505251221', '2016-06-01', 'audi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50022', '422', '370102199606261222', '2016-06-01', 'baoma', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50023', '423', '370103199707271223', '2016-06-01', 'benchi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50024', '424', '370104199808281224', '2016-06-01', 'bentian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50025', '425', '370105199909011225', '2016-06-01', 'biaozhi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50026', '426', '370112199110021226', '2016-06-01', 'bieke', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50027', '427', '370123199211031227', '2016-06-01', 'biyadi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50028', '428', '370201199312041228', '2016-06-01', 'dazhong', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50029', '429', '370202199401051229', '2016-06-01', 'fengtian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50030', '430', '370203199502061230', '2016-06-01', 'fute', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50031', '431', '370205199603071231', '2016-06-01', 'mazhida', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50032', '432', '370211199704081232', '2016-06-01', 'qirui', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50033', '433', '370212199805091233', '2016-06-01', 'richan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50034', '434', '370213199906101234', '2016-06-01', 'sanling', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50035', '435', '370214199107111235', '2016-06-01', 'sibalu', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50036', '436', '370281199208121236', '2016-06-01', 'tesila', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50037', '437', '370282199309131237', '2016-06-01', 'voervo', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50038', '438', '370283199410141238', '2016-06-01', 'xiandai', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50039', '439', '370284199511151239', '2016-06-01', 'xuefulan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50040', '440', '370285199612161240', '2016-06-01', 'zhonghua', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50041', '441', '370101199701171241', '2016-06-01', 'audi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50042', '442', '370102199802181242', '2016-06-01', 'baoma', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50043', '443', '370103199903191243', '2016-06-01', 'benchi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50044', '444', '370104199504201244', '2016-06-01', 'bentian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50045', '445', '370105199605211245', '2016-06-01', 'biaozhi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50046', '446', '370112199706221246', '2016-06-01', 'bieke', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50047', '447', '370123199807231247', '2016-06-01', 'biyadi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50048', '448', '370201199908241248', '2016-06-01', 'dazhong', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50049', '449', '370202199109251249', '2016-06-01', 'fengtian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50050', '450', '370203199210261250', '2016-06-01', 'fute', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50051', '451', '370205199311271251', '2016-06-01', 'mazhida', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50052', '452', '370211199412281252', '2016-06-01', 'qirui', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50053', '453', '370212199501011253', '2016-06-01', 'richan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50054', '454', '370213199602021254', '2016-06-01', 'sanling', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50055', '455', '370214199703031255', '2016-06-01', 'sibalu', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50056', '456', '370281199804041256', '2016-06-01', 'tesila', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50057', '457', '370282199905051257', '2016-06-01', 'voervo', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50058', '458', '370283199106061258', '2016-06-01', 'xiandai', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50059', '459', '370284199207071259', '2016-06-01', 'xuefulan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50060', '460', '370285199308081260', '2016-06-01', 'zhonghua', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50061', '461', '370101199409091261', '2016-06-01', 'audi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50062', '462', '370102199510101262', '2016-06-01', 'baoma', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50063', '463', '370103199611111263', '2016-06-01', 'benchi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50064', '464', '370104199712121264', '2016-06-01', 'bentian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50065', '465', '370105199801131265', '2016-06-01', 'biaozhi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50066', '466', '370112199902141266', '2016-06-01', 'bieke', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50067', '467', '370123199503151267', '2016-06-01', 'biyadi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50068', '468', '370201199604161268', '2016-06-01', 'dazhong', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50069', '469', '370202199705171269', '2016-06-01', 'fengtian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50070', '470', '370203199806181270', '2016-06-01', 'fute', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50071', '471', '370205199907191271', '2016-06-01', 'mazhida', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50072', '472', '370211199108201272', '2016-06-01', 'qirui', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50073', '473', '370212199209211273', '2016-06-01', 'richan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50074', '474', '370213199310221274', '2016-06-01', 'sanling', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50075', '475', '370214199411231275', '2016-06-01', 'sibalu', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50076', '476', '370281199512241276', '2016-06-01', 'tesila', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50077', '477', '370282199601251277', '2016-06-01', 'voervo', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50078', '478', '370283199702261278', '2016-06-01', 'xiandai', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50079', '479', '370284199803271279', '2016-06-01', 'xuefulan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50080', '480', '370285199904281280', '2016-06-01', 'zhonghua', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50081', '481', '370101199105011281', '2016-06-01', 'audi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50082', '482', '370102199206021282', '2016-06-01', 'baoma', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50083', '483', '370103199307031283', '2016-06-01', 'benchi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50084', '484', '370104199408041284', '2016-06-01', 'bentian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50085', '485', '370105199509051285', '2016-06-01', 'biaozhi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50086', '486', '370213199310221274', '2016-06-01', 'bieke', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50087', '487', '370214199411231275', '2016-06-01', 'biyadi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50088', '488', '370281199512241276', '2016-06-01', 'dazhong', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50089', '489', '370282199601251277', '2016-06-01', 'fengtian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50090', '490', '370283199702261278', '2016-06-01', 'fute', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50091', '491', '370284199803271279', '2016-06-01', 'mazhida', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50092', '492', '370285199904281280', '2016-06-01', 'qirui', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50093', '493', '370101199105011281', '2016-06-01', 'richan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50094', '494', '370102199206021282', '2016-06-01', 'sanling', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50095', '495', '370103199307031283', '2016-06-01', 'sibalu', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50096', '496', '370104199408041284', '2016-06-01', 'tesila', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50097', '497', '370105199509051285', '2016-06-01', 'voervo', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50098', '498', '370213199310221274', '2016-06-01', 'xiandai', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50099', '499', '370214199411231275', '2016-06-01', 'xuefulan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁A50100', '500', '370281199512241276', '2016-06-01', 'dazhong', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10001', '1', '370101196101011001', '2016-06-01', 'audi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10002', '2', '370102196202021002', '2016-06-01', 'baoma', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10003', '3', '370103196303031003', '2016-06-01', 'benchi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10004', '4', '370101196101011001', '2016-06-01', 'bentian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10005', '5', '370102196202021002', '2016-06-01', 'biaozhi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10006', '6', '370103196303031003', '2016-06-01', 'bieke', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10007', '7', '370101196101011001', '2016-06-01', 'biyadi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10008', '8', '370102196202021002', '2016-06-01', 'dazhong', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10009', '9', '370103196303031003', '2016-06-01', 'fengtian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10010', '10', '370101196101011001', '2016-06-01', 'fute', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10011', '11', '370112196606061006', '2016-06-01', 'mazhida', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10012', '12', '370123196707071007', '2016-06-01', 'qirui', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10013', '13', '370201196808081008', '2016-06-01', 'richan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10014', '14', '370202196909091009', '2016-06-01', 'sanling', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10015', '15', '370203196110101010', '2016-06-01', 'sibalu', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10016', '16', '370205196211111011', '2016-06-01', 'tesila', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10017', '17', '370211196312121012', '2016-06-01', 'voervo', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10018', '18', '370212196401131013', '2016-06-01', 'xiandai', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10019', '19', '370213196502141014', '2016-06-01', 'xuefulan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10020', '20', '370214196603151015', '2016-06-01', 'zhonghua', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10021', '21', '370281196704161016', '2016-06-01', 'audi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10022', '22', '370282196805171017', '2016-06-01', 'baoma', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10023', '23', '370283196906181018', '2016-06-01', 'benchi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10024', '24', '370284196107191019', '2016-06-01', 'bentian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10025', '25', '370285196208201020', '2016-06-01', 'biaozhi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10026', '26', '370101196309211021', '2016-06-01', 'bieke', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10027', '27', '370102196410221022', '2016-06-01', 'biyadi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10028', '28', '370103196511231023', '2016-06-01', 'dazhong', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10029', '29', '370104196612241024', '2016-06-01', 'fengtian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10030', '30', '370105196701251025', '2016-06-01', 'fute', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10031', '31', '370112196802261026', '2016-06-01', 'mazhida', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10032', '32', '370123196903271027', '2016-06-01', 'qirui', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10033', '33', '370112196606061006', '2016-06-01', 'richan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10034', '34', '370123196707071007', '2016-06-01', 'sanling', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10035', '35', '370201196808081008', '2016-06-01', 'sibalu', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10036', '36', '370202196909091009', '2016-06-01', 'tesila', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10037', '37', '370203196110101010', '2016-06-01', 'voervo', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10038', '38', '370205196211111011', '2016-06-01', 'xiandai', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10039', '39', '370211196312121012', '2016-06-01', 'xuefulan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10040', '40', '370212196401131013', '2016-06-01', 'zhonghua', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10041', '41', '370213196502141014', '2016-06-01', 'audi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10042', '42', '370214196603151015', '2016-06-01', 'baoma', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10043', '43', '370281196704161016', '2016-06-01', 'benchi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10044', '44', '370282196805171017', '2016-06-01', 'bentian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10045', '45', '370283196906181018', '2016-06-01', 'biaozhi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10046', '46', '370284196107191019', '2016-06-01', 'bieke', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10047', '47', '370285196208201020', '2016-06-01', 'biyadi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10048', '48', '370101196309211021', '2016-06-01', 'dazhong', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10049', '49', '370102196410221022', '2016-06-01', 'fengtian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10050', '50', '370103196511231023', '2016-06-01', 'fute', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10051', '51', '370104196612241024', '2016-06-01', 'mazhida', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10052', '52', '370105196701251025', '2016-06-01', 'qirui', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10053', '53', '370112196802261026', '2016-06-01', 'richan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10054', '54', '370123196903271027', '2016-06-01', 'sanling', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10055', '55', '370112196606061006', '2016-06-01', 'sibalu', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10056', '56', '370123196707071007', '2016-06-01', 'tesila', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10057', '57', '370201196808081008', '2016-06-01', 'voervo', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10058', '58', '370202196909091009', '2016-06-01', 'xiandai', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10059', '59', '370203196110101010', '2016-06-01', 'xuefulan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10060', '60', '370205196211111011', '2016-06-01', 'zhonghua', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10061', '61', '370211196312121012', '2016-06-01', 'audi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10062', '62', '370212196401131013', '2016-06-01', 'baoma', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10063', '63', '370213196502141014', '2016-06-01', 'benchi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10064', '64', '370214196603151015', '2016-06-01', 'bentian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10065', '65', '370281196704161016', '2016-06-01', 'biaozhi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10066', '66', '370282196805171017', '2016-06-01', 'bieke', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10067', '67', '370283196906181018', '2016-06-01', 'biyadi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10068', '68', '370284196107191019', '2016-06-01', 'dazhong', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10069', '69', '370285196208201020', '2016-06-01', 'fengtian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10070', '70', '370101196309211021', '2016-06-01', 'fute', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10071', '71', '370102196410221022', '2016-06-01', 'mazhida', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10072', '72', '370103196511231023', '2016-06-01', 'qirui', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10073', '73', '370104196612241024', '2016-06-01', 'richan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10074', '74', '370105196701251025', '2016-06-01', 'sanling', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10075', '75', '370112196802261026', '2016-06-01', 'sibalu', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10076', '76', '370123196903271027', '2016-06-01', 'tesila', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10077', '77', '370205196407031031', '2016-06-01', 'voervo', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10078', '78', '370211196508041032', '2016-06-01', 'xiandai', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10079', '79', '370212196609051033', '2016-06-01', 'xuefulan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10080', '80', '370213196710061034', '2016-06-01', 'zhonghua', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10081', '81', '370214196811071035', '2016-06-01', 'audi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10082', '82', '370281196912081036', '2016-06-01', 'baoma', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10083', '83', '370282196101091037', '2016-06-01', 'benchi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10084', '84', '370283196202101038', '2016-06-01', 'bentian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10085', '85', '370284196303111039', '2016-06-01', 'biaozhi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10086', '86', '370285196404121040', '2016-06-01', 'bieke', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10087', '87', '370101196505131041', '2016-06-01', 'biyadi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10088', '88', '370102196606141042', '2016-06-01', 'dazhong', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10089', '89', '370103196707151043', '2016-06-01', 'fengtian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10090', '90', '370104196808161044', '2016-06-01', 'fute', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10091', '91', '370105196909171045', '2016-06-01', 'mazhida', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10092', '92', '370112197110181046', '2016-06-01', 'qirui', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10093', '93', '370123197211191047', '2016-06-01', 'richan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10094', '94', '370201197312201048', '2016-06-01', 'sanling', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10095', '95', '370202197401211049', '2016-06-01', 'sibalu', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10096', '96', '370203197502221050', '2016-06-01', 'tesila', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10097', '97', '370205197603231051', '2016-06-01', 'voervo', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10098', '98', '370211197704241052', '2016-06-01', 'xiandai', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10099', '99', '370212197805251053', '2016-06-01', 'xuefulan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁B10100', '100', '370213197906261054', '2016-06-01', 'zhonghua', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50101', '500', '370282199601251277', '2016-06-01', 'fengtian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50102', '500', '370283199702261278', '2016-06-01', 'fute', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50103', '500', '370284199803271279', '2016-06-01', 'mazhida', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50104', '500', '370285199904281280', '2016-06-01', 'qirui', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50105', '500', '370101199105011281', '2016-06-01', 'richan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50106', '500', '370102199206021282', '2016-06-01', 'sanling', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50107', '500', '370103199307031283', '2016-06-01', 'sibalu', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50108', '500', '370104199408041284', '2016-06-01', 'tesila', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50109', '500', '370105199509051285', '2016-06-01', 'voervo', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50110', '500', '370213199310221274', '2016-06-01', 'xiandai', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50111', '500', '370214199411231275', '2016-06-01', 'xuefulan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50112', '500', '370281199512241276', '2016-06-01', 'zhonghua', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50113', '500', '370282199601251277', '2016-06-01', 'audi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50114', '500', '370283199702261278', '2016-06-01', 'baoma', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50115', '500', '370284199803271279', '2016-06-01', 'benchi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50116', '500', '370285199904281280', '2016-06-01', 'bentian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50117', '500', '370101199105011281', '2016-06-01', 'biaozhi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50118', '500', '370102199206021282', '2016-06-01', 'bieke', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50119', '500', '370103199307031283', '2016-06-01', 'biyadi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50120', '500', '370104199408041284', '2016-06-01', 'dazhong', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50121', '500', '370105199509051285', '2016-06-01', 'fengtian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50122', '500', '370213199310221274', '2016-06-01', 'fute', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50123', '500', '370214199411231275', '2016-06-01', 'mazhida', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50124', '500', '370281199512241276', '2016-06-01', 'qirui', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50125', '500', '370282199601251277', '2016-06-01', 'richan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50126', '500', '370283199702261278', '2016-06-01', 'sanling', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50127', '500', '370284199803271279', '2016-06-01', 'sibalu', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50128', '500', '370285199904281280', '2016-06-01', 'tesila', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50129', '500', '370101199105011281', '2016-06-01', 'voervo', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50130', '500', '370102199206021282', '2016-06-01', 'xiandai', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50131', '500', '370103199307031283', '2016-06-01', 'xuefulan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50132', '500', '370104199408041284', '2016-06-01', 'zhonghua', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50133', '500', '370105199509051285', '2016-06-01', 'audi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50134', '500', '370213199310221274', '2016-06-01', 'baoma', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50135', '500', '370214199411231275', '2016-06-01', 'benchi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50136', '500', '370281199512241276', '2016-06-01', 'bentian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50137', '500', '370282199601251277', '2016-06-01', 'biaozhi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50138', '500', '370283199702261278', '2016-06-01', 'bieke', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50139', '500', '370284199803271279', '2016-06-01', 'biyadi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50140', '500', '370285199904281280', '2016-06-01', 'dazhong', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50141', '500', '370101199105011281', '2016-06-01', 'fengtian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50142', '500', '370102199206021282', '2016-06-01', 'fute', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50143', '500', '370103199307031283', '2016-06-01', 'mazhida', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50144', '500', '370104199408041284', '2016-06-01', 'qirui', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50145', '500', '370105199509051285', '2016-06-01', 'richan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50146', '500', '370213199310221274', '2016-06-01', 'sanling', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50147', '500', '370214199411231275', '2016-06-01', 'sibalu', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50148', '500', '370281199512241276', '2016-06-01', 'tesila', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50149', '500', '370282199601251277', '2016-06-01', 'voervo', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50150', '500', '370283199702261278', '2016-06-01', 'xiandai', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50151', '500', '370284199803271279', '2016-06-01', 'xuefulan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50152', '500', '370285199904281280', '2016-06-01', 'zhonghua', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50153', '500', '370101199105011281', '2016-06-01', 'audi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50154', '500', '370102199206021282', '2016-06-01', 'baoma', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50155', '500', '370103199307031283', '2016-06-01', 'benchi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50156', '500', '370104199408041284', '2016-06-01', 'bentian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50157', '500', '370105199509051285', '2016-06-01', 'biaozhi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50158', '500', '370213199310221274', '2016-06-01', 'bieke', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50159', '500', '370214199411231275', '2016-06-01', 'biyadi', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50160', '500', '370281199512241276', '2016-06-01', 'dazhong', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50161', '500', '370282199601251277', '2016-06-01', 'fengtian', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50162', '500', '370283199702261278', '2016-06-01', 'fute', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50163', '500', '370284199803271279', '2016-06-01', 'mazhida', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50164', '500', '370285199904281280', '2016-06-01', 'qirui', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50165', '500', '370101199105011281', '2016-06-01', 'richan', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50166', '500', '370102199206021282', '2016-06-01', 'sanling', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50167', '500', '370103199307031283', '2016-06-01', 'sibalu', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50168', '500', '370104199408041284', '2016-06-01', 'tesila', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50169', '500', '370105199509051285', '2016-06-01', 'voervo', '/itmsdb/Public/dist/img/audi.jpg', '0');
+INSERT INTO `carinfo` VALUES ('鲁C50170', '500', '370213199310221274', '2016-06-01', 'xiandai', '/itmsdb/Public/dist/img/audi.jpg', '0');
 
 -- ----------------------------
--- Table structure for `peccancy`
+-- Table structure for peccancy
 -- ----------------------------
 DROP TABLE IF EXISTS `peccancy`;
 CREATE TABLE `peccancy` (
@@ -3097,7 +3099,7 @@ INSERT INTO `peccancy` VALUES ('2476', '鲁C50148', '1039', '2016-06-05 06:19:21
 INSERT INTO `peccancy` VALUES ('2477', '鲁C50129', '1039', '2016-06-06 07:19:21', '广州路');
 
 -- ----------------------------
--- Table structure for `peccancytype`
+-- Table structure for peccancytype
 -- ----------------------------
 DROP TABLE IF EXISTS `peccancytype`;
 CREATE TABLE `peccancytype` (
@@ -3292,7 +3294,7 @@ INSERT INTO `peccancytype` VALUES ('1709A　　', '1000', '12', '驾驶与驾驶
 INSERT INTO `peccancytype` VALUES ('1709B　　', '1500', '12', '驾驶与驾驶证载明的准驾车型不相符合的车辆的 B驾驶汽车类');
 
 -- ----------------------------
--- Table structure for `road`
+-- Table structure for road
 -- ----------------------------
 DROP TABLE IF EXISTS `road`;
 CREATE TABLE `road` (
@@ -3316,7 +3318,7 @@ INSERT INTO `road` VALUES ('6', '广州路', null, null, null);
 INSERT INTO `road` VALUES ('7', '高速公路', null, null, null);
 
 -- ----------------------------
--- Table structure for `sbusinfo`
+-- Table structure for sbusinfo
 -- ----------------------------
 DROP TABLE IF EXISTS `sbusinfo`;
 CREATE TABLE `sbusinfo` (
@@ -3345,7 +3347,7 @@ INSERT INTO `sbusinfo` VALUES ('14', '36');
 INSERT INTO `sbusinfo` VALUES ('15', '60');
 
 -- ----------------------------
--- Table structure for `sbusstation`
+-- Table structure for sbusstation
 -- ----------------------------
 DROP TABLE IF EXISTS `sbusstation`;
 CREATE TABLE `sbusstation` (
@@ -3369,7 +3371,7 @@ INSERT INTO `sbusstation` VALUES ('3', '7831', '1');
 INSERT INTO `sbusstation` VALUES ('3', '2156', '4');
 
 -- ----------------------------
--- Table structure for `scarblacklist`
+-- Table structure for scarblacklist
 -- ----------------------------
 DROP TABLE IF EXISTS `scarblacklist`;
 CREATE TABLE `scarblacklist` (
@@ -3378,22 +3380,16 @@ CREATE TABLE `scarblacklist` (
   `datetime` datetime DEFAULT NULL COMMENT '黑名单记录时间',
   `username` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`cbid`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of scarblacklist
 -- ----------------------------
-INSERT INTO `scarblacklist` VALUES ('7', '1', '2017-03-22 01:44:21', 'user1');
-INSERT INTO `scarblacklist` VALUES ('8', '2', '2017-03-22 01:44:21', 'user1');
-INSERT INTO `scarblacklist` VALUES ('9', '1', '2017-02-16 01:44:21', 'user2');
-INSERT INTO `scarblacklist` VALUES ('10', '2', '2017-02-24 01:44:21', 'user2');
-INSERT INTO `scarblacklist` VALUES ('11', '1', '2017-02-21 01:44:21', 'user3');
-INSERT INTO `scarblacklist` VALUES ('12', '2', '2017-02-21 01:44:21', 'user3');
-INSERT INTO `scarblacklist` VALUES ('15', '1', '2016-02-21 01:44:21', 'user4');
-INSERT INTO `scarblacklist` VALUES ('16', '2', '2016-02-21 01:44:21', 'user4');
+INSERT INTO `scarblacklist` VALUES ('17', '5', '2018-05-06 16:04:56', 'user101');
+INSERT INTO `scarblacklist` VALUES ('18', '6', '2018-05-06 16:04:56', 'user102');
 
 -- ----------------------------
--- Table structure for `scarcharge`
+-- Table structure for scarcharge
 -- ----------------------------
 DROP TABLE IF EXISTS `scarcharge`;
 CREATE TABLE `scarcharge` (
@@ -3401,26 +3397,24 @@ CREATE TABLE `scarcharge` (
   `money` int(11) DEFAULT NULL,
   `chargetime` datetime DEFAULT NULL,
   `carid` int(11) DEFAULT NULL,
+  `charge_man` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ccid`),
   KEY `FKktns4rrkbxa9via0ex7avmg0k` (`carid`),
   CONSTRAINT `FKktns4rrkbxa9via0ex7avmg0k` FOREIGN KEY (`carid`) REFERENCES `scarinfo` (`carid`),
   CONSTRAINT `scarcharge_ibfk_1` FOREIGN KEY (`carid`) REFERENCES `scarinfo` (`carid`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of scarcharge
 -- ----------------------------
-INSERT INTO `scarcharge` VALUES ('1', '1', '2017-11-17 10:36:04', '2');
-INSERT INTO `scarcharge` VALUES ('2', '2', '2017-11-17 10:36:11', '2');
-INSERT INTO `scarcharge` VALUES ('3', '3', '2017-11-17 10:36:14', '2');
-INSERT INTO `scarcharge` VALUES ('4', '4', '2017-11-17 10:36:21', '2');
-INSERT INTO `scarcharge` VALUES ('5', '10', '2017-11-26 16:58:11', '1');
-INSERT INTO `scarcharge` VALUES ('6', '20', '2017-11-26 16:58:19', '1');
-INSERT INTO `scarcharge` VALUES ('7', '30', '2017-11-26 16:58:24', '1');
-INSERT INTO `scarcharge` VALUES ('8', '40', '2017-11-26 16:58:28', '1');
+INSERT INTO `scarcharge` VALUES ('12', '1000', '2018-05-06 13:10:02', '4', null);
+INSERT INTO `scarcharge` VALUES ('13', '110', '2018-05-06 13:15:52', '2', null);
+INSERT INTO `scarcharge` VALUES ('14', '100', '2018-05-06 13:18:41', '2', null);
+INSERT INTO `scarcharge` VALUES ('15', '50', '2018-05-06 13:23:01', '2', 'admin');
+INSERT INTO `scarcharge` VALUES ('16', '300', '2018-05-06 13:28:53', '3', 'admin');
 
 -- ----------------------------
--- Table structure for `scarfee`
+-- Table structure for scarfee
 -- ----------------------------
 DROP TABLE IF EXISTS `scarfee`;
 CREATE TABLE `scarfee` (
@@ -3431,20 +3425,29 @@ CREATE TABLE `scarfee` (
   PRIMARY KEY (`cfid`),
   KEY `FKd0si4bm80cstqakw6954ppnch` (`carid`),
   CONSTRAINT `FKd0si4bm80cstqakw6954ppnch` FOREIGN KEY (`carid`) REFERENCES `scarinfo` (`carid`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of scarfee
 -- ----------------------------
-INSERT INTO `scarfee` VALUES ('1', '1', '2017-11-26 17:03:48', '1');
-INSERT INTO `scarfee` VALUES ('2', '1', '2017-11-26 17:03:53', '2');
-INSERT INTO `scarfee` VALUES ('3', '1', '2017-11-26 17:03:58', '3');
-INSERT INTO `scarfee` VALUES ('4', '1', '2017-11-26 17:04:02', '4');
-INSERT INTO `scarfee` VALUES ('5', '1', '2017-11-26 18:52:00', '10');
-INSERT INTO `scarfee` VALUES ('6', '2', '2017-11-26 18:52:00', '10');
+INSERT INTO `scarfee` VALUES ('1', '1', '2017-11-26 17:03:48', '100');
+INSERT INTO `scarfee` VALUES ('2', '2', '2017-11-26 17:03:53', '260');
+INSERT INTO `scarfee` VALUES ('3', '3', '2017-11-26 17:03:58', '420');
+INSERT INTO `scarfee` VALUES ('4', '4', '2017-11-26 17:04:02', '130');
+INSERT INTO `scarfee` VALUES ('5', '5', '2017-11-26 18:52:00', '140');
+INSERT INTO `scarfee` VALUES ('6', '6', '2017-11-26 18:52:00', '150');
+INSERT INTO `scarfee` VALUES ('7', '7', '2017-11-26 18:52:00', '100');
+INSERT INTO `scarfee` VALUES ('8', '8', '2017-11-26 18:52:00', '150');
+INSERT INTO `scarfee` VALUES ('9', '9', '2017-11-26 18:52:00', '200');
+INSERT INTO `scarfee` VALUES ('10', '10', '2017-11-26 18:52:00', '250');
+INSERT INTO `scarfee` VALUES ('11', '11', '2017-11-26 18:52:00', '300');
+INSERT INTO `scarfee` VALUES ('12', '12', '2017-11-26 18:52:00', '250');
+INSERT INTO `scarfee` VALUES ('13', '13', '2017-11-26 18:52:00', '260');
+INSERT INTO `scarfee` VALUES ('14', '14', '2017-11-26 18:52:00', '270');
+INSERT INTO `scarfee` VALUES ('15', '15', '2017-11-26 18:52:00', '100');
 
 -- ----------------------------
--- Table structure for `scarinfo`
+-- Table structure for scarinfo
 -- ----------------------------
 DROP TABLE IF EXISTS `scarinfo`;
 CREATE TABLE `scarinfo` (
@@ -3474,7 +3477,7 @@ INSERT INTO `scarinfo` VALUES ('14', 'Stop', '0');
 INSERT INTO `scarinfo` VALUES ('15', 'Stop', '0');
 
 -- ----------------------------
--- Table structure for `setctralog`
+-- Table structure for setctralog
 -- ----------------------------
 DROP TABLE IF EXISTS `setctralog`;
 CREATE TABLE `setctralog` (
@@ -3496,7 +3499,7 @@ INSERT INTO `setctralog` VALUES ('4', '2', '2017-11-26 10:27:55', '2017-11-24 10
 INSERT INTO `setctralog` VALUES ('5', '4', '2017-11-24 10:28:43', '2017-11-24 10:29:30', '40');
 
 -- ----------------------------
--- Table structure for `smonthtemperature`
+-- Table structure for smonthtemperature
 -- ----------------------------
 DROP TABLE IF EXISTS `smonthtemperature`;
 CREATE TABLE `smonthtemperature` (
@@ -3523,7 +3526,7 @@ INSERT INTO `smonthtemperature` VALUES ('11', '-6', '14');
 INSERT INTO `smonthtemperature` VALUES ('12', '-16', '-2');
 
 -- ----------------------------
--- Table structure for `sothersingle`
+-- Table structure for sothersingle
 -- ----------------------------
 DROP TABLE IF EXISTS `sothersingle`;
 CREATE TABLE `sothersingle` (
@@ -3542,7 +3545,7 @@ INSERT INTO `sothersingle` VALUES ('FeeRate', '10', null);
 INSERT INTO `sothersingle` VALUES ('Up', '505', null);
 
 -- ----------------------------
--- Table structure for `sparam`
+-- Table structure for sparam
 -- ----------------------------
 DROP TABLE IF EXISTS `sparam`;
 CREATE TABLE `sparam` (
@@ -3558,7 +3561,7 @@ INSERT INTO `sparam` VALUES ('sand_ip', '192.168.0.112', null);
 INSERT INTO `sparam` VALUES ('sand_port', '8890', null);
 
 -- ----------------------------
--- Table structure for `sroad`
+-- Table structure for sroad
 -- ----------------------------
 DROP TABLE IF EXISTS `sroad`;
 CREATE TABLE `sroad` (
@@ -3584,7 +3587,7 @@ INSERT INTO `sroad` VALUES ('11', '3');
 INSERT INTO `sroad` VALUES ('12', '5');
 
 -- ----------------------------
--- Table structure for `sroadlight`
+-- Table structure for sroadlight
 -- ----------------------------
 DROP TABLE IF EXISTS `sroadlight`;
 CREATE TABLE `sroadlight` (
@@ -3602,7 +3605,7 @@ INSERT INTO `sroadlight` VALUES ('2', 'Close', 'Auto');
 INSERT INTO `sroadlight` VALUES ('3', 'Open', 'Manual');
 
 -- ----------------------------
--- Table structure for `srole`
+-- Table structure for srole
 -- ----------------------------
 DROP TABLE IF EXISTS `srole`;
 CREATE TABLE `srole` (
@@ -3619,7 +3622,7 @@ INSERT INTO `srole` VALUES ('adv_user', null);
 INSERT INTO `srole` VALUES ('nor_user', null);
 
 -- ----------------------------
--- Table structure for `stralight`
+-- Table structure for stralight
 -- ----------------------------
 DROP TABLE IF EXISTS `stralight`;
 CREATE TABLE `stralight` (
@@ -3644,7 +3647,7 @@ INSERT INTO `stralight` VALUES ('6', 'Yellow', '45', '35', '5', '0');
 INSERT INTO `stralight` VALUES ('7', 'Green', '25', '25', '3', '0');
 
 -- ----------------------------
--- Table structure for `suser`
+-- Table structure for suser
 -- ----------------------------
 DROP TABLE IF EXISTS `suser`;
 CREATE TABLE `suser` (
@@ -3657,313 +3660,314 @@ CREATE TABLE `suser` (
   `pregisterdate` datetime DEFAULT NULL,
   `role` varchar(20) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
+  `car_num` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of suser
 -- ----------------------------
-INSERT INTO `suser` VALUES ('admin', 'admin', 'admin', 'admin', '男', 'admin', '2017-05-26 14:48:06', 'admin', null);
-INSERT INTO `suser` VALUES ('user1', '123456', '王生安', '370101196101011001', '男', '13804110001', '1990-05-21 14:19:21', 'adv_user', null);
-INSERT INTO `suser` VALUES ('user10', '123456', '张昧谡', '370203196110101010', '男', '13804110010', '1990-05-30 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user100', '123456', '吴少晓', '370285198104161100', '男', '13804110100', '1990-08-28 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user101', '123456', '廖湖花', '370101198205171101', '男', '13804110101', '1990-08-29 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user102', '123456', '章苑虹', '370102198306181102', '女', '13804110102', '1990-08-30 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user103', '123456', '汤瑄意', '370103198407191103', '男', '13804110103', '1990-08-31 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user104', '123456', '曾琼方', '370104198508201104', '男', '13804110104', '1990-09-01 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user105', '123456', '胡馨真', '370105198609211105', '女', '13804110105', '1990-09-02 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user106', '123456', '杨邦游', '370112198710221106', '男', '13804110106', '1990-09-03 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user107', '123456', '卫淮玄', '370123198811231107', '男', '13804110107', '1990-09-04 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user108', '123456', '王研建', '370201198912241108', '女', '13804110108', '1990-09-05 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user109', '123456', '杨镜祯', '370202198101251109', '男', '13804110109', '1990-09-06 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user11', '123456', '岑弥勳', '370205196211111011', '男', '13804110011', '1990-05-31 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user110', '123456', '秦龄颢', '370203198202261110', '男', '13804110110', '1990-09-07 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user111', '123456', '蒲稳雄', '370205198303271111', '女', '13804110111', '1990-09-08 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user112', '123456', '刘铎牧', '370211198404281112', '男', '13804110112', '1990-09-09 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user113', '123456', '元负祎', '370212198505011113', '男', '13804110113', '1990-09-10 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user114', '123456', '陈之万', '370213198606021114', '女', '13804110114', '1990-09-11 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user115', '123456', '李草革', '370214198707031115', '男', '13804110115', '1990-09-12 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user116', '123456', '孔笛渝', '370281198808041116', '男', '13804110116', '1990-09-13 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user117', '123456', '俞荔洋', '370282198909051117', '女', '13804110117', '1990-09-14 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user118', '123456', '童好钧', '370283198110061118', '男', '13804110118', '1990-09-15 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user119', '123456', '苏遥研', '370284198211071119', '男', '13804110119', '1990-09-16 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user12', '123456', '宁古薄', '370211196312121012', '女', '13804110012', '1990-06-01 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user120', '123456', '贺炳江', '370285198312081120', '女', '13804110120', '1990-09-17 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user121', '123456', '任奥亿', '370101198401091121', '男', '13804110121', '1990-09-18 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user122', '123456', '刘龙玉', '370102198502101122', '男', '13804110122', '1990-09-19 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user123', '123456', '韩恋力', '370103198603111123', '女', '13804110123', '1990-09-20 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user124', '123456', '费廷格', '370104198704121124', '男', '13804110124', '1990-09-21 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user125', '123456', '孙　路', '370105198805131125', '男', '13804110125', '1990-09-22 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user126', '123456', '王武勳', '370112198906141126', '女', '13804110126', '1990-09-23 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user127', '123456', '余蒙飘', '370123198107151127', '男', '13804110127', '1990-09-24 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user128', '123456', '白飞解', '370201198208161128', '男', '13804110128', '1990-09-25 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user129', '123456', '盛彤敬', '370202198309171129', '女', '13804110129', '1990-09-26 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user13', '123456', '张祥德', '370212196401131013', '男', '13804110013', '1990-06-02 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user130', '123456', '童户虎', '370203198410181130', '男', '13804110130', '1990-09-27 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user131', '123456', '齐木铭', '370205198511191131', '男', '13804110131', '1990-09-28 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user132', '123456', '姬喜赋', '370211198612201132', '女', '13804110132', '1990-09-29 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user133', '123456', '邹毅资', '370212198701211133', '男', '13804110133', '1990-09-30 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user134', '123456', '俞　缘', '370213198802221134', '男', '13804110134', '1990-10-01 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user135', '123456', '姜竟曼', '370214198903231135', '女', '13804110135', '1990-10-02 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user136', '123456', '符梨伶', '370281198104241136', '男', '13804110136', '1990-10-03 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user137', '123456', '傅　俊', '370282198205251137', '男', '13804110137', '1990-10-04 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user138', '123456', '孙怡毓', '370283198306261138', '女', '13804110138', '1990-10-05 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user139', '123456', '潘澜巧', '370284198407271139', '男', '13804110139', '1990-10-06 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user14', '123456', '何颖升', '370213196502141014', '男', '13804110014', '1990-06-03 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user140', '123456', '陈茵斓', '370285198508281140', '男', '13804110140', '1990-10-07 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user141', '123456', '孙　锦', '370101198609011141', '女', '13804110141', '1990-10-08 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user142', '123456', '卢靠清', '370102198710021142', '男', '13804110142', '1990-10-09 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user143', '123456', '孙仁露', '370103198811031143', '男', '13804110143', '1990-10-10 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user144', '123456', '路园芸', '370104198912041144', '女', '13804110144', '1990-10-11 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user145', '123456', '符毓好', '370105198101051145', '男', '13804110145', '1990-10-12 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user146', '123456', '白西清', '370112198202061146', '男', '13804110146', '1990-10-13 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user147', '123456', '田研青', '370123198303071147', '女', '13804110147', '1990-10-14 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user148', '123456', '詹生雨', '370201198404081148', '男', '13804110148', '1990-10-15 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user149', '123456', '周小蓉', '370202198505091149', '男', '13804110149', '1990-10-16 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user15', '123456', '陈原庚', '370214196603151015', '女', '13804110015', '1990-06-04 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user150', '123456', '李昇珂', '370203198606101150', '女', '13804110150', '1990-10-17 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user151', '123456', '龙秀青', '370205198707111151', '男', '13804110151', '1990-10-18 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user152', '123456', '岑醇燕', '370211198808121152', '男', '13804110152', '1990-10-19 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user153', '123456', '张懂霞', '370212198909131153', '女', '13804110153', '1990-10-20 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user154', '123456', '成玻枚', '370213198110141154', '男', '13804110154', '1990-10-21 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user155', '123456', '何弃芳', '370214198211151155', '男', '13804110155', '1990-10-22 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user156', '123456', '苏龄青', '370281198312161156', '女', '13804110156', '1990-10-23 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user157', '123456', '刘量云', '370282198401171157', '男', '13804110157', '1990-10-24 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user158', '123456', '龚芝方', '370283198502181158', '男', '13804110158', '1990-10-25 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user159', '123456', '林效春', '370284198603191159', '女', '13804110159', '1990-10-26 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user16', '123456', '丘约靖', '370281196704161016', '男', '13804110016', '1990-06-05 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user160', '123456', '潘郁斓', '370285198704201160', '男', '13804110160', '1990-10-27 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user161', '123456', '俞伴菲', '370101198805211161', '男', '13804110161', '1990-10-28 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user162', '123456', '卓　云', '370102198906221162', '女', '13804110162', '1990-10-29 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user163', '123456', '时匡贞', '370103198107231163', '男', '13804110163', '1990-10-30 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user164', '123456', '于颐嘉', '370104198208241164', '男', '13804110164', '1990-10-31 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user165', '123456', '武婷俐', '370105198309251165', '女', '13804110165', '1990-11-01 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user166', '123456', '周席胤', '370112198410261166', '男', '13804110166', '1990-11-02 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user167', '123456', '穆沪昭', '370123198511271167', '男', '13804110167', '1990-11-03 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user168', '123456', '凌敖劲', '370201198612281168', '女', '13804110168', '1990-11-04 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user169', '123456', '简渝航', '370202198701011169', '男', '13804110169', '1990-11-05 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user17', '123456', '陈启红', '370282196805171017', '男', '13804110017', '1990-06-06 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user170', '123456', '宁古舟', '370203198802021170', '男', '13804110170', '1990-11-06 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user171', '123456', '黄　冰', '370205198903031171', '女', '13804110171', '1990-11-07 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user172', '123456', '鲁乃燊', '370211198104041172', '男', '13804110172', '1990-11-08 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user173', '123456', '王习帅', '370212198205051173', '男', '13804110173', '1990-11-09 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user174', '123456', '魏古粟', '370213198306061174', '女', '13804110174', '1990-11-10 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user175', '123456', '何巍珑', '370214198407071175', '男', '13804110175', '1990-11-11 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user176', '123456', '卢棠易', '370281198508081176', '男', '13804110176', '1990-11-12 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user177', '123456', '刘皓涪', '370282198609091177', '女', '13804110177', '1990-11-13 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user178', '123456', '穆懂魁', '370283198710101178', '男', '13804110178', '1990-11-14 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user179', '123456', '殷　羿', '370284198811111179', '男', '13804110179', '1990-11-15 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user18', '123456', '吴湘意', '370283196906181018', '女', '13804110018', '1990-06-07 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user180', '123456', '池　传', '370285198912121180', '女', '13804110180', '1990-11-16 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user181', '123456', '郭闰顾', '370101198101131181', '男', '13804110181', '1990-11-17 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user182', '123456', '刘盖光', '370102198202141182', '男', '13804110182', '1990-11-18 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user183', '123456', '张业汜', '370103198303151183', '女', '13804110183', '1990-11-19 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user184', '123456', '张威卫', '370104198404161184', '男', '13804110184', '1990-11-20 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user185', '123456', '刘　萌', '370105198505171185', '男', '13804110185', '1990-11-21 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user186', '123456', '涂致豪', '370112198606181186', '女', '13804110186', '1990-11-22 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user187', '123456', '江延松', '370123198707191187', '男', '13804110187', '1990-11-23 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user188', '123456', '戚树昌', '370201198808201188', '男', '13804110188', '1990-11-24 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user189', '123456', '吴茗厦', '370202198909211189', '女', '13804110189', '1990-11-25 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user19', '123456', '宁芹谚', '370284196107191019', '男', '13804110019', '1990-06-08 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user190', '123456', '叶岳辉', '370203199110221190', '男', '13804110190', '1990-11-26 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user191', '123456', '易渝界', '370205199211231191', '男', '13804110191', '1990-11-27 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user192', '123456', '欧仰麦', '370211199312241192', '女', '13804110192', '1990-11-28 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user193', '123456', '徐吟量', '370212199401251193', '男', '13804110193', '1990-11-29 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user194', '123456', '梁律颜', '370213199502261194', '男', '13804110194', '1990-11-30 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user195', '123456', '李易相', '370214199603271195', '女', '13804110195', '1990-12-01 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user196', '123456', '贺白枫', '370281199704281196', '男', '13804110196', '1990-12-02 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user197', '123456', '孟鸿更', '370282199805011197', '男', '13804110197', '1990-12-03 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user198', '123456', '张图承', '370283199906021198', '女', '13804110198', '1990-12-04 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user199', '123456', '廖惜汐', '370284199107031199', '男', '13804110199', '1990-12-05 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user2', '123456', '张顺谷', '370102196202021002', '男', '13804110002', '1990-05-22 14:19:21', 'adv_user', null);
-INSERT INTO `suser` VALUES ('user20', '123456', '邢衷晓', '370285196208201020', '男', '13804110020', '1990-06-09 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user200', '123456', '陈招戚', '370285199208041200', '男', '13804110200', '1990-12-06 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user201', '123456', '方柱昊', '370101199309051201', '女', '13804110201', '1990-12-07 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user202', '123456', '黄义昼', '370102199410061202', '男', '13804110202', '1990-12-08 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user203', '123456', '张桓甫', '370103199511071203', '男', '13804110203', '1990-12-09 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user204', '123456', '梁洋溢', '370104199612081204', '女', '13804110204', '1990-12-10 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user205', '123456', '何甘念', '370105199701091205', '男', '13804110205', '1990-12-11 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user206', '123456', '侯敦强', '370112199802101206', '男', '13804110206', '1990-12-12 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user207', '123456', '陈裔丰', '370123199903111207', '女', '13804110207', '1990-12-13 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user208', '123456', '邢启杰', '370201199104121208', '男', '13804110208', '1990-12-14 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user209', '123456', '高恋方', '370202199205131209', '男', '13804110209', '1990-12-15 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user21', '123456', '葛冠媛', '370101196309211021', '女', '13804110021', '1990-06-10 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user210', '123456', '王茁珐', '370203199306141210', '女', '13804110210', '1990-12-16 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user211', '123456', '姬中岩', '370205199407151211', '男', '13804110211', '1990-12-17 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user212', '123456', '吴　樵', '370211199508161212', '男', '13804110212', '1990-12-18 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user213', '123456', '杨杜昼', '370212199609171213', '女', '13804110213', '1990-12-19 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user214', '123456', '廉凌刚', '370213199710181214', '男', '13804110214', '1990-12-20 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user215', '123456', '王睦羽', '370214199811191215', '男', '13804110215', '1990-12-21 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user216', '123456', '刘岩丘', '370281199912201216', '女', '13804110216', '1990-12-22 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user217', '123456', '卫斯晾', '370282199101211217', '男', '13804110217', '1990-12-23 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user218', '123456', '汤赫禧', '370283199202221218', '男', '13804110218', '1990-12-24 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user219', '123456', '萧登水', '370284199303231219', '女', '13804110219', '1990-12-25 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user22', '123456', '钟艳梦', '370102196410221022', '男', '13804110022', '1990-06-11 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user220', '123456', '骆其节', '370285199404241220', '男', '13804110220', '1990-12-26 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user221', '123456', '符伯峪', '370101199505251221', '男', '13804110221', '1990-12-27 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user222', '123456', '甘蔼宾', '370102199606261222', '女', '13804110222', '1990-12-28 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user223', '123456', '卓侨汉', '370103199707271223', '男', '13804110223', '1990-12-29 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user224', '123456', '乐侨珂', '370104199808281224', '男', '13804110224', '1990-12-30 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user225', '123456', '倪山骋', '370105199909011225', '女', '13804110225', '1990-12-31 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user226', '123456', '张览秀', '370112199110021226', '男', '13804110226', '1991-01-01 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user227', '123456', '刘丰标', '370123199211031227', '男', '13804110227', '1991-01-02 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user228', '123456', '岳臻俊', '370201199312041228', '女', '13804110228', '1991-01-03 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user229', '123456', '费　学', '370202199401051229', '男', '13804110229', '1991-01-04 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user23', '123456', '戚湘玉', '370103196511231023', '男', '13804110023', '1990-06-12 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user230', '123456', '史岩超', '370203199502061230', '男', '13804110230', '1991-01-05 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user231', '123456', '王慕涛', '370205199603071231', '女', '13804110231', '1991-01-06 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user232', '123456', '陶天瑛', '370211199704081232', '男', '13804110232', '1991-01-07 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user233', '123456', '张彪其', '370212199805091233', '男', '13804110233', '1991-01-08 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user234', '123456', '易静帜', '370213199906101234', '女', '13804110234', '1991-01-09 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user235', '123456', '侯革汜', '370214199107111235', '男', '13804110235', '1991-01-10 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user236', '123456', '陈牧容', '370281199208121236', '男', '13804110236', '1991-01-11 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user237', '123456', '孙渐巍', '370282199309131237', '女', '13804110237', '1991-01-12 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user238', '123456', '吴阐琮', '370283199410141238', '男', '13804110238', '1991-01-13 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user239', '123456', '柳长翊', '370284199511151239', '男', '13804110239', '1991-01-14 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user24', '123456', '丁慧湘', '370104196612241024', '女', '13804110024', '1990-06-13 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user240', '123456', '许席哲', '370285199612161240', '女', '13804110240', '1991-01-15 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user241', '123456', '张桦伦', '370101199701171241', '男', '13804110241', '1991-01-16 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user242', '123456', '区绪声', '370102199802181242', '男', '13804110242', '1991-01-17 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user243', '123456', '梁三贡', '370103199903191243', '女', '13804110243', '1991-01-18 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user244', '123456', '戚阐瑞', '370104199504201244', '男', '13804110244', '1991-01-19 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user245', '123456', '姬融致', '370105199605211245', '男', '13804110245', '1991-01-20 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user246', '123456', '虞竞徽', '370112199706221246', '女', '13804110246', '1991-01-21 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user247', '123456', '邬辉聪', '370123199807231247', '男', '13804110247', '1991-01-22 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user248', '123456', '赵营笛', '370201199908241248', '男', '13804110248', '1991-01-23 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user249', '123456', '施　丹', '370202199109251249', '女', '13804110249', '1991-01-24 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user25', '123456', '陈蕊筌', '370105196701251025', '男', '13804110025', '1990-06-14 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user250', '123456', '史闰煦', '370203199210261250', '男', '13804110250', '1991-01-25 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user251', '123456', '彭坚杰', '370205199311271251', '男', '13804110251', '1991-01-26 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user252', '123456', '孙牡江', '370211199412281252', '女', '13804110252', '1991-01-27 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user253', '123456', '章跋仆', '370212199501011253', '男', '13804110253', '1991-01-28 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user254', '123456', '雷池艾', '370213199602021254', '男', '13804110254', '1991-01-29 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user255', '123456', '章付如', '370214199703031255', '女', '13804110255', '1991-01-30 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user256', '123456', '康翼凤', '370281199804041256', '男', '13804110256', '1991-01-31 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user257', '123456', '孙千诗', '370282199905051257', '男', '13804110257', '1991-02-01 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user258', '123456', '简岚巍', '370283199106061258', '女', '13804110258', '1991-02-02 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user259', '123456', '王思靖', '370284199207071259', '男', '13804110259', '1991-02-03 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user26', '123456', '王赞群', '370112196802261026', '男', '13804110026', '1990-06-15 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user260', '123456', '陈　万', '370285199308081260', '男', '13804110260', '1991-02-04 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user261', '123456', '欧之云', '370101199409091261', '女', '13804110261', '1991-02-05 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user262', '123456', '金奉娟', '370102199510101262', '男', '13804110262', '1991-02-06 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user263', '123456', '孙珊荃', '370103199611111263', '男', '13804110263', '1991-02-07 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user264', '123456', '周俏虹', '370104199712121264', '女', '13804110264', '1991-02-08 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user265', '123456', '张待蕊', '370105199801131265', '男', '13804110265', '1991-02-09 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user266', '123456', '蒲脉童', '370112199902141266', '男', '13804110266', '1991-02-10 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user267', '123456', '梅牧鹃', '370123199503151267', '女', '13804110267', '1991-02-11 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user268', '123456', '陶搏晗', '370201199604161268', '男', '13804110268', '1991-02-12 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user269', '123456', '卫简暖', '370202199705171269', '男', '13804110269', '1991-02-13 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user27', '123456', '陈图凤', '370123196903271027', '女', '13804110027', '1990-06-16 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user270', '123456', '孙喜韵', '370203199806181270', '女', '13804110270', '1991-02-14 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user271', '123456', '关结荃', '370205199907191271', '男', '13804110271', '1991-02-15 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user272', '123456', '廉篱翠', '370211199108201272', '男', '13804110272', '1991-02-16 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user273', '123456', '危娰筱', '370212199209211273', '女', '13804110273', '1991-02-17 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user274', '123456', '钟帅芸', '370213199310221274', '男', '13804110274', '1991-02-18 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user275', '123456', '徐　银', '370214199411231275', '男', '13804110275', '1991-02-19 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user276', '123456', '梁珑诺', '370281199512241276', '女', '13804110276', '1991-02-20 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user277', '123456', '孔嫡妍', '370282199601251277', '男', '13804110277', '1991-02-21 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user278', '123456', '甘廷阳', '370283199702261278', '男', '13804110278', '1991-02-22 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user279', '123456', '雷蕾真', '370284199803271279', '女', '13804110279', '1991-02-23 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user28', '123456', '毕柯音', '370201196104281028', '男', '13804110028', '1990-06-17 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user280', '123456', '韩宇窍', '370285199904281280', '男', '13804110280', '1991-02-24 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user281', '123456', '邹树园', '370101199105011281', '男', '13804110281', '1991-02-25 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user282', '123456', '周戚晴', '370102199206021282', '女', '13804110282', '1991-02-26 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user283', '123456', '陆凛娣', '370103199307031283', '男', '13804110283', '1991-02-27 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user284', '123456', '孙静芙', '370104199408041284', '男', '13804110284', '1991-02-28 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user285', '123456', '涂俱珍', '370105199509051285', '女', '13804110285', '1991-03-01 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user29', '123456', '张察妙', '370202196205011029', '男', '13804110029', '1990-06-18 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user3', '123456', '张淮森', '370103196303031003', '女', '13804110003', '1990-05-23 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user30', '123456', '郑迎凌', '370203196306021030', '女', '13804110030', '1990-06-19 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user31', '123456', '文儒御', '370205196407031031', '男', '13804110031', '1990-06-20 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user32', '123456', '卢辅岳', '370211196508041032', '男', '13804110032', '1990-06-21 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user33', '123456', '岳珂秩', '370212196609051033', '女', '13804110033', '1990-06-22 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user34', '123456', '于偌朔', '370213196710061034', '男', '13804110034', '1990-06-23 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user35', '123456', '倪景民', '370214196811071035', '男', '13804110035', '1990-06-24 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user36', '123456', '李丞佩', '370281196912081036', '女', '13804110036', '1990-06-25 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user37', '123456', '褚郁安', '370282196101091037', '男', '13804110037', '1990-06-26 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user38', '123456', '韦显敬', '370283196202101038', '男', '13804110038', '1990-06-27 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user39', '123456', '周丹淦', '370284196303111039', '女', '13804110039', '1990-06-28 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user4', '123456', '周逸依', '370104196404041004', '男', '13804110004', '1990-05-24 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user40', '123456', '龙乔盼', '370285196404121040', '男', '13804110040', '1990-06-29 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user41', '123456', '梁　舒', '370101196505131041', '男', '13804110041', '1990-06-30 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user42', '123456', '岑修聪', '370102196606141042', '女', '13804110042', '1990-07-01 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user43', '123456', '文　法', '370103196707151043', '男', '13804110043', '1990-07-02 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user44', '123456', '余雄锡', '370104196808161044', '男', '13804110044', '1990-07-03 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user45', '123456', '刘胜汉', '370105196909171045', '女', '13804110045', '1990-07-04 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user46', '123456', '陈颁谊', '370112197110181046', '男', '13804110046', '1990-07-05 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user47', '123456', '蔡德俊', '370123197211191047', '男', '13804110047', '1990-07-06 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user48', '123456', '侯杏彩', '370201197312201048', '女', '13804110048', '1990-07-07 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user49', '123456', '陶益怡', '370202197401211049', '男', '13804110049', '1990-07-08 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user5', '123456', '朱付流', '370105196505051005', '男', '13804110005', '1990-05-25 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user50', '123456', '梁频淼', '370203197502221050', '男', '13804110050', '1990-07-09 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user51', '123456', '罗融雪', '370205197603231051', '女', '13804110051', '1990-07-10 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user52', '123456', '钱里桦', '370211197704241052', '男', '13804110052', '1990-07-11 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user53', '123456', '张晶卿', '370212197805251053', '男', '13804110053', '1990-07-12 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user54', '123456', '欧房楠', '370213197906261054', '女', '13804110054', '1990-07-13 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user55', '123456', '梁仓蓉', '370214197107271055', '男', '13804110055', '1990-07-14 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user56', '123456', '吴影雯', '370281197208281056', '男', '13804110056', '1990-07-15 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user57', '123456', '杨才芝', '370282197309011057', '女', '13804110057', '1990-07-16 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user58', '123456', '沈传喜', '370283197410021058', '男', '13804110058', '1990-07-17 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user59', '123456', '吴音同', '370284197511031059', '男', '13804110059', '1990-07-18 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user6', '123456', '李彩早', '370112196606061006', '女', '13804110006', '1990-05-26 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user60', '123456', '张悟玫', '370285197612041060', '女', '13804110060', '1990-07-19 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user61', '123456', '王顺坤', '370101197701051061', '男', '13804110061', '1990-07-20 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user62', '123456', '王均染', '370102197802061062', '男', '13804110062', '1990-07-21 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user63', '123456', '齐榜卫', '370103197903071063', '女', '13804110063', '1990-07-22 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user64', '123456', '周　启', '370104197104081064', '男', '13804110064', '1990-07-23 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user65', '123456', '蔡季雄', '370105197205091065', '男', '13804110065', '1990-07-24 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user66', '123456', '沈光岸', '370112197306101066', '女', '13804110066', '1990-07-25 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user67', '123456', '卫颁细', '370123197407111067', '男', '13804110067', '1990-07-26 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user68', '123456', '石　厚', '370201197508121068', '男', '13804110068', '1990-07-27 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user69', '123456', '章晞旺', '370202197609131069', '女', '13804110069', '1990-07-28 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user7', '123456', '梁澄静', '370123196707071007', '男', '13804110007', '1990-05-27 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user70', '123456', '陈孝厦', '370203197710141070', '男', '13804110070', '1990-07-29 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user71', '123456', '雷础炯', '370205197811151071', '男', '13804110071', '1990-07-30 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user72', '123456', '区胄法', '370211197912161072', '女', '13804110072', '1990-07-31 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user73', '123456', '柳霖席', '370212197101171073', '男', '13804110073', '1990-08-01 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user74', '123456', '颜便贤', '370213197202181074', '男', '13804110074', '1990-08-02 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user75', '123456', '辛觅宝', '370214197303191075', '女', '13804110075', '1990-08-03 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user76', '123456', '陶　政', '370281197404201076', '男', '13804110076', '1990-08-04 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user77', '123456', '廉璨升', '370282197505211077', '男', '13804110077', '1990-08-05 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user78', '123456', '邱伴斌', '370283197606221078', '女', '13804110078', '1990-08-06 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user79', '123456', '王觉飘', '370284197707231079', '男', '13804110079', '1990-08-07 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user8', '123456', '池慕营', '370201196808081008', '男', '13804110008', '1990-05-28 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user80', '123456', '蔡和智', '370285197808241080', '男', '13804110080', '1990-08-08 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user81', '123456', '林锐耀', '370101197909251081', '女', '13804110081', '1990-08-09 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user82', '123456', '施其钱', '370102197110261082', '男', '13804110082', '1990-08-10 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user83', '123456', '于焯胥', '370103197211271083', '男', '13804110083', '1990-08-11 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user84', '123456', '温胄昀', '370104197312281084', '女', '13804110084', '1990-08-12 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user85', '123456', '陈鲜毅', '370105197401011085', '男', '13804110085', '1990-08-13 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user86', '123456', '林匡容', '370112197502021086', '男', '13804110086', '1990-08-14 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user87', '123456', '周　臣', '370123197603031087', '女', '13804110087', '1990-08-15 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user88', '123456', '戚谆桂', '370201197704041088', '男', '13804110088', '1990-08-16 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user89', '123456', '章仲栾', '370202197805051089', '男', '13804110089', '1990-08-17 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user9', '123456', '俞灶迟', '370202196909091009', '女', '13804110009', '1990-05-29 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user90', '123456', '朱鸥隐', '370203197906061090', '女', '13804110090', '1990-08-18 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user91', '123456', '孙如香', '370205198107071091', '男', '13804110091', '1990-08-19 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user92', '123456', '沈颜碧', '370211198208081092', '男', '13804110092', '1990-08-20 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user93', '123456', '华娟女', '370212198309091093', '女', '13804110093', '1990-08-21 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user94', '123456', '翁昀齐', '370213198410101094', '男', '13804110094', '1990-08-22 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user95', '123456', '涂邦香', '370214198511111095', '男', '13804110095', '1990-08-23 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user96', '123456', '谢巾贞', '370281198612121096', '女', '13804110096', '1990-08-24 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user97', '123456', '黎益欣', '370282198701131097', '男', '13804110097', '1990-08-25 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user98', '123456', '莫桦谊', '370283198802141098', '男', '13804110098', '1990-08-26 14:19:21', 'nor_user', null);
-INSERT INTO `suser` VALUES ('user99', '123456', '陈明榕', '370284198903151099', '女', '13804110099', '1990-08-27 14:19:21', 'nor_user', null);
+INSERT INTO `suser` VALUES ('admin', 'admin', 'admin', 'admin', '男', 'admin', '2017-05-26 14:48:06', '1', null, '1');
+INSERT INTO `suser` VALUES ('user1', '123456', '王生安', '370101196101011001', '男', '13804110001', '1990-05-21 14:19:21', '2', null, '2');
+INSERT INTO `suser` VALUES ('user10', '123456', '张昧谡', '370203196110101010', '男', '13804110010', '1990-05-30 14:19:21', '1', null, '3');
+INSERT INTO `suser` VALUES ('user100', '123456', '吴少晓', '370285198104161100', '男', '13804110100', '1990-08-28 14:19:21', '1', null, '4');
+INSERT INTO `suser` VALUES ('user101', '123456', '廖湖花', '370101198205171101', '男', '13804110101', '1990-08-29 14:19:21', '1', null, '5');
+INSERT INTO `suser` VALUES ('user102', '123456', '章苑虹', '370102198306181102', '女', '13804110102', '1990-08-30 14:19:21', '1', null, '6');
+INSERT INTO `suser` VALUES ('user103', '123456', '汤瑄意', '370103198407191103', '男', '13804110103', '1990-08-31 14:19:21', '1', null, '7');
+INSERT INTO `suser` VALUES ('user104', '123456', '曾琼方', '370104198508201104', '男', '13804110104', '1990-09-01 14:19:21', '1', null, '8');
+INSERT INTO `suser` VALUES ('user105', '123456', '胡馨真', '370105198609211105', '女', '13804110105', '1990-09-02 14:19:21', '1', null, '9');
+INSERT INTO `suser` VALUES ('user106', '123456', '杨邦游', '370112198710221106', '男', '13804110106', '1990-09-03 14:19:21', '1', null, '10');
+INSERT INTO `suser` VALUES ('user107', '123456', '卫淮玄', '370123198811231107', '男', '13804110107', '1990-09-04 14:19:21', '1', null, '11');
+INSERT INTO `suser` VALUES ('user108', '123456', '王研建', '370201198912241108', '女', '13804110108', '1990-09-05 14:19:21', '1', null, '12');
+INSERT INTO `suser` VALUES ('user109', '123456', '杨镜祯', '370202198101251109', '男', '13804110109', '1990-09-06 14:19:21', '1', null, '13');
+INSERT INTO `suser` VALUES ('user11', '123456', '岑弥勳', '370205196211111011', '男', '13804110011', '1990-09-06 14:19:21', '1', '', '14');
+INSERT INTO `suser` VALUES ('user110', '123456', '秦龄颢', '370203198202261110', '男', '13804110110', '1990-09-07 14:19:21', '1', null, '15');
+INSERT INTO `suser` VALUES ('user111', '123456', '蒲稳雄', '370205198303271111', '女', '13804110111', '1990-09-08 14:19:21', '1', null, '16');
+INSERT INTO `suser` VALUES ('user112', '123456', '刘铎牧', '370211198404281112', '男', '13804110112', '1990-09-09 14:19:21', '1', null, '17');
+INSERT INTO `suser` VALUES ('user113', '123456', '元负祎', '370212198505011113', '男', '13804110113', '1990-09-10 14:19:21', '1', null, '18');
+INSERT INTO `suser` VALUES ('user114', '123456', '陈之万', '370213198606021114', '女', '13804110114', '1990-09-11 14:19:21', '1', null, '19');
+INSERT INTO `suser` VALUES ('user115', '123456', '李草革', '370214198707031115', '男', '13804110115', '1990-09-12 14:19:21', '1', null, '20');
+INSERT INTO `suser` VALUES ('user116', '123456', '孔笛渝', '370281198808041116', '男', '13804110116', '1990-09-13 14:19:21', '1', null, '21');
+INSERT INTO `suser` VALUES ('user117', '123456', '俞荔洋', '370282198909051117', '女', '13804110117', '1990-09-14 14:19:21', '1', null, '22');
+INSERT INTO `suser` VALUES ('user118', '123456', '童好钧', '370283198110061118', '男', '13804110118', '1990-09-15 14:19:21', '1', null, '23');
+INSERT INTO `suser` VALUES ('user119', '123456', '苏遥研', '370284198211071119', '男', '13804110119', '1990-09-16 14:19:21', '1', null, '24');
+INSERT INTO `suser` VALUES ('user12', '123456', '宁古薄', '370211196312121012', '女', '13804110012', '1990-06-01 14:19:21', '1', null, '25');
+INSERT INTO `suser` VALUES ('user120', '123456', '贺炳江', '370285198312081120', '女', '13804110120', '1990-09-17 14:19:21', '1', null, '26');
+INSERT INTO `suser` VALUES ('user121', '123456', '任奥亿', '370101198401091121', '男', '13804110121', '1990-09-18 14:19:21', '1', null, '27');
+INSERT INTO `suser` VALUES ('user122', '123456', '刘龙玉', '370102198502101122', '男', '13804110122', '1990-09-19 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user123', '123456', '韩恋力', '370103198603111123', '女', '13804110123', '1990-09-20 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user124', '123456', '费廷格', '370104198704121124', '男', '13804110124', '1990-09-21 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user125', '123456', '孙　路', '370105198805131125', '男', '13804110125', '1990-09-22 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user126', '123456', '王武勳', '370112198906141126', '女', '13804110126', '1990-09-23 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user127', '123456', '余蒙飘', '370123198107151127', '男', '13804110127', '1990-09-24 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user128', '123456', '白飞解', '370201198208161128', '男', '13804110128', '1990-09-25 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user129', '123456', '盛彤敬', '370202198309171129', '女', '13804110129', '1990-09-26 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user13', '123456', '张祥德', '370212196401131013', '男', '13804110013', '1990-06-02 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user130', '123456', '童户虎', '370203198410181130', '男', '13804110130', '1990-09-27 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user131', '123456', '齐木铭', '370205198511191131', '男', '13804110131', '1990-09-28 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user132', '123456', '姬喜赋', '370211198612201132', '女', '13804110132', '1990-09-29 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user133', '123456', '邹毅资', '370212198701211133', '男', '13804110133', '1990-09-30 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user134', '123456', '俞　缘', '370213198802221134', '男', '13804110134', '1990-10-01 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user135', '123456', '姜竟曼', '370214198903231135', '女', '13804110135', '1990-10-02 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user136', '123456', '符梨伶', '370281198104241136', '男', '13804110136', '1990-10-03 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user137', '123456', '傅　俊', '370282198205251137', '男', '13804110137', '1990-10-04 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user138', '123456', '孙怡毓', '370283198306261138', '女', '13804110138', '1990-10-05 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user139', '123456', '潘澜巧', '370284198407271139', '男', '13804110139', '1990-10-06 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user14', '123456', '何颖升', '370213196502141014', '男', '13804110014', '1990-06-03 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user140', '123456', '陈茵斓', '370285198508281140', '男', '13804110140', '1990-10-07 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user141', '123456', '孙　锦', '370101198609011141', '女', '13804110141', '1990-10-08 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user142', '123456', '卢靠清', '370102198710021142', '男', '13804110142', '1990-10-09 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user143', '123456', '孙仁露', '370103198811031143', '男', '13804110143', '1990-10-10 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user144', '123456', '路园芸', '370104198912041144', '女', '13804110144', '1990-10-11 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user145', '123456', '符毓好', '370105198101051145', '男', '13804110145', '1990-10-12 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user146', '123456', '白西清', '370112198202061146', '男', '13804110146', '1990-10-13 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user147', '123456', '田研青', '370123198303071147', '女', '13804110147', '1990-10-14 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user148', '123456', '詹生雨', '370201198404081148', '男', '13804110148', '1990-10-15 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user149', '123456', '周小蓉', '370202198505091149', '男', '13804110149', '1990-10-16 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user15', '123456', '陈原庚', '370214196603151015', '女', '13804110015', '1990-06-04 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user150', '123456', '李昇珂', '370203198606101150', '女', '13804110150', '1990-10-17 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user151', '123456', '龙秀青', '370205198707111151', '男', '13804110151', '1990-10-18 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user152', '123456', '岑醇燕', '370211198808121152', '男', '13804110152', '1990-10-19 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user153', '123456', '张懂霞', '370212198909131153', '女', '13804110153', '1990-10-20 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user154', '123456', '成玻枚', '370213198110141154', '男', '13804110154', '1990-10-21 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user155', '123456', '何弃芳', '370214198211151155', '男', '13804110155', '1990-10-22 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user156', '123456', '苏龄青', '370281198312161156', '女', '13804110156', '1990-10-23 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user157', '123456', '刘量云', '370282198401171157', '男', '13804110157', '1990-10-24 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user158', '123456', '龚芝方', '370283198502181158', '男', '13804110158', '1990-10-25 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user159', '123456', '林效春', '370284198603191159', '女', '13804110159', '1990-10-26 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user16', '123456', '丘约靖', '370281196704161016', '男', '13804110016', '1990-06-05 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user160', '123456', '潘郁斓', '370285198704201160', '男', '13804110160', '1990-10-27 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user161', '123456', '俞伴菲', '370101198805211161', '男', '13804110161', '1990-10-28 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user162', '123456', '卓　云', '370102198906221162', '女', '13804110162', '1990-10-29 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user163', '123456', '时匡贞', '370103198107231163', '男', '13804110163', '1990-10-30 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user164', '123456', '于颐嘉', '370104198208241164', '男', '13804110164', '1990-10-31 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user165', '123456', '武婷俐', '370105198309251165', '女', '13804110165', '1990-11-01 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user166', '123456', '周席胤', '370112198410261166', '男', '13804110166', '1990-11-02 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user167', '123456', '穆沪昭', '370123198511271167', '男', '13804110167', '1990-11-03 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user168', '123456', '凌敖劲', '370201198612281168', '女', '13804110168', '1990-11-04 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user169', '123456', '简渝航', '370202198701011169', '男', '13804110169', '1990-11-05 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user17', '123456', '陈启红', '370282196805171017', '男', '13804110017', '1990-06-06 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user170', '123456', '宁古舟', '370203198802021170', '男', '13804110170', '1990-11-06 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user171', '123456', '黄　冰', '370205198903031171', '女', '13804110171', '1990-11-07 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user172', '123456', '鲁乃燊', '370211198104041172', '男', '13804110172', '1990-11-08 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user173', '123456', '王习帅', '370212198205051173', '男', '13804110173', '1990-11-09 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user174', '123456', '魏古粟', '370213198306061174', '女', '13804110174', '1990-11-10 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user175', '123456', '何巍珑', '370214198407071175', '男', '13804110175', '1990-11-11 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user176', '123456', '卢棠易', '370281198508081176', '男', '13804110176', '1990-11-12 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user177', '123456', '刘皓涪', '370282198609091177', '女', '13804110177', '1990-11-13 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user178', '123456', '穆懂魁', '370283198710101178', '男', '13804110178', '1990-11-14 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user179', '123456', '殷　羿', '370284198811111179', '男', '13804110179', '1990-11-15 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user18', '123456', '吴湘意', '370283196906181018', '女', '13804110018', '1990-06-07 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user180', '123456', '池　传', '370285198912121180', '女', '13804110180', '1990-11-16 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user181', '123456', '郭闰顾', '370101198101131181', '男', '13804110181', '1990-11-17 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user182', '123456', '刘盖光', '370102198202141182', '男', '13804110182', '1990-11-18 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user183', '123456', '张业汜', '370103198303151183', '女', '13804110183', '1990-11-19 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user184', '123456', '张威卫', '370104198404161184', '男', '13804110184', '1990-11-20 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user185', '123456', '刘　萌', '370105198505171185', '男', '13804110185', '1990-11-21 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user186', '123456', '涂致豪', '370112198606181186', '女', '13804110186', '1990-11-22 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user187', '123456', '江延松', '370123198707191187', '男', '13804110187', '1990-11-23 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user188', '123456', '戚树昌', '370201198808201188', '男', '13804110188', '1990-11-24 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user189', '123456', '吴茗厦', '370202198909211189', '女', '13804110189', '1990-11-25 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user19', '123456', '宁芹谚', '370284196107191019', '男', '13804110019', '1990-06-08 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user190', '123456', '叶岳辉', '370203199110221190', '男', '13804110190', '1990-11-26 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user191', '123456', '易渝界', '370205199211231191', '男', '13804110191', '1990-11-27 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user192', '123456', '欧仰麦', '370211199312241192', '女', '13804110192', '1990-11-28 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user193', '123456', '徐吟量', '370212199401251193', '男', '13804110193', '1990-11-29 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user194', '123456', '梁律颜', '370213199502261194', '男', '13804110194', '1990-11-30 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user195', '123456', '李易相', '370214199603271195', '女', '13804110195', '1990-12-01 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user196', '123456', '贺白枫', '370281199704281196', '男', '13804110196', '1990-12-02 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user197', '123456', '孟鸿更', '370282199805011197', '男', '13804110197', '1990-12-03 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user198', '123456', '张图承', '370283199906021198', '女', '13804110198', '1990-12-04 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user199', '123456', '廖惜汐', '370284199107031199', '男', '13804110199', '1990-12-05 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user2', '123456', '张顺谷', '370102196202021002', '男', '13804110002', '1990-05-22 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user20', '123456', '邢衷晓', '370285196208201020', '男', '13804110020', '1990-06-09 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user200', '123456', '陈招戚', '370285199208041200', '男', '13804110200', '1990-12-06 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user201', '123456', '方柱昊', '370101199309051201', '女', '13804110201', '1990-12-07 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user202', '123456', '黄义昼', '370102199410061202', '男', '13804110202', '1990-12-08 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user203', '123456', '张桓甫', '370103199511071203', '男', '13804110203', '1990-12-09 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user204', '123456', '梁洋溢', '370104199612081204', '女', '13804110204', '1990-12-10 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user205', '123456', '何甘念', '370105199701091205', '男', '13804110205', '1990-12-11 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user206', '123456', '侯敦强', '370112199802101206', '男', '13804110206', '1990-12-12 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user207', '123456', '陈裔丰', '370123199903111207', '女', '13804110207', '1990-12-13 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user208', '123456', '邢启杰', '370201199104121208', '男', '13804110208', '1990-12-14 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user209', '123456', '高恋方', '370202199205131209', '男', '13804110209', '1990-12-15 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user21', '123456', '葛冠媛', '370101196309211021', '女', '13804110021', '1990-06-10 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user210', '123456', '王茁珐', '370203199306141210', '女', '13804110210', '1990-12-16 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user211', '123456', '姬中岩', '370205199407151211', '男', '13804110211', '1990-12-17 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user212', '123456', '吴　樵', '370211199508161212', '男', '13804110212', '1990-12-18 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user213', '123456', '杨杜昼', '370212199609171213', '女', '13804110213', '1990-12-19 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user214', '123456', '廉凌刚', '370213199710181214', '男', '13804110214', '1990-12-20 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user215', '123456', '王睦羽', '370214199811191215', '男', '13804110215', '1990-12-21 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user216', '123456', '刘岩丘', '370281199912201216', '女', '13804110216', '1990-12-22 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user217', '123456', '卫斯晾', '370282199101211217', '男', '13804110217', '1990-12-23 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user218', '123456', '汤赫禧', '370283199202221218', '男', '13804110218', '1990-12-24 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user219', '123456', '萧登水', '370284199303231219', '女', '13804110219', '1990-12-25 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user22', '123456', '钟艳梦', '370102196410221022', '男', '13804110022', '1990-06-11 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user220', '123456', '骆其节', '370285199404241220', '男', '13804110220', '1990-12-26 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user221', '123456', '符伯峪', '370101199505251221', '男', '13804110221', '1990-12-27 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user222', '123456', '甘蔼宾', '370102199606261222', '女', '13804110222', '1990-12-28 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user223', '123456', '卓侨汉', '370103199707271223', '男', '13804110223', '1990-12-29 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user224', '123456', '乐侨珂', '370104199808281224', '男', '13804110224', '1990-12-30 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user225', '123456', '倪山骋', '370105199909011225', '女', '13804110225', '1990-12-31 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user226', '123456', '张览秀', '370112199110021226', '男', '13804110226', '1991-01-01 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user227', '123456', '刘丰标', '370123199211031227', '男', '13804110227', '1991-01-02 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user228', '123456', '岳臻俊', '370201199312041228', '女', '13804110228', '1991-01-03 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user229', '123456', '费　学', '370202199401051229', '男', '13804110229', '1991-01-04 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user23', '123456', '戚湘玉', '370103196511231023', '男', '13804110023', '1990-06-12 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user230', '123456', '史岩超', '370203199502061230', '男', '13804110230', '1991-01-05 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user231', '123456', '王慕涛', '370205199603071231', '女', '13804110231', '1991-01-06 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user232', '123456', '陶天瑛', '370211199704081232', '男', '13804110232', '1991-01-07 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user233', '123456', '张彪其', '370212199805091233', '男', '13804110233', '1991-01-08 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user234', '123456', '易静帜', '370213199906101234', '女', '13804110234', '1991-01-09 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user235', '123456', '侯革汜', '370214199107111235', '男', '13804110235', '1991-01-10 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user236', '123456', '陈牧容', '370281199208121236', '男', '13804110236', '1991-01-11 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user237', '123456', '孙渐巍', '370282199309131237', '女', '13804110237', '1991-01-12 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user238', '123456', '吴阐琮', '370283199410141238', '男', '13804110238', '1991-01-13 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user239', '123456', '柳长翊', '370284199511151239', '男', '13804110239', '1991-01-14 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user24', '123456', '丁慧湘', '370104196612241024', '女', '13804110024', '1990-06-13 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user240', '123456', '许席哲', '370285199612161240', '女', '13804110240', '1991-01-15 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user241', '123456', '张桦伦', '370101199701171241', '男', '13804110241', '1991-01-16 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user242', '123456', '区绪声', '370102199802181242', '男', '13804110242', '1991-01-17 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user243', '123456', '梁三贡', '370103199903191243', '女', '13804110243', '1991-01-18 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user244', '123456', '戚阐瑞', '370104199504201244', '男', '13804110244', '1991-01-19 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user245', '123456', '姬融致', '370105199605211245', '男', '13804110245', '1991-01-20 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user246', '123456', '虞竞徽', '370112199706221246', '女', '13804110246', '1991-01-21 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user247', '123456', '邬辉聪', '370123199807231247', '男', '13804110247', '1991-01-22 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user248', '123456', '赵营笛', '370201199908241248', '男', '13804110248', '1991-01-23 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user249', '123456', '施　丹', '370202199109251249', '女', '13804110249', '1991-01-24 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user25', '123456', '陈蕊筌', '370105196701251025', '男', '13804110025', '1990-06-14 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user250', '123456', '史闰煦', '370203199210261250', '男', '13804110250', '1991-01-25 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user251', '123456', '彭坚杰', '370205199311271251', '男', '13804110251', '1991-01-26 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user252', '123456', '孙牡江', '370211199412281252', '女', '13804110252', '1991-01-27 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user253', '123456', '章跋仆', '370212199501011253', '男', '13804110253', '1991-01-28 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user254', '123456', '雷池艾', '370213199602021254', '男', '13804110254', '1991-01-29 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user255', '123456', '章付如', '370214199703031255', '女', '13804110255', '1991-01-30 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user256', '123456', '康翼凤', '370281199804041256', '男', '13804110256', '1991-01-31 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user257', '123456', '孙千诗', '370282199905051257', '男', '13804110257', '1991-02-01 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user258', '123456', '简岚巍', '370283199106061258', '女', '13804110258', '1991-02-02 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user259', '123456', '王思靖', '370284199207071259', '男', '13804110259', '1991-02-03 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user26', '123456', '王赞群', '370112196802261026', '男', '13804110026', '1990-06-15 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user260', '123456', '陈　万', '370285199308081260', '男', '13804110260', '1991-02-04 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user261', '123456', '欧之云', '370101199409091261', '女', '13804110261', '1991-02-05 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user262', '123456', '金奉娟', '370102199510101262', '男', '13804110262', '1991-02-06 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user263', '123456', '孙珊荃', '370103199611111263', '男', '13804110263', '1991-02-07 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user264', '123456', '周俏虹', '370104199712121264', '女', '13804110264', '1991-02-08 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user265', '123456', '张待蕊', '370105199801131265', '男', '13804110265', '1991-02-09 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user266', '123456', '蒲脉童', '370112199902141266', '男', '13804110266', '1991-02-10 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user267', '123456', '梅牧鹃', '370123199503151267', '女', '13804110267', '1991-02-11 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user268', '123456', '陶搏晗', '370201199604161268', '男', '13804110268', '1991-02-12 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user269', '123456', '卫简暖', '370202199705171269', '男', '13804110269', '1991-02-13 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user27', '123456', '陈图凤', '370123196903271027', '女', '13804110027', '1990-06-16 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user270', '123456', '孙喜韵', '370203199806181270', '女', '13804110270', '1991-02-14 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user271', '123456', '关结荃', '370205199907191271', '男', '13804110271', '1991-02-15 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user272', '123456', '廉篱翠', '370211199108201272', '男', '13804110272', '1991-02-16 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user273', '123456', '危娰筱', '370212199209211273', '女', '13804110273', '1991-02-17 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user274', '123456', '钟帅芸', '370213199310221274', '男', '13804110274', '1991-02-18 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user275', '123456', '徐　银', '370214199411231275', '男', '13804110275', '1991-02-19 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user276', '123456', '梁珑诺', '370281199512241276', '女', '13804110276', '1991-02-20 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user277', '123456', '孔嫡妍', '370282199601251277', '男', '13804110277', '1991-02-21 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user278', '123456', '甘廷阳', '370283199702261278', '男', '13804110278', '1991-02-22 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user279', '123456', '雷蕾真', '370284199803271279', '女', '13804110279', '1991-02-23 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user28', '123456', '毕柯音', '370201196104281028', '男', '13804110028', '1990-06-17 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user280', '123456', '韩宇窍', '370285199904281280', '男', '13804110280', '1991-02-24 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user281', '123456', '邹树园', '370101199105011281', '男', '13804110281', '1991-02-25 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user282', '123456', '周戚晴', '370102199206021282', '女', '13804110282', '1991-02-26 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user283', '123456', '陆凛娣', '370103199307031283', '男', '13804110283', '1991-02-27 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user284', '123456', '孙静芙', '370104199408041284', '男', '13804110284', '1991-02-28 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user285', '123456', '涂俱珍', '370105199509051285', '女', '13804110285', '1991-03-01 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user29', '123456', '张察妙', '370202196205011029', '男', '13804110029', '1990-06-18 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user3', '123456', '张淮森', '370103196303031003', '女', '13804110003', '1990-05-23 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user30', '123456', '郑迎凌', '370203196306021030', '女', '13804110030', '1990-06-19 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user31', '123456', '文儒御', '370205196407031031', '男', '13804110031', '1990-06-20 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user32', '123456', '卢辅岳', '370211196508041032', '男', '13804110032', '1990-06-21 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user33', '123456', '岳珂秩', '370212196609051033', '女', '13804110033', '1990-06-22 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user34', '123456', '于偌朔', '370213196710061034', '男', '13804110034', '1990-06-23 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user35', '123456', '倪景民', '370214196811071035', '男', '13804110035', '1990-06-24 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user36', '123456', '李丞佩', '370281196912081036', '女', '13804110036', '1990-06-25 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user37', '123456', '褚郁安', '370282196101091037', '男', '13804110037', '1990-06-26 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user38', '123456', '韦显敬', '370283196202101038', '男', '13804110038', '1990-06-27 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user39', '123456', '周丹淦', '370284196303111039', '女', '13804110039', '1990-06-28 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user4', '123456', '周逸依', '370104196404041004', '男', '13804110004', '1990-05-24 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user40', '123456', '龙乔盼', '370285196404121040', '男', '13804110040', '1990-06-29 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user41', '123456', '梁　舒', '370101196505131041', '男', '13804110041', '1990-06-30 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user42', '123456', '岑修聪', '370102196606141042', '女', '13804110042', '1990-07-01 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user43', '123456', '文　法', '370103196707151043', '男', '13804110043', '1990-07-02 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user44', '123456', '余雄锡', '370104196808161044', '男', '13804110044', '1990-07-03 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user45', '123456', '刘胜汉', '370105196909171045', '女', '13804110045', '1990-07-04 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user46', '123456', '陈颁谊', '370112197110181046', '男', '13804110046', '1990-07-05 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user47', '123456', '蔡德俊', '370123197211191047', '男', '13804110047', '1990-07-06 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user48', '123456', '侯杏彩', '370201197312201048', '女', '13804110048', '1990-07-07 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user49', '123456', '陶益怡', '370202197401211049', '男', '13804110049', '1990-07-08 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user5', '123456', '朱付流', '370105196505051005', '男', '13804110005', '1990-05-25 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user50', '123456', '梁频淼', '370203197502221050', '男', '13804110050', '1990-07-09 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user51', '123456', '罗融雪', '370205197603231051', '女', '13804110051', '1990-07-10 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user52', '123456', '钱里桦', '370211197704241052', '男', '13804110052', '1990-07-11 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user53', '123456', '张晶卿', '370212197805251053', '男', '13804110053', '1990-07-12 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user54', '123456', '欧房楠', '370213197906261054', '女', '13804110054', '1990-07-13 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user55', '123456', '梁仓蓉', '370214197107271055', '男', '13804110055', '1990-07-14 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user56', '123456', '吴影雯', '370281197208281056', '男', '13804110056', '1990-07-15 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user57', '123456', '杨才芝', '370282197309011057', '女', '13804110057', '1990-07-16 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user58', '123456', '沈传喜', '370283197410021058', '男', '13804110058', '1990-07-17 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user59', '123456', '吴音同', '370284197511031059', '男', '13804110059', '1990-07-18 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user6', '123456', '李彩早', '370112196606061006', '女', '13804110006', '1990-05-26 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user60', '123456', '张悟玫', '370285197612041060', '女', '13804110060', '1990-07-19 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user61', '123456', '王顺坤', '370101197701051061', '男', '13804110061', '1990-07-20 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user62', '123456', '王均染', '370102197802061062', '男', '13804110062', '1990-07-21 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user63', '123456', '齐榜卫', '370103197903071063', '女', '13804110063', '1990-07-22 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user64', '123456', '周　启', '370104197104081064', '男', '13804110064', '1990-07-23 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user65', '123456', '蔡季雄', '370105197205091065', '男', '13804110065', '1990-07-24 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user66', '123456', '沈光岸', '370112197306101066', '女', '13804110066', '1990-07-25 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user67', '123456', '卫颁细', '370123197407111067', '男', '13804110067', '1990-07-26 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user68', '123456', '石　厚', '370201197508121068', '男', '13804110068', '1990-07-27 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user69', '123456', '章晞旺', '370202197609131069', '女', '13804110069', '1990-07-28 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user7', '123456', '梁澄静', '370123196707071007', '男', '13804110007', '1990-05-27 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user70', '123456', '陈孝厦', '370203197710141070', '男', '13804110070', '1990-07-29 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user71', '123456', '雷础炯', '370205197811151071', '男', '13804110071', '1990-07-30 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user72', '123456', '区胄法', '370211197912161072', '女', '13804110072', '1990-07-31 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user73', '123456', '柳霖席', '370212197101171073', '男', '13804110073', '1990-08-01 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user74', '123456', '颜便贤', '370213197202181074', '男', '13804110074', '1990-08-02 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user75', '123456', '辛觅宝', '370214197303191075', '女', '13804110075', '1990-08-03 14:19:21', '2', null, null);
+INSERT INTO `suser` VALUES ('user76', '123456', '陶　政', '370281197404201076', '男', '13804110076', '1990-08-04 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user77', '123456', '廉璨升', '370282197505211077', '男', '13804110077', '1990-08-05 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user78', '123456', '邱伴斌', '370283197606221078', '女', '13804110078', '1990-08-06 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user79', '123456', '王觉飘', '370284197707231079', '男', '13804110079', '1990-08-07 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user8', '123456', '池慕营', '370201196808081008', '男', '13804110008', '1990-05-28 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user80', '123456', '蔡和智', '370285197808241080', '男', '13804110080', '1990-08-08 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user81', '123456', '林锐耀', '370101197909251081', '女', '13804110081', '1990-08-09 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user82', '123456', '施其钱', '370102197110261082', '男', '13804110082', '1990-08-10 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user83', '123456', '于焯胥', '370103197211271083', '男', '13804110083', '1990-08-11 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user84', '123456', '温胄昀', '370104197312281084', '女', '13804110084', '1990-08-12 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user85', '123456', '陈鲜毅', '370105197401011085', '男', '13804110085', '1990-08-13 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user86', '123456', '林匡容', '370112197502021086', '男', '13804110086', '1990-08-14 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user87', '123456', '周　臣', '370123197603031087', '女', '13804110087', '1990-08-15 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user88', '123456', '戚谆桂', '370201197704041088', '男', '13804110088', '1990-08-16 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user89', '123456', '章仲栾', '370202197805051089', '男', '13804110089', '1990-08-17 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user9', '123456', '俞灶迟', '370202196909091009', '女', '13804110009', '1990-05-29 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user90', '123456', '朱鸥隐', '370203197906061090', '女', '13804110090', '1990-08-18 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user91', '123456', '孙如香', '370205198107071091', '男', '13804110091', '1990-08-19 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user92', '123456', '沈颜碧', '370211198208081092', '男', '13804110092', '1990-08-20 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user93', '123456', '华娟女', '370212198309091093', '女', '13804110093', '1990-08-21 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user94', '123456', '翁昀齐', '370213198410101094', '男', '13804110094', '1990-08-22 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user95', '123456', '涂邦香', '370214198511111095', '男', '13804110095', '1990-08-23 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user96', '123456', '谢巾贞', '370281198612121096', '女', '13804110096', '1990-08-24 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user97', '123456', '黎益欣', '370282198701131097', '男', '13804110097', '1990-08-25 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user98', '123456', '莫桦谊', '370283198802141098', '男', '13804110098', '1990-08-26 14:19:21', '1', null, null);
+INSERT INTO `suser` VALUES ('user99', '123456', '陈明榕', '370284198903151099', '女', '13804110099', '1990-08-27 14:19:21', '1', null, null);
 
 -- ----------------------------
--- View structure for `caruser`
+-- View structure for caruser
 -- ----------------------------
 DROP VIEW IF EXISTS `caruser`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `caruser` AS select `suser`.`username` AS `username`,`suser`.`pname` AS `pname`,`suser`.`pcardid` AS `pcardid`,`suser`.`psex` AS `psex`,`suser`.`ptel` AS `ptel`,date_format(`suser`.`pregisterdate`,'%Y-%c-%d %h:%i:%s') AS `pregisterdate` from `suser` where (`suser`.`username` <> 'admin') order by (substr(`suser`.`username`,5) + 0);
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `caruser` AS select `suser`.`username` AS `username`,`suser`.`pname` AS `pname`,`suser`.`pcardid` AS `pcardid`,`suser`.`psex` AS `psex`,`suser`.`ptel` AS `ptel`,date_format(`suser`.`pregisterdate`,'%Y-%c-%d %h:%i:%s') AS `pregisterdate` from `suser` where (`suser`.`username` <> 'admin') order by (substr(`suser`.`username`,5) + 0) ;
 
 -- ----------------------------
--- View structure for `loginuser`
+-- View structure for loginuser
 -- ----------------------------
 DROP VIEW IF EXISTS `loginuser`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `loginuser` AS select `suser`.`username` AS `username`,`suser`.`password` AS `userpwd`,(case when (`suser`.`role` = 'admin') then 'R03' when (`suser`.`role` = 'nor_user') then 'R01' when (`suser`.`role` = 'adv_user') then 'R02' end) AS `userrole` from `suser`;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `loginuser` AS select `suser`.`username` AS `username`,`suser`.`password` AS `userpwd`,(case when (`suser`.`role` = 'admin') then 'R03' when (`suser`.`role` = 'nor_user') then 'R01' when (`suser`.`role` = 'adv_user') then 'R02' end) AS `userrole` from `suser` ;
 
 -- ----------------------------
--- View structure for `peccancyx`
+-- View structure for peccancyx
 -- ----------------------------
 DROP VIEW IF EXISTS `peccancyx`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `peccancyx` AS select `peccancy`.`id` AS `id`,`peccancy`.`carnumber` AS `carnumber`,`peccancy`.`pcode` AS `pcode`,`peccancy`.`paddr` AS `paddr`,date_format(`peccancy`.`pdatetime`,'%Y-%c-%d %h:%i:%s') AS `pdatetime` from `peccancy`;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `peccancyx` AS select `peccancy`.`id` AS `id`,`peccancy`.`carnumber` AS `carnumber`,`peccancy`.`pcode` AS `pcode`,`peccancy`.`paddr` AS `paddr`,date_format(`peccancy`.`pdatetime`,'%Y-%c-%d %h:%i:%s') AS `pdatetime` from `peccancy` ;

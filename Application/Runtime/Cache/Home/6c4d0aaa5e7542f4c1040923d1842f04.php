@@ -118,7 +118,7 @@
         <li class="treeview"> <a href="#"> <i class="fa fa-exchange"></i> <span>Etc模块</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
           <ul class="treeview-menu">
             <li><a href="<?php echo U('Index/data101');?>"><i class="fa fa-circle-o"></i> Etc基本信息</a></li>
-            <li><a href="<?php echo U('Index/data111');?>"><i class="fa fa-circle-o"></i> Etc通行日志</a></li>
+            <li><a href="<?php echo U('Index/data102');?>"><i class="fa fa-circle-o"></i> Etc通行日志</a></li>
           </ul>
         </li>
       

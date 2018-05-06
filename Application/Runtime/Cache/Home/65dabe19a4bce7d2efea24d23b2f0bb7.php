@@ -86,39 +86,39 @@
             <li><a href="<?php echo U('Index/data013');?>"><i class="fa fa-circle-o"></i>车辆违章记录</a></li>
           </ul>
         </li>
-        <li> <a href="pages/tables/data021.html"> <i class="fa fa-map-signs"></i> <span>红绿灯子系统</span> <span class="pull-right-container">  </span> </a>
+        <li> <a href="<?php echo U('Index/data021');?>"> <i class="fa fa-map-signs"></i> <span>红绿灯子系统</span> <span class="pull-right-container">  </span> </a>
         </li>
-        <li> <a href="pages/tables/data031.html"> <i class="fa fa-filter"></i> <span>路灯子系统</span> <span class="pull-right-container">  </span> </a>
+        <li> <a href="<?php echo U('Index/data031');?>"> <i class="fa fa-filter"></i> <span>路灯子系统</span> <span class="pull-right-container">  </span> </a>
         </li>
-        <li> <a href="pages/tables/data041.html"> <i class="fa fa-filter"></i> <span>环境子系统</span> <span class="pull-right-container">  </span> </a>
+        <li> <a href="<?php echo U('Index/data041');?>"> <i class="fa fa-filter"></i> <span>环境子系统</span> <span class="pull-right-container">  </span> </a>
         </li>
    
         <li class="treeview"> <a href="#"> <i class="fa fa-bus"></i> <span>公交车模块</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
           <ul class="treeview-menu">
-            <li><a href="pages/tables/data051.html"><i class="fa fa-circle-o"></i> 站台信息查询</a></li>
-            <li><a href="pages/tables/data052.html"><i class="fa fa-circle-o"></i> 车载容量查询</a></li>
+            <li><a href="<?php echo U('Index/data051');?>"><i class="fa fa-circle-o"></i> 站台信息查询</a></li>
+            <li><a href="<?php echo U('Index/data052');?>"><i class="fa fa-circle-o"></i> 车载容量查询</a></li>
           </ul>
         </li>
-        <li> <a href="pages/tables/data061.html"> <i class="fa fa-road"></i> <span>道路子系统</span> <span class="pull-right-container">  </span> </a>
+        <li> <a href="<?php echo U('Index/data061');?>"> <i class="fa fa-road"></i> <span>道路子系统</span> <span class="pull-right-container">  </span> </a>
         </li>
         <li class="treeview"> <a href="#"> <i class="fa fa-database"></i> <span>基础数据表 </span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
           <ul class="treeview-menu">
-            <li><a href="pages/tables/data071.html"><i class="fa fa-circle-o"></i> 车辆信息（管理员权限）</a></li>
-            <li><a href="pages/tables/data072.html"><i class="fa fa-circle-o"></i> 违章代码</a></li>
+            <li><a href="<?php echo U('Index/data071');?>"><i class="fa fa-circle-o"></i> 车辆信息（管理员权限）</a></li>
+            <li><a href="<?php echo U('Index/data072');?>"><i class="fa fa-circle-o"></i> 违章代码</a></li>
           </ul>
         </li>
         <li class="treeview"> <a href="#"> <i class="fa fa-users"></i> <span>用户管理</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
           <ul class="treeview-menu">
-            <li><a href="pages/tables/data081.html"><i class="fa fa-circle-o"></i> 用户权限管理（管理员权限）</a></li>
-            <li><a href="pages/tables/data082.html"><i class="fa fa-circle-o"></i> 获取所有用户信息（管理员权限）</a></li>
+            <li><a href="<?php echo U('Index/data081');?>"><i class="fa fa-circle-o"></i> 用户权限管理（管理员权限）</a></li>
+            <li><a href="<?php echo U('Index/data082');?>"><i class="fa fa-circle-o"></i> 获取所有用户信息（管理员权限）</a></li>
           </ul>
         </li>
-        <li> <a href="pages/tables/data091.html"> <i class="fa fa-cloud"></i> <span>气象信息查询</span> <span class="pull-right-container">  </span> </a>
+        <li> <a href="<?php echo U('Index/data091');?>"> <i class="fa fa-cloud"></i> <span>气象信息查询</span> <span class="pull-right-container">  </span> </a>
         </li>
         <li class="treeview"> <a href="#"> <i class="fa fa-exchange"></i> <span>Etc模块</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
           <ul class="treeview-menu">
-            <li><a href="pages/tables/data101.html"><i class="fa fa-circle-o"></i> Etc基本信息</a></li>
-            <li><a href="pages/tables/data111.html"><i class="fa fa-circle-o"></i> Etc通行日志</a></li>
+            <li><a href="<?php echo U('Index/data101');?>"><i class="fa fa-circle-o"></i> Etc基本信息</a></li>
+            <li><a href="<?php echo U('Index/data102');?>"><i class="fa fa-circle-o"></i> Etc通行日志</a></li>
           </ul>
         </li>
       
@@ -164,161 +164,17 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>辽B12345</td>
-                    <td>非法安装警报器的</td>
-                    <td>学院路</td>
-                    <td>2018-11-11 08:22:11</td>
-                    <td>150</td>
-                    <td>2</td>
+				<?php if(is_array($pec_info)): $i = 0; $__LIST__ = $pec_info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                    <td style="width:100px"><?php echo ($vo["id"]); ?></td>
+                    <td style="width:100px"><?php echo ($vo["carnumber"]); ?></td>
+                    <td style="width:350px"><?php echo ($vo["premarks"]); ?></td>
+                    <td><?php echo ($vo["paddr"]); ?></td>
+                    <td><?php echo ($vo["pdatetime"]); ?></td>
+                    <td><?php echo ($vo["pmoney"]); ?></td>
+                    <td><?php echo ($vo["pscore"]); ?></td>
                     <td>未处理</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>辽B12346</td>
-                    <td>非法安装警报器的</td>
-                    <td>学院路</td>
-                    <td>2018-11-01 08:22:11</td>
-                    <td>150</td>
-                    <td>2</td>
-                    <td>已处理</td>
-                  </tr>
-                    <td>1</td>
-                    <td>辽B12345</td>
-                    <td>非法安装警报器的</td>
-                    <td>学院路</td>
-                    <td>2018-11-11 08:22:11</td>
-                    <td>150</td>
-                    <td>2</td>
-                    <td>未处理</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>辽B12346</td>
-                    <td>非法安装警报器的</td>
-                    <td>学院路</td>
-                    <td>2018-11-01 08:22:11</td>
-                    <td>150</td>
-                    <td>2</td>
-                    <td>已处理</td>
-                  </tr>
-                  
-                  
-                    <td>1</td>
-                    <td>辽B12345</td>
-                    <td>非法安装警报器的</td>
-                    <td>学院路</td>
-                    <td>2018-11-11 08:22:11</td>
-                    <td>150</td>
-                    <td>2</td>
-                    <td>未处理</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>辽B12346</td>
-                    <td>非法安装警报器的</td>
-                    <td>学院路</td>
-                    <td>2018-11-01 08:22:11</td>
-                    <td>150</td>
-                    <td>2</td>
-                    <td>已处理</td>
-                  </tr>
-                    <td>1</td>
-                    <td>辽B12345</td>
-                    <td>非法安装警报器的</td>
-                    <td>学院路</td>
-                    <td>2018-11-11 08:22:11</td>
-                    <td>150</td>
-                    <td>2</td>
-                    <td>未处理</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>辽B12346</td>
-                    <td>非法安装警报器的</td>
-                    <td>学院路</td>
-                    <td>2018-11-01 08:22:11</td>
-                    <td>150</td>
-                    <td>2</td>
-                    <td>已处理</td>
-                  </tr>                  
-                    <td>1</td>
-                    <td>辽B12345</td>
-                    <td>非法安装警报器的</td>
-                    <td>学院路</td>
-                    <td>2018-11-11 08:22:11</td>
-                    <td>150</td>
-                    <td>2</td>
-                    <td>未处理</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>辽B12346</td>
-                    <td>非法安装警报器的</td>
-                    <td>学院路</td>
-                    <td>2018-11-01 08:22:11</td>
-                    <td>150</td>
-                    <td>2</td>
-                    <td>已处理</td>
-                  </tr>                  
-                    <td>1</td>
-                    <td>辽B12345</td>
-                    <td>非法安装警报器的</td>
-                    <td>学院路</td>
-                    <td>2018-11-11 08:22:11</td>
-                    <td>150</td>
-                    <td>2</td>
-                    <td>未处理</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>辽B12346</td>
-                    <td>非法安装警报器的</td>
-                    <td>学院路</td>
-                    <td>2018-11-01 08:22:11</td>
-                    <td>150</td>
-                    <td>2</td>
-                    <td>已处理</td>
-                  </tr>                  
-                    <td>1</td>
-                    <td>辽B12345</td>
-                    <td>非法安装警报器的</td>
-                    <td>学院路</td>
-                    <td>2018-11-11 08:22:11</td>
-                    <td>150</td>
-                    <td>2</td>
-                    <td>未处理</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>辽B12346</td>
-                    <td>非法安装警报器的</td>
-                    <td>学院路</td>
-                    <td>2018-11-01 08:22:11</td>
-                    <td>150</td>
-                    <td>2</td>
-                    <td>已处理</td>
-                  </tr>                  
-                    <td>1</td>
-                    <td>辽B12345</td>
-                    <td>非法安装警报器的</td>
-                    <td>学院路</td>
-                    <td>2018-11-11 08:22:11</td>
-                    <td>150</td>
-                    <td>2</td>
-                    <td>未处理</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>辽B12346</td>
-                    <td>非法安装警报器的</td>
-                    <td>学院路</td>
-                    <td>2018-11-01 08:22:11</td>
-                    <td>150</td>
-                    <td>2</td>
-                    <td>已处理</td>
-                  </tr>
+                  </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                 
                   
                                                       
                 </tbody>

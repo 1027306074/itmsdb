@@ -1,6 +1,29 @@
 <!DOCTYPE html>
 <html>
 <include file="./Application/Home/View/default/Public/header.html" />
+<script>
+function check(){
+var data=new Array();
+	$.each($('input:checkbox:checked'),function(i){
+               data[i] = $(this).val();
+            });
+	$.ajax({
+			type : "post", 
+                url : "{:U('Index/data101')}",
+                data : {data:data},              
+                success:function(res){
+				
+                   if(res==1){
+						alert("加入黑名单成功！");
+						location.reload();
+				   }else{
+						alert("加入黑名单失败！");
+				   }
+                } 
+	});		
+}
+
+</script>	
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
@@ -77,40 +100,20 @@
                   </tr>
                 </thead>
                 <tbody>
+				<volist name='carinfo' id='vo'>
                   <tr>
-                    <td>1</td>
-                    <td><label> <input type="checkbox" class="minimal-red">  </label></td>
-                    <td>辽B12345</td>
-                    <td>张胜男</td>
-                    <td>是</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td><label> <input type="checkbox" class="minimal-red">  </label></td>
-                    <td>辽B12345</td>
-                    <td>张胜男</td>
-                    <td>是</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td><label> <input type="checkbox" class="minimal-red">  </label></td>
-                    <td>辽B12345</td>
-                    <td>张胜男</td>
+                    <td>{$vo.number}</td>
+                    <td><label> <input type="checkbox" class="minimal-red" value='{$vo.number}'>  </label></td>
+                    <td>{$vo.carnumber}</td>
+                    <td>{$vo.pname}</td>
+					<if condition="$vo.is_black eq 0">
                     <td>否</td>
+					<else />
+					<td>是</td>
+					</if>
                   </tr>
-                  <tr>
-                    <td>4</td>
-                    <td><label> <input type="checkbox" class="minimal-red">  </label></td>
-                    <td>辽B12345</td>
-                    <td>张胜男</td>
-                    <td>是</td>
-                  </tr>                  <tr>
-                    <td>5</td>
-                    <td><label> <input type="checkbox" class="minimal-red">  </label></td>
-                    <td>辽B12345</td>
-                    <td>张胜男</td>
-                    <td>是</td>
-                  </tr>
+				 </volist> 
+                 
 
 				  
                 </tbody>
@@ -122,7 +125,7 @@
           </div>
           <!-- /.box -->
           
-			<button type="button" class="btn bg-primary btn-flat margin">加入黑名单</button>
+			<button type="button" onclick="check()" class="btn bg-primary btn-flat margin">加入黑名单</button>
 
           
 

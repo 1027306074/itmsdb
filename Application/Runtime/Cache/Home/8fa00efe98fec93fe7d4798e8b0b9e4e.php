@@ -32,6 +32,29 @@
 <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
+<script>
+function check(){
+var data=new Array();
+	$.each($('input:checkbox:checked'),function(i){
+               data[i] = $(this).val();
+            });
+	$.ajax({
+			type : "post", 
+                url : "<?php echo U('Index/data101');?>",
+                data : {data:data},              
+                success:function(res){
+				
+                   if(res==1){
+						alert("加入黑名单成功！");
+						location.reload();
+				   }else{
+						alert("加入黑名单失败！");
+				   }
+                } 
+	});		
+}
+
+</script>	
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
@@ -200,40 +223,16 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td><label> <input type="checkbox" class="minimal-red">  </label></td>
-                    <td>辽B12345</td>
-                    <td>张胜男</td>
-                    <td>是</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td><label> <input type="checkbox" class="minimal-red">  </label></td>
-                    <td>辽B12345</td>
-                    <td>张胜男</td>
-                    <td>是</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td><label> <input type="checkbox" class="minimal-red">  </label></td>
-                    <td>辽B12345</td>
-                    <td>张胜男</td>
-                    <td>否</td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td><label> <input type="checkbox" class="minimal-red">  </label></td>
-                    <td>辽B12345</td>
-                    <td>张胜男</td>
-                    <td>是</td>
-                  </tr>                  <tr>
-                    <td>5</td>
-                    <td><label> <input type="checkbox" class="minimal-red">  </label></td>
-                    <td>辽B12345</td>
-                    <td>张胜男</td>
-                    <td>是</td>
-                  </tr>
+				<?php if(is_array($carinfo)): $i = 0; $__LIST__ = $carinfo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                    <td><?php echo ($vo["number"]); ?></td>
+                    <td><label> <input type="checkbox" class="minimal-red" value='<?php echo ($vo["number"]); ?>'>  </label></td>
+                    <td><?php echo ($vo["carnumber"]); ?></td>
+                    <td><?php echo ($vo["pname"]); ?></td>
+					<?php if($vo["is_black"] == 0): ?><td>否</td>
+					<?php else: ?>
+					<td>是</td><?php endif; ?>
+                  </tr><?php endforeach; endif; else: echo "" ;endif; ?> 
+                 
 
 				  
                 </tbody>
@@ -245,7 +244,7 @@
           </div>
           <!-- /.box -->
           
-			<button type="button" class="btn bg-primary btn-flat margin">加入黑名单</button>
+			<button type="button" onclick="check()" class="btn bg-primary btn-flat margin">加入黑名单</button>
 
           
 

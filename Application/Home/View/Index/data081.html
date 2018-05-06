@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html>
 <include file="./Application/Home/View/default/Public/header.html" />
+<script>
+function set(username,key){
+$.ajax({
+				type : "post", 
+                url : "{:U('Index/data081')}",
+                data : {username:username,key:key},              
+                success:function(res){
+				
+                   if(res==1){
+						alert("修改成功！");
+						location.reload();
+				   }else{
+						alert("修改失败！");
+				
+				   }
+                } 
+});
+}
+</script>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
@@ -39,161 +58,29 @@
                   </tr>
                 </thead>
                 <tbody>
+				<volist name='info' id='vo' key="k">
                   <tr>
-                    <td>1</td>
-                    <td>user1</td>
-                    <td>123456</td>
-                    <td>一般管理员</td>
-                    <td>
+                    <td>{$k}</td>
+                    <td>{$vo.username}</td>
+                    <td>{$vo.password}</td>
+				
+					<if condition="$vo.role eq 1">
+						<td>一般管理员</td>
+						<elseif condition="$vo.role eq 2" />
+						<td>普通用户</td>
+						<elseif condition="$vo.role eq 3" />
+						<td>无效用户</td>
+					</if>
+                   <td>
                         <div class="btn-group">
-                          <button type="button" class="btn btn-default">设为一般管理员</button>
-                          <button type="button" class="btn btn-default">设为普通用户</button>
-                          <button type="button" class="btn btn-default">设为无效用户</button>
+                          <button type="button" class="btn btn-default" onclick="set('{$vo.username}',1)">设为一般管理员</button>
+                          <button type="button" class="btn btn-default" onclick="set('{$vo.username}',2)">设为普通用户</button>
+                          <button type="button" class="btn btn-default" onclick="set('{$vo.username}',3)">设为无效用户</button>
                         </div>
                     </td>
                   </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>user1</td>
-                    <td>123456</td>
-                    <td>一般管理员</td>
-                    <td>
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-default">设为一般管理员</button>
-                          <button type="button" class="btn btn-default">设为普通用户</button>
-                          <button type="button" class="btn btn-default">设为无效用户</button>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>user1</td>
-                    <td>123456</td>
-                    <td>一般管理员</td>
-                    <td>
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-default">设为一般管理员</button>
-                          <button type="button" class="btn btn-default">设为普通用户</button>
-                          <button type="button" class="btn btn-default">设为无效用户</button>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>user1</td>
-                    <td>123456</td>
-                    <td>一般管理员</td>
-                    <td>
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-default">设为一般管理员</button>
-                          <button type="button" class="btn btn-default">设为普通用户</button>
-                          <button type="button" class="btn btn-default">设为无效用户</button>
-                        </div>
-                    </td>
-                  </tr>                  
-                  <tr>
-                    <td>1</td>
-                    <td>user1</td>
-                    <td>123456</td>
-                    <td>一般管理员</td>
-                    <td>
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-default">设为一般管理员</button>
-                          <button type="button" class="btn btn-default">设为普通用户</button>
-                          <button type="button" class="btn btn-default">设为无效用户</button>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>user1</td>
-                    <td>123456</td>
-                    <td>一般管理员</td>
-                    <td>
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-default">设为一般管理员</button>
-                          <button type="button" class="btn btn-default">设为普通用户</button>
-                          <button type="button" class="btn btn-default">设为无效用户</button>
-                        </div>
-                    </td>
-                  </tr>                  
-                  <tr>
-                    <td>1</td>
-                    <td>user1</td>
-                    <td>123456</td>
-                    <td>一般管理员</td>
-                    <td>
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-default">设为一般管理员</button>
-                          <button type="button" class="btn btn-default">设为普通用户</button>
-                          <button type="button" class="btn btn-default">设为无效用户</button>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>user1</td>
-                    <td>123456</td>
-                    <td>一般管理员</td>
-                    <td>
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-default">设为一般管理员</button>
-                          <button type="button" class="btn btn-default">设为普通用户</button>
-                          <button type="button" class="btn btn-default">设为无效用户</button>
-                        </div>
-                    </td>
-                  </tr>                  
-                  <tr>
-                    <td>1</td>
-                    <td>user1</td>
-                    <td>123456</td>
-                    <td>一般管理员</td>
-                    <td>
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-default">设为一般管理员</button>
-                          <button type="button" class="btn btn-default">设为普通用户</button>
-                          <button type="button" class="btn btn-default">设为无效用户</button>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>user1</td>
-                    <td>123456</td>
-                    <td>一般管理员</td>
-                    <td>
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-default">设为一般管理员</button>
-                          <button type="button" class="btn btn-default">设为普通用户</button>
-                          <button type="button" class="btn btn-default">设为无效用户</button>
-                        </div>
-                    </td>
-                  <tr>
-                    <td>1</td>
-                    <td>user1</td>
-                    <td>123456</td>
-                    <td>一般管理员</td>
-                    <td>
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-default">设为一般管理员</button>
-                          <button type="button" class="btn btn-default">设为普通用户</button>
-                          <button type="button" class="btn btn-default">设为无效用户</button>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>user1</td>
-                    <td>123456</td>
-                    <td>一般管理员</td>
-                    <td>
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-default">设为一般管理员</button>
-                          <button type="button" class="btn btn-default">设为普通用户</button>
-                          <button type="button" class="btn btn-default">设为无效用户</button>
-                        </div>
-                    </td>
-                  </tr>  
+				  </volist>
+                  
                                   
                   
                   

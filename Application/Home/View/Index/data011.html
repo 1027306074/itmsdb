@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 <include file="./Application/Home/View/default/Public/header.html" />
+<script>
+	function chngzhi(id){
+		$('#car_id').val(id);
+	}
+</script>
+
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 <include file="./Application/Home/View/default/Public/common.html" />
@@ -42,154 +48,18 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td><img src="__PUBLIC__/dist/img/audi.jpg" width="50" height="50"></td>
-                    <td>辽B12345</td>
-                    <td>张胜男</td>
-                    <td>100</td>
+				<volist name='carinfo' id = 'item'>
+				<tr>
+                    <td>{$item.number}</td>
+                    <td><img src="{$item.cardbrand}" width="50" height="50"></td>
+                    <td>{$item.carnumber}</td>
+                    <td>{$item.pname}</td>
+                    <td>{$item.money}</td>
                     <td><button type="button" class="btn btn-primary btn-info">  <span class="glyphicon glyphicon-pause"></span> 暂停</button></td>
-                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">  充值      </button></td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td><img src="__PUBLIC__/dist/img/audi.jpg" alt="" width="50" height="50"></td>
-                    <td>辽B12346</td>
-                    <td>赵四</td>
-                    <td>200</td>
-                    <td><button type="button" class="btn btn-primary btn-info">  <span class="glyphicon glyphicon-play"></span> 启动</button></td>
-                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">  充值      </button></td>
-                  </tr>
-                     <td>2</td>
-                    <td><img src="__PUBLIC__/dist/img/audi.jpg" alt="" width="50" height="50"></td>
-                    <td>辽B12346</td>
-                    <td>赵四</td>
-                    <td>200</td>
-                    <td><button type="button" class="btn btn-primary btn-info">  <span class="glyphicon glyphicon-play"></span> 启动</button></td>
-                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">  充值      </button></td>
-                  </tr>
-                    <td>2</td>
-                    <td><img src="__PUBLIC__/dist/img/audi.jpg" alt="" width="50" height="50"></td>
-                    <td>辽B12346</td>
-                    <td>赵四</td>
-                    <td>200</td>
-                    <td><button type="button" class="btn btn-primary btn-info">  <span class="glyphicon glyphicon-play"></span> 启动</button></td>
-                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">  充值      </button></td>
-                  </tr>                  
-                    <td>2</td>
-                    <td><img src="__PUBLIC__/dist/img/audi.jpg" alt="" width="50" height="50"></td>
-                    <td>辽B12346</td>
-                    <td>赵四</td>
-                    <td>200</td>
-                    <td><button type="button" class="btn btn-primary btn-info">  <span class="glyphicon glyphicon-play"></span> 启动</button></td>
-                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">  充值      </button></td>
-                  </tr>                  
-                    <td>2</td>
-                    <td><img src="__PUBLIC__/dist/img/audi.jpg" alt="" width="50" height="50"></td>
-                    <td>辽B12346</td>
-                    <td>赵四</td>
-                    <td>200</td>
-                    <td><button type="button" class="btn btn-primary btn-info">  <span class="glyphicon glyphicon-play"></span> 启动</button></td>
-                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">  充值      </button></td>
-                  </tr>                  
-                    <td>2</td>
-                    <td><img src="__PUBLIC__/dist/img/audi.jpg" alt="" width="50" height="50"></td>
-                    <td>辽B12346</td>
-                    <td>赵四</td>
-                    <td>200</td>
-                    <td><button type="button" class="btn btn-primary btn-info">  <span class="glyphicon glyphicon-play"></span> 启动</button></td>
-                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">  充值      </button></td>
-                  </tr>                  
-                    <td>2</td>
-                    <td><img src="__PUBLIC__/dist/img/audi.jpg" alt="" width="50" height="50"></td>
-                    <td>辽B12346</td>
-                    <td>赵四</td>
-                    <td>200</td>
-                    <td><button type="button" class="btn btn-primary btn-info">  <span class="glyphicon glyphicon-play"></span> 启动</button></td>
-                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">  充值      </button></td>
-                  </tr>                  
-                  </tr>                  
-                    <td>2</td>
-                    <td><img src="__PUBLIC__/dist/img/audi.jpg" alt="" width="50" height="50"></td>
-                    <td>辽B12346</td>
-                    <td>赵四</td>
-                    <td>200</td>
-                    <td><button type="button" class="btn btn-primary btn-info">  <span class="glyphicon glyphicon-play"></span> 启动</button></td>
-                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">  充值      </button></td>
-                  </tr>                  
-                    <td>2</td>
-                    <td><img src="__PUBLIC__/dist/img/audi.jpg" alt="" width="50" height="50"></td>
-                    <td>辽B12346</td>
-                    <td>赵四</td>
-                    <td>200</td>
-                    <td><button type="button" class="btn btn-primary btn-info">  <span class="glyphicon glyphicon-play"></span> 启动</button></td>
-                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">  充值      </button></td>
-                  </tr>                  
-                    <td>2</td>
-                    <td><img src="__PUBLIC__/dist/img/audi.jpg" alt="" width="50" height="50"></td>
-                    <td>辽B12346</td>
-                    <td>赵四</td>
-                    <td>200</td>
-                    <td><button type="button" class="btn btn-primary btn-info">  <span class="glyphicon glyphicon-play"></span> 启动</button></td>
-                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">  充值      </button></td>
-                  </tr>                  
-                  </tr>                  
-                    <td>2</td>
-                    <td><img src="__PUBLIC__/dist/img/audi.jpg" alt="" width="50" height="50"></td>
-                    <td>辽B12346</td>
-                    <td>赵四</td>
-                    <td>200</td>
-                    <td><button type="button" class="btn btn-primary btn-info">  <span class="glyphicon glyphicon-play"></span> 启动</button></td>
-                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">  充值      </button></td>
-                  </tr>                  
-                    <td>2</td>
-                    <td><img src="__PUBLIC__/dist/img/audi.jpg" alt="" width="50" height="50"></td>
-                    <td>辽B12346</td>
-                    <td>赵四</td>
-                    <td>200</td>
-                    <td><button type="button" class="btn btn-primary btn-info">  <span class="glyphicon glyphicon-play"></span> 启动</button></td>
-                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">  充值      </button></td>
-                  </tr>                  
-                    <td>2</td>
-                    <td><img src="__PUBLIC__/dist/img/audi.jpg" alt="" width="50" height="50"></td>
-                    <td>辽B12346</td>
-                    <td>赵四</td>
-                    <td>200</td>
-                    <td><button type="button" class="btn btn-primary btn-info">  <span class="glyphicon glyphicon-play"></span> 启动</button></td>
-                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">  充值      </button></td>
-                  </tr>                  
-                  </tr>                  
-                    <td>2</td>
-                    <td><img src="__PUBLIC__/dist/img/audi.jpg" alt="" width="50" height="50"></td>
-                    <td>辽B12346</td>
-                    <td>赵四</td>
-                    <td>200</td>
-                    <td><button type="button" class="btn btn-primary btn-info">  <span class="glyphicon glyphicon-play"></span> 启动</button></td>
-                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">  充值      </button></td>
-                  </tr>                  
-                    <td>2</td>
-                    <td><img src="__PUBLIC__/dist/img/audi.jpg" alt="" width="50" height="50"></td>
-                    <td>辽B12346</td>
-                    <td>赵四</td>
-                    <td>200</td>
-                    <td><button type="button" class="btn btn-primary btn-info">  <span class="glyphicon glyphicon-play"></span> 启动</button></td>
-                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">  充值      </button></td>
-                  </tr>                  
-                    <td>2</td>
-                    <td><img src="__PUBLIC__/dist/img/audi.jpg" alt="" width="50" height="50"></td>
-                    <td>辽B12346</td>
-                    <td>赵四</td>
-                    <td>200</td>
-                    <td><button type="button" class="btn btn-primary btn-info">  <span class="glyphicon glyphicon-play"></span> 启动</button></td>
-                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">  充值      </button></td>
-                  </tr>                  
-
-
-
-
-
-
-                </tbody>
+                    <td><button onclick="chngzhi({$item.number})" type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info" data-id="{$item.number}">  充值      </button></td>
+                 </tr>
+				</volist>
+            </tbody>
                 <tfoot>
                 </tfoot>
               </table>
@@ -207,12 +77,12 @@
                     <h4 class="modal-title">车辆账户充值</h4>
                   </div>
                   <div class="modal-body">
-                      <input type="number" class="form-control" id="exampleInputEmail1" placeholder="充值金额">
-
+                      <input type="number" class="form-control" id="charge_money" placeholder="充值金额">
+					  <input type="hidden" id='car_id' value=''>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-primary pull-left" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-primary ">充值</button>
+                    <button type="button" class="btn btn-primary " onclick="charge()">充值</button>
                   </div>
                 </div>
                 <!-- /.modal-content -->
@@ -232,4 +102,40 @@
   <!-- /.content-wrapper -->
 <include file="./Application/Home/View/default/Public/footer.html" />
 </body>
+<script>
+
+
+
+
+
+
+function charge(id){
+		var car_id=$('#car_id').val();	
+		var charge_money = $("#charge_money").val();
+		if(!charge_money){
+			alert("请输入充值金额！");
+			return false;
+		}
+		if(charge_money<0){
+			alert("请输入正确金额！");
+			return false;
+		}
+		 $.ajax({  
+                type : "post", 
+                url : "{:U('Index/data011')}",
+                data : {money:charge_money,car_id:car_id},              
+                success:function(res){
+				
+                   if(res==1){
+						alert("充值成功！");
+						location.reload();
+				   }else{
+						alert("充值失败！");
+						location.reload();
+				   }
+                }  
+            });  
+		
+}
+</script>
 </html>

@@ -161,119 +161,14 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
-                  </tr>                  
-                  <tr>
-                    <td>1</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
-                  </tr>                  
-                  <tr>
-                    <td>1</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>辽B12345</td>
-                    <td>10</td>
-                    <td>user1</td>
-                    <td>2018-11-11 08:22:11</td>
-                  </tr>                  
+				<?php if(is_array($info)): $i = 0; $__LIST__ = $info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                    <td><?php echo ($vo["carid"]); ?></td>
+                    <td><?php echo ($vo["carnumber"]); ?></td>
+                    <td><?php echo ($vo["money"]); ?></td>
+                    <td><?php echo ($vo["charge_man"]); ?></td>
+                    <td><?php echo ($vo["chargetime"]); ?></td>
+                  </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                   
-                  <tr>
-                    <td>Other browsers</td>
-                    <td>&nbsp;</td>
-                    <td>All others</td>
-                    <td>-</td>
-                    <td>-</td>
-                  </tr>
                 </tbody>
                 <tfoot>
                 </tfoot>

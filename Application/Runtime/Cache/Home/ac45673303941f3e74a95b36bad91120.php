@@ -161,66 +161,13 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>2017/02/21 01:14:21</td>
-                    <td><p>2017/02/21 01:38:12</p></td>
-                    <td>10元</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>2017/02/21 01:23:29</td>
-                    <td>2017/02/21 01:43:01</td>
-                    <td>15元</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>2017/02/21 01:35:11</td>
-                    <td>2017/02/21 01:44:35</td>
-                    <td>12元</td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td>2017/02/21 01:47:56</td>
-                    <td>2017/02/21 01:48:20</td>
-                    <td>25元</td>
-                  </tr>
-                  <tr>
-                    <td>5</td>
-                    <td>2017/02/21 01:48:16</td>
-                    <td>2017/02/21 01:49:21</td>
-                    <td>10元</td>
-                  </tr>
-                  <tr>
-                    <td>6</td>
-                    <td>2017/02/21 01:49:27</td>
-                    <td>2017/02/21 01:49:46</td>
-                    <td>15元</td>
-                  </tr>
-                  <tr>
-                    <td>7</td>
-                    <td>2017/02/21 01:52:00</td>
-                    <td>2017/02/21 01:52:21</td>
-                    <td>12元</td>
-                  </tr>
-                  <tr>
-                    <td>8</td>
-                    <td>2017/02/21 01:54:49</td>
-                    <td>2017/02/21 01:55:25</td>
-                    <td>12元</td>
-                  </tr>
-                  <tr>
-                    <td>9</td>
-                    <td>2017/02/21 01:56:00</td>
-                    <td>2017/02/21 01:57:24</td>
-                    <td>12元</td>
-                  </tr>
-                  <tr>
-                    <td>10</td>
-                    <td>2017/02/21 01:18:16</td>
-                    <td>2017/02/21 02;00:10</td>
-                    <td>17元</td>
-                  </tr>
+				<?php if(is_array($info)): $i = 0; $__LIST__ = $info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                    <td><?php echo ($vo["etlid"]); ?></td>
+                    <td><?php echo ($vo["intime"]); ?></td>
+                    <td><?php echo ($vo["outtime"]); ?></td>
+                    <td><?php echo ($vo["money"]); ?>元</td>
+                  </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                 
                 </tbody>
                 <tfoot>
                 </tfoot>
