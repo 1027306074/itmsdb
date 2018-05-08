@@ -40,18 +40,19 @@
 
     <form action="" method="post" id="form_login">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="text" name="info[username]" id="username">
+        <input type="text" class="form-control" value="<?php echo $_COOKIE['name'];?>" placeholder="username" name="info[username]" id="username">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password" name="info[password]" id="password" type="password">
+        <input style="margin-top:35px;" type="password" value="<?php echo $_COOKIE['password']?>" class="form-control" placeholder="Password" name="info[password]" id="password" type="password">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
         <div class="col-xs-8">
           <div class="checkbox icheck">
             <label>
-              <input type="checkbox"> 记住密码
+              <!-- <input type="checkbox"> 记住密码 -->
+			  <?php if($_COOKIE['remember'] == 1){?><input type="checkbox" name="remember" value="1" checked><?php }else{($_COOKIE['remember'] == "")?><input type="checkbox" name="remember" value="1">记住密码<?php }?></td>
             </label>
           </div>
         </div>
@@ -77,6 +78,7 @@
 <script src="/itmsdb/Public/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- iCheck -->
 <script src="/itmsdb/Public/plugins/iCheck/icheck.min.js"></script>
+<script src="/itmsdb/Public/dist/js/layer.js"></script>
 <script>
   $(function () {
     $('input').iCheck({
@@ -90,11 +92,18 @@
         var username = $("#username").val();
         var password = $("#password").val();
         if(!username){
-            alert('请输入用户名');
+		layer.tips('请输入用户名', '#username', {
+  tips: [1, 'red'] //还可配置颜色
+});
+
+           <!-- layer.alert('请输入用户名'); -->
             return false;
         }
         if(!password){
-            alert('请输入密码');
+				layer.tips('请输入密码', '#password', {
+  tips: [1, 'red'] //还可配置颜色
+});
+            <!-- alert('请输入密码'); -->
             return false;
         }
    

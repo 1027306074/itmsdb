@@ -10,6 +10,18 @@ class IndexController extends Controller {
             if(empty($user)){
                 $this->error("账号密码不匹配，请重试！");die;
             }else{
+				$remember = $_POST['remember'];
+				$name =$_POST['info']['username'];
+				$password =$_POST['info']['password'];
+				if($remember == 1){
+					 setcookie('name',$name,time()+3600);
+					 setcookie('password',$password,time()+3600);
+					 setcookie('remember',$remember,time()+3600);
+					 }else{
+					 setcookie('name',$name,time()-3600);
+					 setcookie('password',$password,time()-3600);
+					 setcookie('remember',$remember,time()-3600);
+					 }
               
                 $_SESSION['user']['username'] = $user['username'];
               $this->success("登录成功！",U('Index/index2'));die;
