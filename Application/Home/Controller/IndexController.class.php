@@ -2,13 +2,14 @@
 namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
-
+// public function _initialize(){
+	 // if(isset($_COOKIE['name'])){
+		 //echo $_COOKIE['name'];die;
+                // $this->assign('name',$_COOKIE['name']);
+            // }
+// }
     public function index(){
-		if($_COOKIE){
-			$this->assign('name',$_COOKIE['name']);
-			$this->assign('password',$_COOKIE['password']);
-			$this->assign('remember',$_COOKIE['remember']);
-		}
+
 		
 		if(IS_AJAX){
 			$info = I('info');
@@ -22,9 +23,9 @@ class IndexController extends Controller {
 				$name =$_POST['u'];
 				$password =$_POST['p'];
 				if($remember == 1){
-					 setcookie('name',$name,time()+3600);
-					 setcookie('password',$password,time()+3600);
-					 setcookie('remember',$remember,time()+3600);
+					 setcookie('name',$name,time()+3600*24*30);
+					 setcookie('password',$password,time()+3600*24*30);
+					 setcookie('remember',$remember,time()+3600*24*30);
 					 }else{
 					 setcookie('name',$name,time()-3600);
 					 setcookie('password',$password,time()-3600);
@@ -36,11 +37,11 @@ class IndexController extends Controller {
               
             }
 		}
-		$this->display();
+		$this->display('index');
     }
 	public function logout(){
 		session(null);
-		$this->redirect('/');
+		$this->index();
 	}
 	public function index2(){
 		$this->display();	

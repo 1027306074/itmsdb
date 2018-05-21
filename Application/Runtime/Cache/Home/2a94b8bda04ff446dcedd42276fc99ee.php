@@ -40,11 +40,11 @@
 
     <form action="" method="post" id="form_login">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" value="<?php echo $_COOKIE['name'];?>" placeholder="<?php echo $_COOKIE['name'];?>" name="info[username]" id="username">
+       <input type="text" class="form-control" value="<?php echo $_COOKIE['name']?>" placeholder="username" name="info[username]" id="username">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input style="margin-top:35px;" type="password" value="<?php echo $_COOKIE['password']?>" class="form-control" placeholder="<?php echo $_COOKIE['password']?>" name="info[password]" id="password" type="password">
+        <input style="margin-top:35px;" type="password" value="<?php echo $_COOKIE['password']?>" class="form-control" placeholder="Password" name="info[password]" id="password" type="password">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
@@ -118,6 +118,7 @@
 				alert("登录成功！");	
                 window.location.href = "<?php echo U('Index/index2');?>";
             } else {
+			console.log(r)
                 alert("用户名或密码错误！");
             }
         }
