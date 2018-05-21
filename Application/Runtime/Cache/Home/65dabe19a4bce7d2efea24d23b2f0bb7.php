@@ -178,8 +178,7 @@
                   
                                                       
                 </tbody>
-                <tfoot>
-                </tfoot>
+              
               </table>
             </div>
             <!-- /.box-body --> 

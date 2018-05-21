@@ -40,11 +40,11 @@
 
     <form action="" method="post" id="form_login">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" value="<?php echo $_COOKIE['name'];?>" placeholder="username" name="info[username]" id="username">
+        <input type="text" class="form-control" value="<?php echo $_COOKIE['name'];?>" placeholder="<?php echo $_COOKIE['name'];?>" name="info[username]" id="username">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input style="margin-top:35px;" type="password" value="<?php echo $_COOKIE['password']?>" class="form-control" placeholder="Password" name="info[password]" id="password" type="password">
+        <input style="margin-top:35px;" type="password" value="<?php echo $_COOKIE['password']?>" class="form-control" placeholder="<?php echo $_COOKIE['password']?>" name="info[password]" id="password" type="password">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
@@ -52,13 +52,13 @@
           <div class="checkbox icheck">
             <label>
               <!-- <input type="checkbox"> 记住密码 -->
-			  <?php if($_COOKIE['remember'] == 1){?><input type="checkbox" name="remember" value="1" checked><?php }else{($_COOKIE['remember'] == "")?><input type="checkbox" name="remember" value="1">记住密码<?php }?></td>
+			  <?php if($_COOKIE['remember'] == 1){?><input type="checkbox" name="remember" value="1" checked><?php }else{($_COOKIE['remember'] == "")?><input type="checkbox" name="remember" id="remember" value="1">记住密码<?php }?></td>
             </label>
           </div>
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">登  录</button>
+          <button type="button" class="btn btn-primary btn-block btn-flat" onclick="login()">登  录</button>
         </div>
         <!-- /.col -->
       </div>
@@ -87,28 +87,45 @@
       increaseArea: '20%' // optional
     });
   });
-  
-      $("#form_login").submit(function(){
+  function login(){
+   
         var username = $("#username").val();
         var password = $("#password").val();
+		var remember = $("#remember").val();
         if(!username){
 		layer.tips('请输入用户名', '#username', {
-  tips: [1, 'red'] //还可配置颜色
+		tips: [1, 'red'] 
 });
-
-           <!-- layer.alert('请输入用户名'); -->
             return false;
         }
         if(!password){
 				layer.tips('请输入密码', '#password', {
-  tips: [1, 'red'] //还可配置颜色
+				tips: [1, 'red'] 
 });
-            <!-- alert('请输入密码'); -->
             return false;
         }
+		$.ajax({
+        type: "post",
+        url: "<?php echo U('Index/index');?>",
+        data: {
+            u: username,
+            p: password,
+			remember:remember
+        },
+        success: function(r) { 
+			
+            if(r == 1) {  
+				alert("登录成功！");	
+                window.location.href = "<?php echo U('Index/index2');?>";
+            } else {
+                alert("用户名或密码错误！");
+            }
+        }
+    });
    
     
-    });
+
+	}
 </script>
 </body>
 </html>

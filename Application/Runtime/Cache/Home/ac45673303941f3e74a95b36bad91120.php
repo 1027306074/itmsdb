@@ -135,7 +135,7 @@
     <section class="content-header">
       <h1>      
           <ol class="breadcrumb">
-            <li><a href="../../index2.html"><i class="fa  fa-sign-out"></i> 主页</a></li>
+            <li><a href="<?php echo U('Index/index2');?>"><i class="fa  fa-sign-out"></i> 主页</a></li>
             <li><a href="#">Etc模块</a></li>
             <li class="active">Etc通行日志</li>
           </ol>
@@ -162,12 +162,12 @@
                 </thead>
                 <tbody>
 				<?php if(is_array($info)): $i = 0; $__LIST__ = $info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-                    <td><?php echo ($vo["etlid"]); ?></td>
+                    <td><?php echo ($vo["username"]); ?></td>
                     <td><?php echo ($vo["intime"]); ?></td>
                     <td><?php echo ($vo["outtime"]); ?></td>
                     <td><?php echo ($vo["money"]); ?>元</td>
                   </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-                 
+   
                 </tbody>
                 <tfoot>
                 </tfoot>

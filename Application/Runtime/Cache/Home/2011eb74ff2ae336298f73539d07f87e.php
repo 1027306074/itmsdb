@@ -135,7 +135,7 @@
     <section class="content-header">
       <h1>      
           <ol class="breadcrumb">
-            <li><a href="../../index2.html"><i class="fa  fa-sign-out"></i> 主页</a></li>
+            <li><a href="<?php echo U('Index/index2');?>"><i class="fa  fa-sign-out"></i> 主页</a></li>
             
             <li class="active">气象信息查询</li>
           </ol>

@@ -12,7 +12,7 @@
     <section class="content-header">
       <h1>      
           <ol class="breadcrumb">
-            <li><a href="../../index2.html"><i class="fa  fa-sign-out"></i> 主页</a></li>
+            <li><a href="{:U('Index/index2')}"><i class="fa  fa-sign-out"></i> 主页</a></li>
             <li><a href="#">Etc模块</a></li>
             <li class="active">Etc通行日志</li>
           </ol>
@@ -40,7 +40,7 @@
                 <tbody>
 				<volist name="info" id = 'vo'>
                   <tr>
-                    <td>{$vo.etlid}</td>
+                    <td>{$vo.username}</td>
                     <td>{$vo.intime}</td>
                     <td>{$vo.outtime}</td>
                     <td>{$vo.money}元</td>

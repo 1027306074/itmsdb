@@ -2,17 +2,25 @@
 namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
+
     public function index(){
-		if(IS_POST){
+		if($_COOKIE){
+			$this->assign('name',$_COOKIE['name']);
+			$this->assign('password',$_COOKIE['password']);
+			$this->assign('remember',$_COOKIE['remember']);
+		}
+		
+		if(IS_AJAX){
 			$info = I('info');
+			$info['info']['username']=$_POST['u'];
+			$info['info']['password']=$_POST['p'];
+			
             $user = D('suser')->where($info)->find();
             $res = array();
-            if(empty($user)){
-                $this->error("账号密码不匹配，请重试！");die;
-            }else{
+            if($user){
 				$remember = $_POST['remember'];
-				$name =$_POST['info']['username'];
-				$password =$_POST['info']['password'];
+				$name =$_POST['u'];
+				$password =$_POST['p'];
 				if($remember == 1){
 					 setcookie('name',$name,time()+3600);
 					 setcookie('password',$password,time()+3600);
@@ -24,7 +32,7 @@ class IndexController extends Controller {
 					 }
               
                 $_SESSION['user']['username'] = $user['username'];
-              $this->success("登录成功！",U('Index/index2'));die;
+				echo 1;die;
               
             }
 		}
@@ -32,7 +40,7 @@ class IndexController extends Controller {
     }
 	public function logout(){
 		session(null);
-		$this->success('退出成功', U('Index/index'));
+		$this->redirect('/');
 	}
 	public function index2(){
 		$this->display();	
@@ -143,13 +151,13 @@ class IndexController extends Controller {
 				echo 1;die;
 			}else{
 				echo 0;die;
-			}
+			}                                                
 		}
 		$this->display();	
 	}
 	public function data102(){
 		$log=M('setctralog');
-		$info = $log->select();
+		$info = $log->join('suser on setctralog.etlid = suser.car_num')->select();
 		$this->assign('info',$info);
 		$this->display();	
 	}
